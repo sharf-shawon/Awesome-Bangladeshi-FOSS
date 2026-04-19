@@ -6,9 +6,12 @@ Please review the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 
 ## How to propose a project
 
-1. Fork the repository and create a branch.
-2. Add your project to the most relevant section in `README.md`.
-3. Open a pull request with a short explanation of why the project belongs in this list.
+You can contribute in either of these ways:
+
+1. Open a **Submit a New Project** issue from the issue templates and fill in all required fields.
+2. Or fork the repository, create a branch, add your project to the most relevant section in `README.md`, then open a pull request.
+
+When you use the issue template route, automation validates your submission, creates a PR automatically, and enables auto-merge after required checks pass.
 
 ## Entry requirements
 

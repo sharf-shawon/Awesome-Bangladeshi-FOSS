@@ -172,6 +172,8 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 The `lint` workflow runs `awesome-lint` for awesome-list quality checks.
 The `validate-readme` workflow enforces project entry format and GitHub repository link rules.
+The `project-submission` workflow validates issue-template submissions, comments with fix instructions on failures, and creates a PR on success.
+The `auto-merge` workflow enables auto-merge for eligible non-draft pull requests once required checks pass.
 The `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
 
 <!--lint disable awesome-license-->
