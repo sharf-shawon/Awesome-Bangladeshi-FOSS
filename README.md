@@ -158,6 +158,7 @@ Projects should have:
 - [Awesome Bangla](https://github.com/banglakit/awesome-bangla) - Curated list of Bangla computing tools, datasets, and resources.
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
 - [bangla-wordlist](https://github.com/tahmid02016/bangla-wordlist) - Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work.
+- [BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis](https://github.com/fahad35/BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis) - Lexicon of 61k+ Bangla words labeled with positive, negative and neutral sentiment for sentiment analysis and opinion mining.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
