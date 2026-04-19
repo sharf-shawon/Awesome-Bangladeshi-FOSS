@@ -638,6 +638,12 @@
     },
     {
       "category": "Other FOSS Projects",
+      "name": "BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis",
+      "repository": "https://github.com/fahad35/BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis",
+      "description": "Lexicon of 61k+ Bangla words labeled with positive, negative and neutral sentiment for sentiment analysis and opinion mining."
+    },
+    {
+      "category": "Other FOSS Projects",
       "name": "Findex",
       "repository": "https://github.com/mdgaziur/findex",
       "description": "Highly customizable GTK3 application launcher for Linux written in Rust."
