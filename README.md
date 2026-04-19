@@ -155,6 +155,7 @@ Projects should have:
 - [Archcraft](https://github.com/archcraft-os/archcraft) - Minimal, aesthetic Arch-based Linux distribution with lightweight window managers.
 - [Awesome Bangla](https://github.com/banglakit/awesome-bangla) - Curated list of Bangla computing tools, datasets, and resources.
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
+- [bangla-wordlist](https://github.com/tahmid02016/bangla-wordlist) - Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
