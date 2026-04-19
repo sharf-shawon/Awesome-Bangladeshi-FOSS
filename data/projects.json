@@ -98,6 +98,12 @@
     },
     {
       "category": "Mobile Apps",
+      "name": "Bangla-Dictionary",
+      "repository": "https://github.com/rafi-kamal/Bangla-Dictionary",
+      "description": "Open source English‑to‑Bangla dictionary app for Android based on Ankur.org’s Bangla‑English dictionary database."
+    },
+    {
+      "category": "Mobile Apps",
       "name": "COVID-19 Bangladesh Android",
       "repository": "https://github.com/SaadAAkash/COVID-19-Bangladesh-Android",
       "description": "Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh."
@@ -626,9 +632,21 @@
     },
     {
       "category": "Other FOSS Projects",
+      "name": "bangla-wordlist",
+      "repository": "https://github.com/tahmid02016/bangla-wordlist",
+      "description": "Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work."
+    },
+    {
+      "category": "Other FOSS Projects",
       "name": "Findex",
       "repository": "https://github.com/mdgaziur/findex",
       "description": "Highly customizable GTK3 application launcher for Linux written in Rust."
+    },
+    {
+      "category": "Other FOSS Projects",
+      "name": "NER-Bangla-Dataset",
+      "repository": "https://github.com/MISabic/NER-Bangla-Dataset",
+      "description": "Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research."
     },
     {
       "category": "Awesome Lists & Resource Collections",
@@ -659,6 +677,12 @@
       "name": "Bangla-NLP-Dataset",
       "repository": "https://github.com/Foysal87/Bangla-NLP-Dataset",
       "description": "Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "BD-public-api-datasets",
+      "repository": "https://github.com/SohanChy/BD-public-api-datasets",
+      "description": "Collective list of Bangladeshi public APIs and datasets aggregated from government and local services."
     },
     {
       "category": "Awesome Lists & Resource Collections",
