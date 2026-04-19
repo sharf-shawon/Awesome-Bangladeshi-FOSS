@@ -41,7 +41,7 @@ Projects should have:
 - [CoronaInfoBD](https://github.com/TeamTigers/coronainfobd) - Real-time coronavirus tracker for Bangladesh with data visualization and awareness content.
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
-- [NodeJS Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
+- [Node.js Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
 - [OSINT-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.
 - [Prochaar](https://github.com/CodeForBangladesh/prochaar) - Rails API backend for broadcasting missing person alerts across Bangladesh.
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
@@ -126,7 +126,7 @@ Projects should have:
 - [Bangladeshi Geo Data](https://github.com/engrasel/bangladeshi-geo-data) - npm package exposing administrative and city data for Bangladesh.
 - [battery-monitor](https://github.com/maateen/battery-monitor) - Linux desktop utility that notifies users about battery state changes.
 - [Brightness Controller](https://github.com/LordAmit/Brightness) - GUI tool to control display brightness on multi-monitor Linux setups.
-- [CPID](https://github.com/niyazed/cpid) - Cow price dataset with categorized images for price prediction and classification research.
+- [CPID](https://github.com/niyazed/cpid) - Categorized cattle price image dataset with labeled photos for price prediction and classification research.
 - [laravel-bangladesh-geocode](https://github.com/devfaysal/laravel-bangladesh-geocode) - Laravel package for seeding and querying Bangladesh administrative location data.
 - [Medicinedb](https://github.com/WSAyan/medicinedb) - SQLite medicine database with JSON and CSV exports focused on the Bangladesh market.
 - [ProxyBD](https://github.com/fahimscirex/proxybd) - Auto-updated list of Bangladeshi proxy servers for research and testing.
