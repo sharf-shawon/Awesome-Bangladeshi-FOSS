@@ -160,7 +160,7 @@ jobs:
           commit-message: "chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
           branch: auto/add-bd-foss-${{ steps.month.outputs.tag }}
           base: ${{ github.event.repository.default_branch }}
-          title: chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})
+          title: "chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
           body-path: data/monthly_pr_body.md
           draft: false
           labels: |
