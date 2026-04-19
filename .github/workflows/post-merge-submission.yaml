@@ -1,7 +1,7 @@
 name: post-merge-submission
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - closed
 
@@ -29,19 +29,28 @@ jobs:
 
             const issueNumber = Number(match[1]);
 
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issueNumber,
-              body: `This submission was merged in #${context.payload.pull_request.number}. The issue is now closed.`
-            });
+            try {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                state: 'closed'
+              });
 
-            await github.rest.issues.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issueNumber,
-              state: 'closed'
-            });
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                body: `This submission was merged in #${context.payload.pull_request.number}. The issue is now closed.`
+              });
+            } catch (error) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                body: `This submission was merged in #${context.payload.pull_request.number}, but I could not close this issue automatically. Please verify the project entry was added correctly and close this issue promptly.`
+              });
+            }
 
       - name: delete merged submission branch
         if: startsWith(github.event.pull_request.head.ref, 'automation/project-submission-') && github.event.pull_request.head.repo.full_name == github.repository
