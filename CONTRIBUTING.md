@@ -24,3 +24,4 @@ Please review the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 - Avoid duplicate entries.
 - Links must point to GitHub repository URLs in the format `https://github.com/owner/repo`.
 - Pull requests must pass all GitHub Actions checks (`lint` and `validate-readme`).
+- Eligible non-draft pull requests can be auto-merged after repository rules and required checks are satisfied.

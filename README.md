@@ -13,6 +13,7 @@ A curated list of high-quality free and open source software created in or activ
 - [Government & Utility Services](#government--utility-services)
 - [Fintech & Payments](#fintech--payments)
 - [Other FOSS Projects](#other-foss-projects)
+- [Awesome Lists & Resource Collections](#awesome-lists--resource-collections)
 - [Contributing](#contributing)
 - [Automation](#automation)
 - [License](#license)
@@ -153,6 +154,14 @@ Projects should have:
 - [Awesome Bangla](https://github.com/banglakit/awesome-bangla) - Curated list of Bangla computing tools, datasets, and resources.
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
+
+## Awesome Lists & Resource Collections
+
+- [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
+- [Awesome Open Source by Country or Region](https://github.com/slowernews/awesome-open-source-by-country-or-region) - Global index of country-specific open source lists, including Bangladesh-focused resources.
+- [Bangla All Programming Resources](https://github.com/BanglaProgramming/Bangla-All-Programming-Resources) - Bangla programming tutorials and references organized by core CS topics.
+- [Bangla Programming Resources](https://github.com/me-shaon/bangla-programming-resources) - Curated Bangla learning materials across algorithms, data structures, and software fundamentals.
+- [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
 
 ## Contributing
 
