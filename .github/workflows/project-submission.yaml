@@ -182,7 +182,7 @@ jobs:
             ready-to-merge
 
       - name: comment pull request creation failure
-        if: steps.create-pr.outcome == 'failure'
+        if: steps.create-pr.conclusion == 'failure' && !steps.create-pr.outputs.pull-request-number
         uses: actions/github-script@v7
         with:
           script: |
@@ -209,7 +209,7 @@ jobs:
             });
 
       - name: stop after pull request creation failure
-        if: steps.create-pr.outcome == 'failure'
+        if: steps.create-pr.conclusion == 'failure' && !steps.create-pr.outputs.pull-request-number
         run: exit 1
 
       - name: comment with pull request link
