@@ -39,7 +39,7 @@ Projects should have:
 
 ## Mobile Apps
 
-- [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Maintained fork of Android Week View with updated tooling.
+- [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Community-maintained fork of Android Week View with updated tooling.
 
 ## Developer Tools & Libraries
 
@@ -50,7 +50,7 @@ Projects should have:
 - [BNLTK](https://github.com/asraf-patoary/bnltk) - Python Bangla NLP toolkit for tokenization, stemming, and POS tagging.
 - [charisma](https://github.com/usmanhalalit/charisma) - Responsive multi-skin admin dashboard template for web applications.
 - [coreui-django-boilerplate](https://github.com/ni8mr/coreui-django-boilerplate) - Django starter project prewired with the CoreUI Bootstrap admin template.
-- [devsonket](https://github.com/devsonket/devsonket.github.io) - Bangla developer cheatsheet collection available as JSON data and static site.
+- [Devsonket](https://github.com/devsonket/devsonket.github.io) - Bangla developer cheatsheet collection available as JSON data and static site.
 - [django-elasticsearch-dsl](https://github.com/django-es/django-elasticsearch-dsl) - Library for indexing Django models into Elasticsearch with declarative DSL mapping.
 - [django-webpush](https://github.com/safwanrahman/django-webpush) - Django app for sending web push notifications to browsers.
 - [go-avro-phonetic](https://github.com/sadlil/go-avro-phonetic) - Golang implementation of the Avro phonetic Bangla input method.
@@ -90,8 +90,6 @@ Projects should have:
 - [Archcraft](https://github.com/archcraft-os/archcraft) - Minimal, aesthetic Arch-based Linux distribution with lightweight window managers.
 - [Awesome Bangla](https://github.com/banglakit/awesome-bangla) - Curated list of Bangla computing tools, datasets, and resources.
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
-- [Bangladesh Open Source Network](https://github.com/bdosn) - Organization repositories promoting open source, robotics, and programming in Bangladesh.
-- [Code for Bangladesh](https://github.com/CodeForBangladesh) - Organization hosting civic and social-impact open source projects focused on Bangladesh.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 ## Contributing
 
