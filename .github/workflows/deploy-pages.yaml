@@ -24,6 +24,8 @@ jobs:
 
       - name: setup pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: create index page from README
         run: cp README.md index.md

@@ -1,3 +1,4 @@
+<!--lint disable awesome-github-->
 # Awesome Bangladeshi FOSS [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml)
 
 A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
@@ -178,3 +179,4 @@ The `deploy-pages` workflow automatically publishes the list to GitHub Pages on 
 
 Distributed under the [MIT License](license).
 <!--lint enable awesome-license-->
+<!--lint enable awesome-github-->
