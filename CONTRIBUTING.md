@@ -22,3 +22,5 @@ Please review the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
 
 - Keep descriptions concise and value-focused.
 - Avoid duplicate entries.
+- Links must point to GitHub repository URLs in the format `https://github.com/owner/repo`.
+- Pull requests must pass all GitHub Actions checks (`lint` and `validate-readme`).

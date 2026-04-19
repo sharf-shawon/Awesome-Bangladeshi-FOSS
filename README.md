@@ -1,4 +1,4 @@
-# Awesome Bangladeshi FOSS [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Bangladeshi FOSS [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml)
 
 A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 
@@ -14,6 +14,7 @@ A curated list of high-quality free and open source software created in or activ
 - [Fintech & Payments](#fintech--payments)
 - [Other FOSS Projects](#other-foss-projects)
 - [Contributing](#contributing)
+- [Automation](#automation)
 - [License](#license)
 <!--lint enable awesome-toc-->
 
@@ -156,6 +157,12 @@ Projects should have:
 ## Contributing
 
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+
+## Automation
+
+- `lint` workflow runs `awesome-lint` for awesome-list quality checks.
+- `validate-readme` workflow enforces contribution rules for project entry format, alphabetical ordering, and GitHub repository links.
+- `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
 
 <!--lint disable awesome-license-->
 ## License
