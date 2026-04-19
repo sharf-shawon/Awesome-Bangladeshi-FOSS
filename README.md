@@ -162,6 +162,7 @@ Projects should have:
 - [Awesome Open Source by Country or Region](https://github.com/slowernews/awesome-open-source-by-country-or-region) - Global index of country-specific open source lists, including Bangladesh-focused resources.
 - [Bangla All Programming Resources](https://github.com/BanglaProgramming/Bangla-All-Programming-Resources) - Bangla programming tutorials and references organized by core CS topics.
 - [Bangla Programming Resources](https://github.com/me-shaon/bangla-programming-resources) - Curated Bangla learning materials across algorithms, data structures, and software fundamentals.
+- [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
 
 ## Contributing
