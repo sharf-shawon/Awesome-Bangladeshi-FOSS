@@ -1,0 +1,664 @@
+{
+  "projects": [
+    {
+      "category": "Web Applications",
+      "name": "Bangladesh Income Tax Calculator",
+      "repository": "https://github.com/ssi-anik/bd-income-tax-calculator",
+      "description": "Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Bangladesh Renovation Platform",
+      "repository": "https://github.com/shamspias/Bangladesh-Renovation-Platform",
+      "description": "Civic engagement platform for proposing ideas, reporting problems, and sharing solutions."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Bangladesh Tech Companies",
+      "repository": "https://github.com/MBSTUPC/tech-companies-in-bangladesh",
+      "description": "Community-maintained directory of tech companies in Bangladesh for job seekers and networking."
+    },
+    {
+      "category": "Web Applications",
+      "name": "BanglaGeoAPI",
+      "repository": "https://github.com/thecodermehedi/BanglaGeoAPI",
+      "description": "RESTful API server for Bangladesh administrative geo data built with Node.js and TypeScript."
+    },
+    {
+      "category": "Web Applications",
+      "name": "bdapis",
+      "repository": "https://github.com/AbmSourav/bdapis",
+      "description": "REST API service exposing Bangladesh administrative locations for client applications."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Co-ronaBD.info",
+      "repository": "https://github.com/KhanShaheb34/Co-ronaBD.info",
+      "description": "Interactive dashboard visualizing Bangladesh COVID-19 case statistics and trends."
+    },
+    {
+      "category": "Web Applications",
+      "name": "CoronaInfoBD",
+      "repository": "https://github.com/TeamTigers/coronainfobd",
+      "description": "Real-time coronavirus tracker for Bangladesh with data visualization and awareness content."
+    },
+    {
+      "category": "Web Applications",
+      "name": "FinanceFrz",
+      "repository": "https://github.com/sharf-shawon/FinanceFrz",
+      "description": "Personal finance web app for tracking income and expenses, built as a real-world budgeting tool."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Goodwork",
+      "repository": "https://github.com/Hasnayeen/goodwork",
+      "description": "Self-hosted project management and team collaboration platform for software teams."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Movement Pass Clone",
+      "repository": "https://github.com/yeazin/Movement-Pass-Clone",
+      "description": "Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Node.js Professionals",
+      "repository": "https://github.com/devfikdark/nodeJS-Professionals",
+      "description": "Node.js notes and resource site translated into Bangla for Bangladeshi developers."
+    },
+    {
+      "category": "Web Applications",
+      "name": "OSINT-Tools-Bangladesh",
+      "repository": "https://github.com/paulpogoda/OSINT-Tools-Bangladesh",
+      "description": "Curated portal of Bangladesh-focused OSINT and public data resources."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Prochaar",
+      "repository": "https://github.com/CodeForBangladesh/prochaar",
+      "description": "Rails API backend for broadcasting missing person alerts across Bangladesh."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Stack Unboxed",
+      "repository": "https://github.com/yeasin2002/Stack-Unboxed",
+      "description": "Bangla programming learning platform with tutorials and web development guides."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Zooming Classroom",
+      "repository": "https://github.com/yeazin/Zooming-cls",
+      "description": "Online classroom platform built with Django for Bangladeshi students."
+    },
+    {
+      "category": "Mobile Apps",
+      "name": "Android Week View",
+      "repository": "https://github.com/aniruddh-0701/Android-Week-View",
+      "description": "Android library for displaying calendar week views with customizable day and event layouts."
+    },
+    {
+      "category": "Mobile Apps",
+      "name": "COVID-19 Bangladesh Android",
+      "repository": "https://github.com/SaadAAkash/COVID-19-Bangladesh-Android",
+      "description": "Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh."
+    },
+    {
+      "category": "Mobile Apps",
+      "name": "Incredible Bangladesh",
+      "repository": "https://github.com/asnbd/incredible-bangladesh",
+      "description": "Tourism guide Android app showcasing Bangladeshi attractions with maps and location details."
+    },
+    {
+      "category": "Mobile Apps",
+      "name": "Missing Person Mobile App",
+      "repository": "https://github.com/CodeForBangladesh/missing-person-mobile-app",
+      "description": "NativeScript mobile client for reporting and locating missing persons in Bangladesh."
+    },
+    {
+      "category": "Mobile Apps",
+      "name": "SUic Player",
+      "repository": "https://github.com/soiadmahedi/SUic-Player",
+      "description": "Android audio and video player built on AndroidX Media3 ExoPlayer."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Avro Keyboard",
+      "repository": "https://github.com/mugli/Avro-Keyboard",
+      "description": "Unicode-compliant Bangla input method editor for Windows."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Avro.py",
+      "repository": "https://github.com/hitblast/avro.py",
+      "description": "Python implementation of the Avro phonetic Bangla input method for Unicode Bengali typing."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "BangalASR",
+      "repository": "https://github.com/menon92/BangalASR",
+      "description": "Transformer-based Bangla automatic speech recognition system."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Bangla BERT",
+      "repository": "https://github.com/sagorbrur/bangla-bert",
+      "description": "Resources and vocabulary for Bangla BERT models built on top of BNLP."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Bangla NLP Parallel Dataset Tools",
+      "repository": "https://github.com/likhonsheikh54/BanglaNLP",
+      "description": "Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "BanglaSpeech2Text",
+      "repository": "https://github.com/shhossain/BanglaSpeech2Text",
+      "description": "Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Bangla TTS",
+      "repository": "https://github.com/zabir-nabil/bangla-tts",
+      "description": "Real-time multilingual Bangla and English text-to-speech synthesis library."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Bengali Alphabet",
+      "repository": "https://github.com/lifeparticle/Bengali-Alphabet",
+      "description": "Dataset and resources for Bengali characters, useful for OCR and Bangla language computing."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Bengali Dictionary",
+      "repository": "https://github.com/MinhasKamal/BengaliDictionary",
+      "description": "Large Bengali word and translation collection suitable for spell checkers and NLP tools."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "BNLP",
+      "repository": "https://github.com/sagorbrur/bnlp",
+      "description": "Bengali NLP toolkit with tokenization, embeddings, POS tagging, and NER."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "BNLP Resources",
+      "repository": "https://github.com/banglanlp/bnlp-resources",
+      "description": "Dataset collection for Bangla language computing and benchmarks."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "BNLTK",
+      "repository": "https://github.com/asraf-patoary/bnltk",
+      "description": "Python Bangla NLP toolkit for tokenization, stemming, and POS tagging."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Bonsai",
+      "repository": "https://github.com/rishi420/Bonsai",
+      "description": "Swift utility by a Bangladeshi developer for presenting custom-sized view controllers on iOS."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "CF Stats",
+      "repository": "https://github.com/sudiptob2/cf-stats",
+      "description": "GitHub Action generator for real-time Codeforces activity badges and stat cards."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "charisma",
+      "repository": "https://github.com/usmanhalalit/charisma",
+      "description": "Responsive multi-skin admin dashboard template for web applications."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "coreui-django-boilerplate",
+      "repository": "https://github.com/ni8mr/coreui-django-boilerplate",
+      "description": "Django starter project prewired with the CoreUI Bootstrap admin template."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "CRUD Generator",
+      "repository": "https://github.com/appzcoder/crud-generator",
+      "description": "Laravel package that scaffolds controllers, models, migrations, and views from a schema."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Devsonket",
+      "repository": "https://github.com/devsonket/devsonket.github.io",
+      "description": "Bangla developer cheatsheet collection available as JSON data and static site."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "django-elasticsearch-dsl",
+      "repository": "https://github.com/django-es/django-elasticsearch-dsl",
+      "description": "Library for indexing Django models into Elasticsearch with declarative DSL mapping."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "django-webpush",
+      "repository": "https://github.com/safwanrahman/django-webpush",
+      "description": "Django app for sending web push notifications to browsers."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "EMQX Web Hook",
+      "repository": "https://github.com/emqx/emqx-web-hook",
+      "description": "Web hook plugin for the EMQX MQTT broker."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Gittivity",
+      "repository": "https://github.com/s1s1ty/gittivity",
+      "description": "Desktop notifier for GitHub activity written in Python."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "go-avro-phonetic",
+      "repository": "https://github.com/sadlil/go-avro-phonetic",
+      "description": "Golang implementation of the Avro phonetic Bangla input method."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "gohttp",
+      "repository": "https://github.com/nahid/gohttp",
+      "description": "Developer-friendly HTTP client library for Go applications."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "gojsonq",
+      "repository": "https://github.com/thedevsaddam/gojsonq",
+      "description": "Go package for querying complex JSON data structures with a fluent API."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "go-trigger",
+      "repository": "https://github.com/sadlil/go-trigger",
+      "description": "Global event dispatcher library for Go using string-based trigger IDs."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Gouberfmt",
+      "repository": "https://github.com/GophersBD/gouberfmt",
+      "description": "Go static analysis tool to check code against the Uber Go style guide."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "govalidator",
+      "repository": "https://github.com/thedevsaddam/govalidator",
+      "description": "Request validation library for Go inspired by Laravel validation rules."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Hacker-Playbook-Utility",
+      "repository": "https://github.com/shepherd-06/Hacker-Playbook-Utility",
+      "description": "Python-powered Bash utility to automate installation of Hacker Playbook tools."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "JsonQ",
+      "repository": "https://github.com/nahid/jsonq",
+      "description": "PHP package for expressive querying of arbitrary JSON data."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "kctl",
+      "repository": "https://github.com/alaminopu/kctl",
+      "description": "Rust-based CLI wrapper to simplify commonly used `kubectl` commands."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "kotlin-jsonq",
+      "repository": "https://github.com/s4kibs4mi/kotlin-jsonq",
+      "description": "Kotlin implementation of a JsonQ-style JSON query API."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "lambda-mod-zsh-theme",
+      "repository": "https://github.com/halfo/lambda-mod-zsh-theme",
+      "description": "Git-aware ZSH shell theme designed for Unicode-capable terminals."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Laracsv",
+      "repository": "https://github.com/usmanhalalit/laracsv",
+      "description": "Laravel package for generating CSV files directly from Eloquent models."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Laravel Admin",
+      "repository": "https://github.com/appzcoder/laravel-admin",
+      "description": "Admin panel generator for rapidly scaffolding admin dashboards in Laravel."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Leet Easy",
+      "repository": "https://github.com/sudiptob2/leet-easy",
+      "description": "Tool that alerts when LeetCode publishes an easy daily coding challenge."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Lumen Route List",
+      "repository": "https://github.com/appzcoder/lumen-route-list",
+      "description": "Lumen package to list and inspect application routes from the CLI."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "MRZ Parser",
+      "repository": "https://github.com/RakibDevs/mrz-parser",
+      "description": "PHP package for parsing machine-readable zone codes from travel documents."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Number to Bangla",
+      "repository": "https://github.com/RakibDevs/number-to-bangla",
+      "description": "Laravel package to convert English numbers to Bangla digits, words, and money formats."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Olova",
+      "repository": "https://github.com/olovajs/olova",
+      "description": "Minimal JavaScript UI library for adding reactive behavior to web applications."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "OpenBangla Keyboard",
+      "repository": "https://github.com/OpenBangla/OpenBangla-Keyboard",
+      "description": "Open source Bangla input method for GNU/Linux with Avro phonetic and other layouts."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Pakhi Bhasha",
+      "repository": "https://github.com/Shafin098/pakhi-bhasha",
+      "description": "Dynamically typed Bangla programming language written in Rust."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "PBTreeView",
+      "repository": "https://github.com/partho-maple/PBTreeView",
+      "description": "Swift UITreeView built on UITableView for displaying hierarchical data."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "PDF Downloader",
+      "repository": "https://github.com/alaminopu/pdf_downloader",
+      "description": "Scrapy spider for batch-downloading PDF files from websites."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Pin Code Fields",
+      "repository": "https://github.com/adar2378/pin_code_fields",
+      "description": "Flutter package for animated PIN and OTP input fields."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Pixie",
+      "repository": "https://github.com/usmanhalalit/pixie",
+      "description": "Lightweight, expressive database query builder for PHP."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Punctuation Restoration",
+      "repository": "https://github.com/xashru/punctuation-restoration",
+      "description": "Transformer-based punctuation restoration models for Bangla and other languages."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "py-jsonq",
+      "repository": "https://github.com/s1s1ty/py-jsonq",
+      "description": "Python port of the JsonQ query builder for working with JSON data."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "PyNotify",
+      "repository": "https://github.com/hasibzunair/pynotify",
+      "description": "Python package for sending emails in a human-friendly way."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "RNM",
+      "repository": "https://github.com/neurobin/rnm",
+      "description": "Unix bulk rename utility written in C++."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "SBNLTK",
+      "repository": "https://github.com/Foysal87/sbnltk",
+      "description": "Bangla NLP toolkit with NER, POS tagging, and other language processing utilities."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "shc",
+      "repository": "https://github.com/neurobin/shc",
+      "description": "Shell script compiler that converts shell scripts to C source and stripped binaries."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "simple-bcrypt",
+      "repository": "https://github.com/shopnilsazal/simple-bcrypt",
+      "description": "Bcrypt hashing helper package for Python web frameworks."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "simple-line-icons",
+      "repository": "https://github.com/thesabbir/simple-line-icons",
+      "description": "MIT-licensed icon font and CSS/SCSS/LESS icon toolkit."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Swift Debouncer",
+      "repository": "https://github.com/webadnan/swift-debouncer",
+      "description": "Simple Swift debouncer utility for throttling method calls in iOS apps."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Talk",
+      "repository": "https://github.com/nahid/talk",
+      "description": "Laravel-based real-time user messaging and chat package."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "validus",
+      "repository": "https://github.com/shopnilsazal/validus",
+      "description": "Lightweight Python string validation library for common data patterns."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "WordPress Settings API Class",
+      "repository": "https://github.com/tareq1988/wordpress-settings-api-class",
+      "description": "PHP wrapper simplifying WordPress options panels using the Settings API."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "WP Eloquent",
+      "repository": "https://github.com/tareq1988/wp-eloquent",
+      "description": "Library for using Laravel's Eloquent ORM inside WordPress plugins and themes."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Bangladesh GeoCode",
+      "repository": "https://github.com/nuhil/bangladesh-geocode",
+      "description": "Bangladesh administrative geocode dataset in SQL, CSV, JSON, XML, and PHP formats."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Bangladesh GeoCode PHP",
+      "repository": "https://github.com/exceptio/bangladesh-geocode",
+      "description": "PHP library providing Bangladesh division, district, and upazila data for applications."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Bangladesh GeoJSON",
+      "repository": "https://github.com/ifahimreza/bangladesh-geojson",
+      "description": "GeoJSON boundary data for Bangladesh divisions, districts, and upazilas."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Bangladesh Unified SIM Codes",
+      "repository": "https://github.com/dibbockb/Bangladesh-Unified-SIM-Codes",
+      "description": "Comprehensive USSD, SMS, and short codes for all Bangladeshi mobile operators."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Bangladeshi Geo Data",
+      "repository": "https://github.com/engrasel/bangladeshi-geo-data",
+      "description": "npm package exposing administrative and city data for Bangladesh."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "battery-monitor",
+      "repository": "https://github.com/maateen/battery-monitor",
+      "description": "Linux desktop utility that notifies users about battery state changes."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Brightness Controller",
+      "repository": "https://github.com/LordAmit/Brightness",
+      "description": "GUI tool to control display brightness on multi-monitor Linux setups."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "CPID",
+      "repository": "https://github.com/niyazed/cpid",
+      "description": "Categorized cattle price image dataset with labeled photos for price prediction and classification research."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "laravel-bangladesh-geocode",
+      "repository": "https://github.com/devfaysal/laravel-bangladesh-geocode",
+      "description": "Laravel package for seeding and querying Bangladesh administrative location data."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "Medicinedb",
+      "repository": "https://github.com/WSAyan/medicinedb",
+      "description": "SQLite medicine database with JSON and CSV exports focused on the Bangladesh market."
+    },
+    {
+      "category": "Government & Utility Services",
+      "name": "ProxyBD",
+      "repository": "https://github.com/fahimscirex/proxybd",
+      "description": "Auto-updated list of Bangladeshi proxy servers for research and testing."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "all-bd-mobile-payments-gateway",
+      "repository": "https://github.com/wp-plugins/all-bd-mobile-payments-gateway",
+      "description": "WooCommerce plugin integrating multiple Bangladeshi mobile payment gateways."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "bkash-js",
+      "repository": "https://github.com/ShejanMahamud/bkash-js",
+      "description": "TypeScript SDK for bKash Checkout URL-based payments with webhook and lifecycle helpers."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "bkash-payment-gateway",
+      "repository": "https://github.com/shahriar-shojib/bkash-payment-gateway",
+      "description": "Node.js and TypeScript library for accepting bKash payments from backend services."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "django-bkash",
+      "repository": "https://github.com/sharf-shawon/django-bkash",
+      "description": "Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "django-bulksms-bd",
+      "repository": "https://github.com/sharf-shawon/django-bulksms-bd",
+      "description": "Django package for integrating the BulkSMSBD.net SMS API with retries, logging, and Bangladeshi number helpers."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "edd-bkash-gateway",
+      "repository": "https://github.com/kapilpaul/edd-bkash-gateway",
+      "description": "Easy Digital Downloads plugin adding bKash payment gateway support."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "laravel-bkash",
+      "repository": "https://github.com/abdursoft/laravel-bkash",
+      "description": "Laravel package for integrating bKash tokenized payment APIs."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "Muthofun SMS Gateway",
+      "repository": "https://github.com/Shipu/muthofun-sms-gateway",
+      "description": "PHP and Laravel client for integrating the Bangladeshi Muthofun SMS gateway."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "Nagad API",
+      "repository": "https://github.com/arif98741/nagadApi",
+      "description": "PHP SDK for integrating Nagad mobile payment gateway APIs."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "Paysenz",
+      "repository": "https://github.com/alamgircsebd/paysenz",
+      "description": "Online payment gateway integration library for Bangladeshi merchants."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "SSLCommerz WooCommerce",
+      "repository": "https://github.com/sslcommerz/SSLCommerz-Woocommerce",
+      "description": "WooCommerce plugin for the Bangladeshi SSLCommerz payment gateway."
+    },
+    {
+      "category": "Other FOSS Projects",
+      "name": "Archcraft",
+      "repository": "https://github.com/archcraft-os/archcraft",
+      "description": "Minimal, aesthetic Arch-based Linux distribution with lightweight window managers."
+    },
+    {
+      "category": "Other FOSS Projects",
+      "name": "Awesome Bangla",
+      "repository": "https://github.com/banglakit/awesome-bangla",
+      "description": "Curated list of Bangla computing tools, datasets, and resources."
+    },
+    {
+      "category": "Other FOSS Projects",
+      "name": "Awesome Bangla Datasets",
+      "repository": "https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets",
+      "description": "Curated index of Bangla language datasets for AI and deep learning."
+    },
+    {
+      "category": "Other FOSS Projects",
+      "name": "Findex",
+      "repository": "https://github.com/mdgaziur/findex",
+      "description": "Highly customizable GTK3 application launcher for Linux written in Rust."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Awesome Open Source Bangladesh",
+      "repository": "https://github.com/hackversedev/awesome-opensource-bangladesh",
+      "description": "Community-maintained list of open source projects and contributors from Bangladesh."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Awesome Open Source by Country or Region",
+      "repository": "https://github.com/slowernews/awesome-open-source-by-country-or-region",
+      "description": "Global index of country-specific open source lists, including Bangladesh-focused resources."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Bangla All Programming Resources",
+      "repository": "https://github.com/BanglaProgramming/Bangla-All-Programming-Resources",
+      "description": "Bangla programming tutorials and references organized by core CS topics."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Bangla Programming Resources",
+      "repository": "https://github.com/me-shaon/bangla-programming-resources",
+      "description": "Curated Bangla learning materials across algorithms, data structures, and software fundamentals."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Made In Bangladesh",
+      "repository": "https://github.com/made-in-bangladesh/made-in-bangladesh",
+      "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
+    }
+  ]
+}

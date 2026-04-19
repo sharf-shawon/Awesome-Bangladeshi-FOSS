@@ -1,0 +1,53 @@
+name: sync-projects-json
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - scripts/generate_projects_json.py
+      - .github/workflows/sync-projects-json.yaml
+      - data/projects.json
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - scripts/generate_projects_json.py
+      - .github/workflows/sync-projects-json.yaml
+      - data/projects.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: generate projects JSON
+        run: python scripts/generate_projects_json.py
+
+      - name: commit synced JSON
+        if: github.event_name == 'push'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync data/projects.json from README"
+          file_pattern: data/projects.json
+
+      - name: commit synced JSON to pull request branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync data/projects.json from README"
+          file_pattern: data/projects.json
