@@ -21,7 +21,6 @@ def main() -> int:
         return 1
 
     errors: list[str] = []
-    section_entries: dict[str, list[tuple[str, int]]] = {}
     seen_links: dict[str, int] = {}
     current_section: str | None = None
 
@@ -30,7 +29,6 @@ def main() -> int:
 
         if line.startswith("## "):
             current_section = line[3:].strip()
-            section_entries.setdefault(current_section, [])
             continue
 
         match = ENTRY_RE.match(line)
@@ -56,18 +54,6 @@ def main() -> int:
             )
         else:
             seen_links[link] = line_number
-
-        if current_section:
-            section_entries.setdefault(current_section, []).append((name, line_number))
-
-    for section, entries in section_entries.items():
-        names = [name for name, _ in entries]
-        normalized = [name.casefold() for name in names]
-        if normalized != sorted(normalized):
-            errors.append(
-                f"Section '{section}' is not alphabetically ordered. "
-                "Sort entries by project name (A-Z, case-insensitive)."
-            )
 
     if errors:
         print("README validation failed:")

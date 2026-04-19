@@ -160,9 +160,9 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ## Automation
 
-- `lint` workflow runs `awesome-lint` for awesome-list quality checks.
-- `validate-readme` workflow enforces contribution rules for project entry format, alphabetical ordering, and GitHub repository links.
-- `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
+The `lint` workflow runs `awesome-lint` for awesome-list quality checks.
+The `validate-readme` workflow enforces project entry format and GitHub repository link rules.
+The `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
 
 <!--lint disable awesome-license-->
 ## License
