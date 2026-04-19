@@ -656,6 +656,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "Bangla-NLP-Dataset",
+      "repository": "https://github.com/Foysal87/Bangla-NLP-Dataset",
+      "description": "Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "Made In Bangladesh",
       "repository": "https://github.com/made-in-bangladesh/made-in-bangladesh",
       "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
