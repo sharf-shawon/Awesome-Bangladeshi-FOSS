@@ -39,14 +39,14 @@ Projects should have:
 
 ## Mobile Apps
 
-- [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Community-maintained fork of Android Week View with updated tooling.
+- [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Android library for displaying calendar week views with customizable day and event layouts.
 
 ## Developer Tools & Libraries
 
 - [Avro Keyboard](https://github.com/mugli/Avro-Keyboard) - Unicode-compliant Bangla input method editor for Windows.
 - [Bangla NLP Parallel Dataset Tools](https://github.com/likhonsheikh54/BanglaNLP) - Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets.
 - [BNLP](https://github.com/sagorbrur/bnlp) - Bengali NLP toolkit with tokenization, embeddings, POS tagging, and NER.
-- [bangla-bert](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
+- [Bangla BERT](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
 - [BNLTK](https://github.com/asraf-patoary/bnltk) - Python Bangla NLP toolkit for tokenization, stemming, and POS tagging.
 - [charisma](https://github.com/usmanhalalit/charisma) - Responsive multi-skin admin dashboard template for web applications.
 - [coreui-django-boilerplate](https://github.com/ni8mr/coreui-django-boilerplate) - Django starter project prewired with the CoreUI Bootstrap admin template.
@@ -59,7 +59,7 @@ Projects should have:
 - [gojsonq](https://github.com/thedevsaddam/gojsonq) - Go package for querying complex JSON data structures with a fluent API.
 - [govalidator](https://github.com/thedevsaddam/govalidator) - Request validation library for Go inspired by Laravel validation rules.
 - [Hacker-Playbook-Utility](https://github.com/shepherd-06/Hacker-Playbook-Utility) - Python-powered Bash utility to automate installation of Hacker Playbook tools.
-- [jsonq](https://github.com/nahid/jsonq) - PHP package for expressive querying of arbitrary JSON data.
+- [JsonQ](https://github.com/nahid/jsonq) - PHP package for expressive querying of arbitrary JSON data.
 - [kctl](https://github.com/alaminopu/kctl) - Rust-based CLI wrapper to simplify commonly used `kubectl` commands.
 - [kotlin-jsonq](https://github.com/s4kibs4mi/kotlin-jsonq) - Kotlin implementation of a JsonQ-style JSON query API.
 - [lambda-mod-zsh-theme](https://github.com/halfo/lambda-mod-zsh-theme) - Git-aware ZSH shell theme designed for Unicode-capable terminals.
