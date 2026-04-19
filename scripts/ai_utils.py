@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small AI helper for category classification and scoring.
+ """Small AI helper for category classification and scoring.
 
 Usage:
   Imported by scripts/filter_and_rank_candidates.py.
@@ -8,8 +8,8 @@ Environment:
   OPENAI_API_KEY (optional): Enables model-assisted scoring.
   OPENAI_MODEL (optional): Defaults to gpt-4o-mini.
 
-Notes:
-  - If no API key is set, this module falls back to deterministic heuristics.
+ Notes:
+   - If no API key is set, this module falls back to deterministic heuristics.
   - Provider can be swapped by replacing `call_openai_json` implementation.
 """
 
@@ -81,7 +81,7 @@ def heuristic_scores(repo: dict[str, Any]) -> dict[str, float]:
     }
 
 
-def call_openai_json(repo: dict[str, Any]) -> dict[str, Any] | None:
+ def call_openai_json(repo: dict[str, Any]) -> dict[str, Any] | None:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
         return None
@@ -109,14 +109,14 @@ def call_openai_json(repo: dict[str, Any]) -> dict[str, Any] | None:
     }
     payload = {
         "model": model,
-        "input": [
+        "messages": [
             {"role": "system", "content": "Return strict JSON only."},
             {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
         ],
-        "text": {"format": {"type": "json_object"}},
+        "response_format": {"type": "json_object"},
     }
     response = requests.post(
-        "https://api.openai.com/v1/responses",
+        "https://api.openai.com/v1/chat/completions",
         headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         json=payload,
         timeout=45,
@@ -124,7 +124,10 @@ def call_openai_json(repo: dict[str, Any]) -> dict[str, Any] | None:
     if response.status_code >= 400:
         return None
     body = response.json()
-    text = (body.get("output_text") or "").strip()
+    choices = body.get("choices") or []
+    if not choices:
+        return None
+    text = str(((choices[0] or {}).get("message") or {}).get("content") or "").strip()
     if not text:
         return None
     try:

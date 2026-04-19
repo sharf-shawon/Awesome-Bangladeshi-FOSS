@@ -188,6 +188,10 @@ def final_rank_score(ai_scores: dict[str, float], candidate: dict[str, Any]) -> 
     return round(score, 4)
 
 
+def sort_key(candidate: dict[str, Any]) -> tuple[float, int]:
+    return (float(candidate.get("rank_score") or 0), int(candidate.get("stargazers_count") or 0))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", default=str(DEFAULT_INPUT), help="Augmented candidates JSON path")
@@ -253,7 +257,7 @@ def main() -> int:
         selected.append(candidate)
         time.sleep(0.2)
 
-    selected.sort(key=lambda c: (float(c.get("rank_score") or 0), int(c.get("stargazers_count") or 0)), reverse=True)
+    selected.sort(key=sort_key, reverse=True)
     top_selected = selected[: max(0, args.limit)]
 
     output = {
