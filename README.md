@@ -54,6 +54,7 @@ Projects should have:
 ## Mobile Apps
 
 - [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Android library for displaying calendar week views with customizable day and event layouts.
+- [Bangla-Dictionary](https://github.com/rafi-kamal/Bangla-Dictionary) - Open source English‑to‑Bangla dictionary app for Android based on Ankur.org’s Bangla‑English dictionary database.
 - [COVID-19 Bangladesh Android](https://github.com/SaadAAkash/COVID-19-Bangladesh-Android) - Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh.
 - [Incredible Bangladesh](https://github.com/asnbd/incredible-bangladesh) - Tourism guide Android app showcasing Bangladeshi attractions with maps and location details.
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
@@ -156,6 +157,7 @@ Projects should have:
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
+- [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
 ## Awesome Lists & Resource Collections
 
 - [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
