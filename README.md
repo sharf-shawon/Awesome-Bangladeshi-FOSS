@@ -119,6 +119,7 @@ Projects should have:
 - [Punctuation Restoration](https://github.com/xashru/punctuation-restoration) - Transformer-based punctuation restoration models for Bangla and other languages.
 - [py-jsonq](https://github.com/s1s1ty/py-jsonq) - Python port of the JsonQ query builder for working with JSON data.
 - [PyNotify](https://github.com/hasibzunair/pynotify) - Python package for sending emails in a human-friendly way.
+- [riti](https://github.com/OpenBangla/riti) - The Next Gen Bengali input method library written in Rust.
 - [RNM](https://github.com/neurobin/rnm) - Unix bulk rename utility written in C++.
 - [SBNLTK](https://github.com/Foysal87/sbnltk) - Bangla NLP toolkit with NER, POS tagging, and other language processing utilities.
 - [shc](https://github.com/neurobin/shc) - Shell script compiler that converts shell scripts to C source and stripped binaries.
@@ -171,9 +172,15 @@ Projects should have:
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
 - [bangla-wordlist](https://github.com/tahmid02016/bangla-wordlist) - Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work.
 - [BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis](https://github.com/fahad35/BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis) - Lexicon of 61k+ Bangla words labeled with positive, negative and neutral sentiment for sentiment analysis and opinion mining.
+- [BDMC](https://github.com/MAHADI-143/BDMC) - Free Bangladeshi and Indian Random Number Cloning Tool.
+- [Express-js-tutorial-bangla](https://github.com/rupomsoft/Express-js-tutorial-bangla) - Express-js-tutorial-bangla.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
+- [host](https://github.com/htr-tech/host) - Expose your LocalHost with this tool.
+- [js.zonayed.me](https://github.com/zonayedpca/js.zonayed.me) - সম্পূর্ণ বাংলায় হাতেকলমে জাভাস্ক্রিপ্ট শিখুন(ওয়েবসাইট রিপো).
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
+- [Node.js-Tutorial-Bangla](https://github.com/rupomsoft/Node.js-Tutorial-Bangla) - In this comprehensive series, we dive into the world of Node.js, exploring its features, functionalities, and best.
+- [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React Bangla Tutorial - স্টেপ বাই স্টেপ ফলো করে রিয়েক্ট শিখুন।.
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 
 [Back to top](#contents)
@@ -186,6 +193,7 @@ Projects should have:
 - [Bangla Programming Resources](https://github.com/me-shaon/bangla-programming-resources) - Curated Bangla learning materials across algorithms, data structures, and software fundamentals.
 - [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
 - [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
+- [DL-Sneak-Peek](https://github.com/menon92/DL-Sneak-Peek) - Deep learning Bangla resources using TensorFlow.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
 
 [Back to top](#contents)

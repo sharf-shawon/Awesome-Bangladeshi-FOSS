@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-04-19T15:42:22.312033+00:00",
+  "input_candidate_count": 855,
+  "skipped_count": 716,
+  "selected_count": 10,
+  "selected": [
+    {
+      "full_name": "htr-tech/host",
+      "name": "host",
+      "html_url": "https://github.com/htr-tech/host",
+      "description": "Expose your LocalHost with this tool",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "gpl-3.0",
+        "spdx_id": "GPL-3.0"
+      },
+      "stars": 657,
+      "forks": 79,
+      "updated_at": "2026-04-13T14:02:55Z",
+      "source": "github_user_location:htr-tech",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 4.5,
+        "maturity": 2.66
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 4.181
+    },
+    {
+      "full_name": "zonayedpca/js.zonayed.me",
+      "name": "js.zonayed.me",
+      "html_url": "https://github.com/zonayedpca/js.zonayed.me",
+      "description": "সম্পূর্ণ বাংলায় হাতেকলমে জাভাস্ক্রিপ্ট শিখুন(ওয়েবসাইট রিপো)",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 327,
+      "forks": 50,
+      "updated_at": "2026-04-16T11:24:06Z",
+      "source": "github_user_location:zonayedpca",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 4.5,
+        "maturity": 2.42
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 4.096
+    },
+    {
+      "full_name": "menon92/DL-Sneak-Peek",
+      "name": "DL-Sneak-Peek",
+      "html_url": "https://github.com/menon92/DL-Sneak-Peek",
+      "description": "Deep learning Bangla resources using TensorFlow",
+      "category": "Awesome Lists & Resource Collections",
+      "license": {
+        "key": "apache-2.0",
+        "spdx_id": "Apache-2.0"
+      },
+      "stars": 167,
+      "forks": 81,
+      "updated_at": "2026-03-09T04:24:15Z",
+      "source": "github_repo_search:topic:bangla",
+      "owner_location": "Dhaka",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 3.61,
+        "maturity": 2.67
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.9105
+    },
+    {
+      "full_name": "FunctionError/PiratesTv",
+      "name": "PiratesTv",
+      "html_url": "https://github.com/FunctionError/PiratesTv",
+      "description": "📢 This project is not maintained anymore 📢",
+      "category": "Awesome Lists & Resource Collections",
+      "license": {
+        "key": "agpl-3.0",
+        "spdx_id": "AGPL-3.0"
+      },
+      "stars": 114,
+      "forks": 42,
+      "updated_at": "2026-04-19T15:14:22Z",
+      "source": "github_repo_search:bangladesh in:name,description,readme",
+      "owner_location": "192.186.88.1",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 3.26,
+        "maturity": 2.35
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.634
+    },
+    {
+      "full_name": "axpdev-lab/aeroftp",
+      "name": "aeroftp",
+      "html_url": "https://github.com/axpdev-lab/aeroftp",
+      "description": "AeroFTP is a Cross-platform desktop client for FTP, FTPS, SFTP, WebDAV, S3-compatible storage, GitHub, and Cloud providers, built with Rust 🦀 (Tauri) + React",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "gpl-3.0",
+        "spdx_id": "GPL-3.0"
+      },
+      "stars": 124,
+      "forks": 5,
+      "updated_at": "2026-04-19T15:20:50Z",
+      "source": "github_repo_search:bangladesh in:name,description,readme",
+      "owner_location": "Italy",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 3.33,
+        "maturity": 2.04
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.5575
+    },
+    {
+      "full_name": "MAHADI-143/BDMC",
+      "name": "BDMC",
+      "html_url": "https://github.com/MAHADI-143/BDMC",
+      "description": "Free Bangladeshi and Indian Random Number Cloning Tool",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "gpl-3.0",
+        "spdx_id": "GPL-3.0"
+      },
+      "stars": 63,
+      "forks": 33,
+      "updated_at": "2026-03-18T01:57:11Z",
+      "source": "github_user_location:MAHADI-143",
+      "owner_location": "Chittagong,Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.92,
+        "maturity": 2.27
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.444
+    },
+    {
+      "full_name": "rupomsoft/Node.js-Tutorial-Bangla",
+      "name": "Node.js-Tutorial-Bangla",
+      "html_url": "https://github.com/rupomsoft/Node.js-Tutorial-Bangla",
+      "description": "In this comprehensive series, we dive into the world of Node.js, exploring its features, functionalities, and best practices. Whether you're a beginner looking to get started with Node.js or an experienced developer seeking to enhance your skills, this series has something for everyone.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "apache-2.0",
+        "spdx_id": "Apache-2.0"
+      },
+      "stars": 49,
+      "forks": 33,
+      "updated_at": "2026-03-25T18:07:59Z",
+      "source": "github_user_location:rupomsoft",
+      "owner_location": "Dhaka,Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.83,
+        "maturity": 2.27
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.4005
+    },
+    {
+      "full_name": "rupomsoft/Express-js-tutorial-bangla",
+      "name": "Express-js-tutorial-bangla",
+      "html_url": "https://github.com/rupomsoft/Express-js-tutorial-bangla",
+      "description": "Express-js-tutorial-bangla",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "apache-2.0",
+        "spdx_id": "Apache-2.0"
+      },
+      "stars": 48,
+      "forks": 33,
+      "updated_at": "2026-02-17T11:42:37Z",
+      "source": "github_user_location:rupomsoft",
+      "owner_location": "Dhaka,Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.82,
+        "maturity": 2.27
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.396
+    },
+    {
+      "full_name": "codedbyMojnu/react-bangla-tutorial",
+      "name": "react-bangla-tutorial",
+      "html_url": "https://github.com/codedbyMojnu/react-bangla-tutorial",
+      "description": "React Bangla Tutorial - স্টেপ বাই স্টেপ ফলো করে রিয়েক্ট শিখুন।",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 33,
+      "forks": 14,
+      "updated_at": "2026-03-28T13:56:07Z",
+      "source": "github_repo_search:topic:bangla",
+      "owner_location": "Pabna, Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.72,
+        "maturity": 2.12
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.295
+    },
+    {
+      "full_name": "OpenBangla/riti",
+      "name": "riti",
+      "html_url": "https://github.com/OpenBangla/riti",
+      "description": "The Next Gen Bengali input method library written in Rust.",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "mpl-2.0",
+        "spdx_id": "MPL-2.0"
+      },
+      "stars": 26,
+      "forks": 6,
+      "updated_at": "2026-03-07T17:50:05Z",
+      "source": "github_repo_search:topic:bangla",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.67,
+        "maturity": 2.05
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.2475
+    }
+  ]
+}
