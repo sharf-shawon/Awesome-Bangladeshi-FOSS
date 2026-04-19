@@ -1,6 +1,6 @@
 name: Submit a New Project
 description: Propose a project to be added to the Awesome Bangladeshi FOSS list.
-title: "[Submission] <Project Name>"
+title: "[Submission]"
 labels:
   - project-submission
 body:
