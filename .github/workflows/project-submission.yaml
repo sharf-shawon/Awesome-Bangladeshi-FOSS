@@ -235,7 +235,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.create-pr.outputs.pull-request-number }}
-          merge-method: squash
+          merge-method: merge
 
       - name: comment auto-merge enablement failure
         if: steps.create-pr.outputs.pull-request-number && steps.enable-automerge.conclusion == 'failure'

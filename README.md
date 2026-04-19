@@ -179,7 +179,7 @@ The `lint` workflow runs `awesome-lint` for awesome-list quality checks.
 The `validate-readme` workflow enforces project entry format and GitHub repository link rules.
 The `project-submission` workflow validates issue-template submissions, comments with fix instructions on failures, creates a PR on success, and enables auto-merge for that PR.
 The `auto-merge` workflow enables auto-merge for eligible non-draft pull requests once required checks pass.
-The `post-merge-submission` workflow comments on the source issue and closes it after a merged automated submission PR.
+The `post-merge-submission` workflow comments on the source issue, closes it, and deletes merged `automation/project-submission-*` branches.
 The `sync-projects-json` workflow regenerates `data/projects.json` from README project entries and auto-commits sync updates on pull requests (same-repo branches) and pushes.
 The `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
 

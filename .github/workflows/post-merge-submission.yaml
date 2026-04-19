@@ -6,6 +6,7 @@ on:
       - closed
 
 permissions:
+  contents: write
   issues: write
   pull-requests: read
 
@@ -41,3 +42,24 @@ jobs:
               issue_number: issueNumber,
               state: 'closed'
             });
+
+      - name: delete merged submission branch
+        if: startsWith(github.event.pull_request.head.ref, 'automation/project-submission-') && github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branchRef = `heads/${context.payload.pull_request.head.ref}`;
+
+            try {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: branchRef
+              });
+            } catch (error) {
+              if (error.status === 422 || error.status === 404) {
+                core.info(`Branch ${branchRef} was already deleted or not found.`);
+              } else {
+                throw error;
+              }
+            }
