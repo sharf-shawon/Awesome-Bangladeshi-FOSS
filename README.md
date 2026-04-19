@@ -40,7 +40,6 @@ Projects should have:
 
 ## Mobile Apps
 
-- [Android Week View](https://github.com/alamkanak/Android-Week-View) - Android calendar component with customizable day and week views.
 - [Android-Week-View (modern fork)](https://github.com/aniruddh-0701/Android-Week-View) - Maintained fork of Android Week View with updated tooling.
 
 ## Developer Tools & Libraries
@@ -48,7 +47,7 @@ Projects should have:
 - [Avro Keyboard](https://github.com/mugli/Avro-Keyboard) - Unicode-compliant Bangla input method editor for Windows.
 - [Bangla NLP Parallel Dataset Tools](https://github.com/likhonsheikh54/BanglaNLP) - Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets.
 - [BNLP](https://github.com/sagorbrur/bnlp) - Bengali NLP toolkit with tokenization, embeddings, POS tagging, and NER.
-- [BNLP Bangla-BERT Tools](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
+- [bangla-bert](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
 - [BNLTK](https://github.com/asraf-patoary/bnltk) - Python Bangla NLP toolkit for tokenization, stemming, and POS tagging.
 - [charisma](https://github.com/usmanhalalit/charisma) - Responsive multi-skin admin dashboard template for web applications.
 - [coreui-django-boilerplate](https://github.com/ni8mr/coreui-django-boilerplate) - Django starter project prewired with the CoreUI Bootstrap admin template.
@@ -65,7 +64,6 @@ Projects should have:
 - [kctl](https://github.com/alaminopu/kctl) - Rust-based CLI wrapper to simplify commonly used `kubectl` commands.
 - [kotlin-jsonq](https://github.com/s4kibs4mi/kotlin-jsonq) - Kotlin implementation of a JsonQ-style JSON query API.
 - [lambda-mod-zsh-theme](https://github.com/halfo/lambda-mod-zsh-theme) - Git-aware ZSH shell theme designed for Unicode-capable terminals.
-- [Made in Bangladesh list](https://github.com/made-in-bangladesh/made-in-bangladesh) - Curated index of Bangladeshi frameworks, libraries, and software projects.
 - [OpenBangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard) - Open source Bangla input method for GNU/Linux with Avro phonetic and other layouts.
 - [py-jsonq](https://github.com/s1s1ty/py-jsonq) - Python port of the JsonQ query builder for working with JSON data.
 - [shc](https://github.com/neurobin/shc) - Shell script compiler that converts shell scripts to C source and stripped binaries.
