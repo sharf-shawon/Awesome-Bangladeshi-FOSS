@@ -6,6 +6,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   awesome-lint:
     runs-on: ubuntu-latest
