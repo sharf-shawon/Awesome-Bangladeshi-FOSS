@@ -162,6 +162,7 @@ Projects should have:
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
+- [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 ## Awesome Lists & Resource Collections
 
 - [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
