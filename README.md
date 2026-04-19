@@ -166,6 +166,7 @@ Projects should have:
 - [Bangla All Programming Resources](https://github.com/BanglaProgramming/Bangla-All-Programming-Resources) - Bangla programming tutorials and references organized by core CS topics.
 - [Bangla Programming Resources](https://github.com/me-shaon/bangla-programming-resources) - Curated Bangla learning materials across algorithms, data structures, and software fundamentals.
 - [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
+- [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
 
 ## Contributing
