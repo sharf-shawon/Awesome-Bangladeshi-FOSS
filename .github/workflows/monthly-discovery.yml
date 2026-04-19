@@ -1,0 +1,171 @@
+name: monthly-discovery
+
+on:
+  schedule:
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover_candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: install automation dependencies
+        run: python -m pip install -r automation-requirements.txt
+
+      - name: discover candidates from GitHub search
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/discover_candidates.py --output data/candidates.json
+
+      - name: upload candidates artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidates
+          path: data/candidates.json
+          if-no-files-found: error
+
+  augment_with_social_media:
+    needs: discover_candidates
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: install automation dependencies
+        run: python -m pip install -r automation-requirements.txt
+
+      - name: download candidates artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: candidates
+          path: data
+
+      - name: augment with social/web discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REDDIT_TOKEN: ${{ secrets.REDDIT_TOKEN }}
+          SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
+        run: python scripts/augment_candidates_with_social.py --input data/candidates.json --output data/candidates_augmented.json
+
+      - name: upload augmented candidates artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidates-augmented
+          path: data/candidates_augmented.json
+          if-no-files-found: error
+
+  filter_and_rank:
+    needs: augment_with_social_media
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: install automation dependencies
+        run: python -m pip install -r automation-requirements.txt
+
+      - name: download augmented candidates artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: candidates-augmented
+          path: data
+
+      - name: filter and rank candidates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+        run: python scripts/filter_and_rank_candidates.py --input data/candidates_augmented.json --projects data/projects.json --output data/top10_to_add.json --limit 10
+
+      - name: upload top candidates artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: top-candidates
+          path: data/top10_to_add.json
+          if-no-files-found: error
+
+  open_pr_with_changes:
+    needs: filter_and_rank
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: install automation dependencies
+        run: python -m pip install -r automation-requirements.txt
+
+      - name: download top candidates artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: top-candidates
+          path: data
+
+      - name: apply top candidates to README
+        run: python scripts/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md
+
+      - name: regenerate projects JSON from README
+        run: python scripts/generate_projects_json.py
+
+      - name: validate README links
+        run: python scripts/validate_readme_links.py
+
+      - name: detect changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: compute month tag
+        if: steps.changes.outputs.has_changes == 'true'
+        id: month
+        run: echo "tag=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      - name: create pull request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
+          branch: auto/add-bd-foss-${{ steps.month.outputs.tag }}
+          base: ${{ github.event.repository.default_branch }}
+          title: chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})
+          body-path: data/monthly_pr_body.md
+          draft: false
+          labels: |
+            automated-submission
+
+      - name: no-op log
+        if: steps.changes.outputs.has_changes != 'true'
+        run: echo "No new qualifying repositories found; no PR created."
