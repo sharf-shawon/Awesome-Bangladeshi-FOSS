@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -100,3 +101,25 @@ def test_generate_empty_readme_returns_no_projects(monkeypatch, tmp_path):
 
     result = generate_projects_json.generate_projects()
     assert result["projects"] == []
+
+
+def test_main_writes_output_file(monkeypatch, tmp_path):
+    readme = tmp_path / "README.md"
+    readme.write_text(_README, encoding="utf-8")
+    output = tmp_path / "data" / "projects.json"
+    (tmp_path / "data").mkdir()
+    monkeypatch.setattr(generate_projects_json, "README_PATH", readme)
+    monkeypatch.setattr(generate_projects_json, "OUTPUT_PATH", output)
+    monkeypatch.setattr(generate_projects_json, "REPO_ROOT", tmp_path)
+    assert generate_projects_json.main() == 0
+    assert output.exists()
+    data = json.loads(output.read_text())
+    assert "projects" in data
+    assert len(data["projects"]) > 0
+
+
+def test_main_raises_if_readme_missing(monkeypatch, tmp_path):
+    monkeypatch.setattr(generate_projects_json, "README_PATH", tmp_path / "NOFILE.md")
+    monkeypatch.setattr(generate_projects_json, "OUTPUT_PATH", tmp_path / "out.json")
+    with pytest.raises(FileNotFoundError):
+        generate_projects_json.main()

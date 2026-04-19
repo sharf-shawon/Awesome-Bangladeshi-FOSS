@@ -133,6 +133,33 @@ def test_classify_and_score_uses_heuristic_category_as_fallback_for_invalid_llm_
     assert result["category"] != "INVALID CATEGORY"
 
 
+def test_call_openai_json_returns_none_for_empty_choices(monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    mock_response = mock.MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"choices": []}
+    with mock.patch("ai_utils.requests.post", return_value=mock_response):
+        assert ai_utils.call_openai_json({"name": "x"}) is None
+
+
+def test_call_openai_json_returns_none_for_empty_content(monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    mock_response = mock.MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"choices": [{"message": {"content": ""}}]}
+    with mock.patch("ai_utils.requests.post", return_value=mock_response):
+        assert ai_utils.call_openai_json({"name": "x"}) is None
+
+
+def test_call_openai_json_returns_none_for_invalid_json_content(monkeypatch):
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    mock_response = mock.MagicMock()
+    mock_response.status_code = 200
+    mock_response.json.return_value = {"choices": [{"message": {"content": "not-json!!!"}}]}
+    with mock.patch("ai_utils.requests.post", return_value=mock_response):
+        assert ai_utils.call_openai_json({"name": "x"}) is None
+
+
 def test_classify_and_score_clamps_scores_from_llm(monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
     mock_response = mock.MagicMock()

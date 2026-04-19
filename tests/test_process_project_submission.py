@@ -117,6 +117,11 @@ def test_parse_submission_bad_url_raises():
         pps.parse_submission(_issue_body(url="https://example.com/owner/repo"))
 
 
+def test_parse_submission_missing_category_raises():
+    with pytest.raises(ValueError, match="Category"):
+        pps.parse_submission(_issue_body(category=""))
+
+
 def test_parse_submission_unknown_category_raises():
     with pytest.raises(ValueError, match="Unsupported category"):
         pps.parse_submission(_issue_body(category="Unknown Section"))
@@ -189,6 +194,18 @@ def test_insert_entry_missing_section_raises():
         pps.insert_entry_in_section(_SECTION_README, "Nonexistent Section", entry)
 
 
+def test_insert_entry_last_section_has_no_next_header():
+    # When the target section is the last section in the file, section_end = len(lines).
+    readme = dedent("""\
+        ## Web Applications
+
+        - [Alpha App](https://github.com/owner/alpha) - First app.
+    """)
+    entry = "- [Zebra App](https://github.com/owner/zebra) - Last app."
+    result = pps.insert_entry_in_section(readme, "Web Applications", entry)
+    assert "https://github.com/owner/zebra" in result
+
+
 # ---------------------------------------------------------------------------
 # write_output
 # ---------------------------------------------------------------------------
@@ -244,5 +261,41 @@ def test_main_inserts_entry_into_readme(monkeypatch, tmp_path):
 
 def test_main_empty_issue_body_returns_error(monkeypatch, tmp_path):
     monkeypatch.setenv("ISSUE_BODY", "")
+    monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    assert pps.main() == 1
+
+
+def test_main_invalid_submission_returns_error(monkeypatch, tmp_path):
+    # parse_submission raises ValueError (bad URL) → main returns 1
+    readme = tmp_path / "README.md"
+    readme.write_text(_SECTION_README, encoding="utf-8")
+    monkeypatch.setattr(pps, "README_PATH", readme)
+    monkeypatch.setenv("ISSUE_BODY", _issue_body(url="https://example.com/not/github"))
+    monkeypatch.setenv("ISSUE_NUMBER", "1")
+    monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    assert pps.main() == 1
+
+
+def test_main_missing_readme_returns_error(monkeypatch, tmp_path):
+    monkeypatch.setattr(pps, "README_PATH", tmp_path / "NOFILE.md")
+    monkeypatch.setenv("ISSUE_BODY", _issue_body())
+    monkeypatch.setenv("ISSUE_NUMBER", "2")
+    monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    assert pps.main() == 1
+
+
+def test_main_duplicate_url_returns_error(monkeypatch, tmp_path):
+    # The URL from _issue_body is already in _SECTION_README → insert raises ValueError
+    readme = tmp_path / "README.md"
+    readme.write_text(_SECTION_README, encoding="utf-8")
+    monkeypatch.setattr(pps, "README_PATH", readme)
+    # Use a URL that already exists in _SECTION_README
+    body = _issue_body(
+        name="Alpha Duplicate",
+        url="https://github.com/owner/alpha",
+        desc="Duplicate of existing entry.",
+    )
+    monkeypatch.setenv("ISSUE_BODY", body)
+    monkeypatch.setenv("ISSUE_NUMBER", "3")
     monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
     assert pps.main() == 1
