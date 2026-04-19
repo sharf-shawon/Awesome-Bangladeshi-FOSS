@@ -39,6 +39,7 @@ Projects should have:
 - [bdapis](https://github.com/AbmSourav/bdapis) - REST API service exposing Bangladesh administrative locations for client applications.
 - [Co-ronaBD.info](https://github.com/KhanShaheb34/Co-ronaBD.info) - Interactive dashboard visualizing Bangladesh COVID-19 case statistics and trends.
 - [CoronaInfoBD](https://github.com/TeamTigers/coronainfobd) - Real-time coronavirus tracker for Bangladesh with data visualization and awareness content.
+- [FinanceFrz](https://github.com/sharf-shawon/FinanceFrz) - Personal finance web app for tracking income and expenses, built as a real-world budgeting tool.
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
 - [Node.js Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
@@ -136,6 +137,8 @@ Projects should have:
 - [all-bd-mobile-payments-gateway](https://github.com/wp-plugins/all-bd-mobile-payments-gateway) - WooCommerce plugin integrating multiple Bangladeshi mobile payment gateways.
 - [bkash-js](https://github.com/ShejanMahamud/bkash-js) - TypeScript SDK for bKash Checkout URL-based payments with webhook and lifecycle helpers.
 - [bkash-payment-gateway](https://github.com/shahriar-shojib/bkash-payment-gateway) - Node.js and TypeScript library for accepting bKash payments from backend services.
+- [django-bkash](https://github.com/sharf-shawon/django-bkash) - Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants.
+- [django-bulksms-bd](https://github.com/sharf-shawon/django-bulksms-bd) - Django package for integrating the BulkSMSBD.net SMS API with retries, logging, and Bangladeshi number helpers.
 - [edd-bkash-gateway](https://github.com/kapilpaul/edd-bkash-gateway) - Easy Digital Downloads plugin adding bKash payment gateway support.
 - [laravel-bkash](https://github.com/abdursoft/laravel-bkash) - Laravel package for integrating bKash tokenized payment APIs.
 - [Muthofun SMS Gateway](https://github.com/Shipu/muthofun-sms-gateway) - PHP and Laravel client for integrating the Bangladeshi Muthofun SMS gateway.
