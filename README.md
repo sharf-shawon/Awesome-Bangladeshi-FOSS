@@ -69,7 +69,7 @@ Projects should have:
 - [BNLP](https://github.com/sagorbrur/bnlp) - Bengali NLP toolkit with tokenization, embeddings, POS tagging, and NER.
 - [BNLP Resources](https://github.com/banglanlp/bnlp-resources) - Dataset collection for Bangla language computing and benchmarks.
 - [BNLTK](https://github.com/asraf-patoary/bnltk) - Python Bangla NLP toolkit for tokenization, stemming, and POS tagging.
-- [Bonsai](https://github.com/rishi420/Bonsai) - Swift utility for presenting custom-sized view controllers on iOS.
+- [Bonsai](https://github.com/rishi420/Bonsai) - Swift utility by a Bangladeshi developer for presenting custom-sized view controllers on iOS.
 - [CF Stats](https://github.com/sudiptob2/cf-stats) - GitHub Action generator for real-time Codeforces activity badges and stat cards.
 - [charisma](https://github.com/usmanhalalit/charisma) - Responsive multi-skin admin dashboard template for web applications.
 - [coreui-django-boilerplate](https://github.com/ni8mr/coreui-django-boilerplate) - Django starter project prewired with the CoreUI Bootstrap admin template.
