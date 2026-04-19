@@ -5,6 +5,8 @@
 
 A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 
+For Better Experience use the web version: [sharf-shawon.github.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.github.io/Awesome-Bangladeshi-FOSS/)
+
 ## Contents
 
 <!--lint disable awesome-toc-->
@@ -53,6 +55,8 @@ Projects should have:
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
 - [Zooming Classroom](https://github.com/yeazin/Zooming-cls) - Online classroom platform built with Django for Bangladeshi students.
 
+[Back to top](#contents)
+
 ## Mobile Apps
 
 - [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Android library for displaying calendar week views with customizable day and event layouts.
@@ -61,6 +65,8 @@ Projects should have:
 - [Incredible Bangladesh](https://github.com/asnbd/incredible-bangladesh) - Tourism guide Android app showcasing Bangladeshi attractions with maps and location details.
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
 - [SUic Player](https://github.com/soiadmahedi/SUic-Player) - Android audio and video player built on AndroidX Media3 ExoPlayer.
+
+[Back to top](#contents)
 
 ## Developer Tools & Libraries
 
@@ -124,6 +130,8 @@ Projects should have:
 - [WordPress Settings API Class](https://github.com/tareq1988/wordpress-settings-api-class) - PHP wrapper simplifying WordPress options panels using the Settings API.
 - [WP Eloquent](https://github.com/tareq1988/wp-eloquent) - Library for using Laravel's Eloquent ORM inside WordPress plugins and themes.
 
+[Back to top](#contents)
+
 ## Government & Utility Services
 
 - [Bangladesh GeoCode](https://github.com/nuhil/bangladesh-geocode) - Bangladesh administrative geocode dataset in SQL, CSV, JSON, XML, and PHP formats.
@@ -137,6 +145,8 @@ Projects should have:
 - [laravel-bangladesh-geocode](https://github.com/devfaysal/laravel-bangladesh-geocode) - Laravel package for seeding and querying Bangladesh administrative location data.
 - [Medicinedb](https://github.com/WSAyan/medicinedb) - SQLite medicine database with JSON and CSV exports focused on the Bangladesh market.
 - [ProxyBD](https://github.com/fahimscirex/proxybd) - Auto-updated list of Bangladeshi proxy servers for research and testing.
+
+[Back to top](#contents)
 
 ## Fintech & Payments
 
@@ -152,6 +162,8 @@ Projects should have:
 - [Paysenz](https://github.com/alamgircsebd/paysenz) - Online payment gateway integration library for Bangladeshi merchants.
 - [SSLCommerz WooCommerce](https://github.com/sslcommerz/SSLCommerz-Woocommerce) - WooCommerce plugin for the Bangladeshi SSLCommerz payment gateway.
 
+[Back to top](#contents)
+
 ## Other FOSS Projects
 
 - [Archcraft](https://github.com/archcraft-os/archcraft) - Minimal, aesthetic Arch-based Linux distribution with lightweight window managers.
@@ -163,6 +175,9 @@ Projects should have:
 
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
+
+[Back to top](#contents)
+
 ## Awesome Lists & Resource Collections
 
 - [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
@@ -172,6 +187,8 @@ Projects should have:
 - [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
 - [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
+
+[Back to top](#contents)
 
 ## Contributing
 
