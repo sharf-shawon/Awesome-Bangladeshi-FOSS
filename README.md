@@ -157,6 +157,7 @@ Projects should have:
 - [Awesome Bangla Datasets](https://github.com/sabbirhossainujjal/Awesome_Bangla_Datasets) - Curated index of Bangla language datasets for AI and deep learning.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
+- [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
 ## Awesome Lists & Resource Collections
 
 - [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
