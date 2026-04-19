@@ -33,14 +33,13 @@ Projects should have:
 ## Web Applications
 
 - [BanglaGeoAPI](https://github.com/thecodermehedi/BanglaGeoAPI) - RESTful API server for Bangladesh administrative geo data built with Node.js and TypeScript.
-- [Bangladesh Location Data](https://github.com/sohan-99/bangladesh-location-data) - Hierarchical Bangladesh location dataset with divisions, districts, upazilas, and unions in Bangla and English.
 - [Bangladesh Renovation Platform](https://github.com/shamspias/Bangladesh-Renovation-Platform) - Civic engagement platform for proposing ideas, reporting problems, and sharing solutions.
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
 - [OSINT-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.
 
 ## Mobile Apps
 
-- [Android-Week-View (modern fork)](https://github.com/aniruddh-0701/Android-Week-View) - Maintained fork of Android Week View with updated tooling.
+- [Android-Week-View](https://github.com/aniruddh-0701/Android-Week-View) - Maintained fork of Android Week View with updated tooling.
 
 ## Developer Tools & Libraries
 
