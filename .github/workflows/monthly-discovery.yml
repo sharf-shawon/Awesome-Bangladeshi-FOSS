@@ -131,12 +131,12 @@ jobs:
         id: count
         run: |
           count=$(python - <<'PY'
-import json
-from pathlib import Path
-payload = json.loads(Path('data/top10_to_add.json').read_text(encoding='utf-8'))
-print(int(payload.get('selected_count') or 0))
-PY
-)
+            import json
+            from pathlib import Path
+            payload = json.loads(Path('data/top10_to_add.json').read_text(encoding='utf-8'))
+            print(int(payload.get('selected_count') or 0))
+            PY
+            )
           echo "selected_count=$count" >> "$GITHUB_OUTPUT"
 
       - name: prepare monthly review bundle
