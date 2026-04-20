@@ -2,6 +2,12 @@
   "projects": [
     {
       "category": "Web Applications",
+      "name": "Awesome-Bangladeshi-FOSS",
+      "repository": "https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS",
+      "description": "A curated list of high-quality free and open source software created in or actively maintained from Bangladesh."
+    },
+    {
+      "category": "Web Applications",
       "name": "Bangladesh Income Tax Calculator",
       "repository": "https://github.com/ssi-anik/bd-income-tax-calculator",
       "description": "Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law."
