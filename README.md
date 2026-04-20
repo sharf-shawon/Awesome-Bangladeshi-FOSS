@@ -41,6 +41,7 @@ Projects should have:
 
 ## Web Applications
 
+- [Awesome-Bangladeshi-FOSS](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS) - A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 - [Bangladesh Income Tax Calculator](https://github.com/ssi-anik/bd-income-tax-calculator) - Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law.
 - [Bangladesh Renovation Platform](https://github.com/shamspias/Bangladesh-Renovation-Platform) - Civic engagement platform for proposing ideas, reporting problems, and sharing solutions.
 - [Bangladesh Tech Companies](https://github.com/MBSTUPC/tech-companies-in-bangladesh) - Community-maintained directory of tech companies in Bangladesh for job seekers and networking.
