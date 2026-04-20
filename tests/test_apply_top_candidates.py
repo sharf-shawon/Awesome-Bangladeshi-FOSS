@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import sys
+from pathlib import Path
 
 import pytest
 
@@ -315,16 +316,19 @@ def _setup(tmp_path, top10=None, readme=None):
     readme_file = tmp_path / "README.md"
     readme_file.write_text(readme or _README_CONTENT, encoding="utf-8")
     pr_body_file = tmp_path / "pr_body.md"
-    return input_file, readme_file, pr_body_file
+    rejects_file = tmp_path / "rejected_projects.json"
+    rejects_file.write_text(json.dumps({"rejected": []}), encoding="utf-8")
+    return input_file, readme_file, pr_body_file, rejects_file
 
 
 def test_main_inserts_entry_and_creates_pr_body(monkeypatch, tmp_path):
-    inp, readme, pr = _setup(tmp_path)
+    inp, readme, pr, rejects = _setup(tmp_path)
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(inp),
         "--readme", str(readme),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     assert atc.main() == 0
     assert "https://github.com/bd-org/new-tool" in readme.read_text()
@@ -337,13 +341,14 @@ def test_main_skips_duplicate_url(monkeypatch, tmp_path):
     top10 = {"selected": [{"full_name": "owner/old-tool", "name": "Old Tool",
                             "html_url": "https://github.com/owner/old-tool",
                             "description": "Already here.", "category": "Developer Tools & Libraries"}]}
-    inp, readme, pr = _setup(tmp_path, top10=top10)
+    inp, readme, pr, rejects = _setup(tmp_path, top10=top10)
     original = readme.read_text()
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(inp),
         "--readme", str(readme),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     atc.main()
     # URL should appear exactly once (not duplicated)
@@ -351,13 +356,14 @@ def test_main_skips_duplicate_url(monkeypatch, tmp_path):
 
 
 def test_main_empty_selected_is_noop(monkeypatch, tmp_path):
-    inp, readme, pr = _setup(tmp_path, top10={"selected": []})
+    inp, readme, pr, rejects = _setup(tmp_path, top10={"selected": []})
     original = readme.read_text()
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(inp),
         "--readme", str(readme),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     assert atc.main() == 0
     assert "No new high-quality" in pr.read_text()
@@ -368,36 +374,39 @@ def test_main_maps_datasets_category(monkeypatch, tmp_path):
                             "html_url": "https://github.com/owner/ds",
                             "description": "A Bangladesh dataset.",
                             "category": "Datasets & Resources"}]}
-    inp, readme, pr = _setup(tmp_path, top10=top10)
+    inp, readme, pr, rejects = _setup(tmp_path, top10=top10)
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(inp),
         "--readme", str(readme),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     assert atc.main() == 0
     assert "https://github.com/owner/ds" in readme.read_text()
 
 
 def test_main_missing_input_raises(monkeypatch, tmp_path):
-    _, readme, pr = _setup(tmp_path)
+    _, readme, pr, rejects = _setup(tmp_path)
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(tmp_path / "missing.json"),
         "--readme", str(readme),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     with pytest.raises(FileNotFoundError):
         atc.main()
 
 
 def test_main_missing_readme_raises(monkeypatch, tmp_path):
-    inp, _, pr = _setup(tmp_path)
+    inp, _, pr, rejects = _setup(tmp_path)
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(inp),
         "--readme", str(tmp_path / "NOFILE.md"),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     with pytest.raises(FileNotFoundError):
         atc.main()
@@ -409,15 +418,80 @@ def test_main_entry_inserted_in_alphabetical_order(monkeypatch, tmp_path):
                             "html_url": "https://github.com/bd/aaa",
                             "description": "Alphabetically first tool.",
                             "category": "Developer Tools & Libraries"}]}
-    inp, readme, pr = _setup(tmp_path, top10=top10)
+    inp, readme, pr, rejects = _setup(tmp_path, top10=top10)
     monkeypatch.setattr(sys, "argv", [
         "apply_top_candidates.py",
         "--input", str(inp),
         "--readme", str(readme),
         "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
     ])
     atc.main()
     lines = readme.read_text().splitlines()
     dev_entries = [l for l in lines if l.strip().startswith("- [")
                    and any(k in l for k in ("aaa", "old-tool"))]
     assert "aaa" in dev_entries[0].lower()
+
+
+def test_split_selected_and_rejected_uses_proposed_subset():
+    payload = {
+        "proposed": [
+            {"full_name": "owner/keep", "html_url": "https://github.com/owner/keep"},
+            {"full_name": "owner/reject", "html_url": "https://github.com/owner/reject"},
+        ],
+        "selected": [
+            {"full_name": "owner/keep", "html_url": "https://github.com/owner/keep"},
+        ],
+    }
+    accepted, rejected = atc.split_selected_and_rejected(payload)
+    assert [item["full_name"] for item in accepted] == ["owner/keep"]
+    assert [item["full_name"] for item in rejected] == ["owner/reject"]
+
+
+def test_main_review_only_does_not_touch_readme(monkeypatch, tmp_path):
+    top10 = {"proposed": [{"full_name": "owner/new", "name": "New",
+                            "html_url": "https://github.com/owner/new",
+                            "description": "New tool.", "category": "Developer Tools & Libraries"}]}
+    inp, readme, pr, rejects = _setup(tmp_path, top10=top10)
+    before = readme.read_text()
+    monkeypatch.setattr(sys, "argv", [
+        "apply_top_candidates.py",
+        "--input", str(inp),
+        "--readme", str(readme),
+        "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
+        "--review-only",
+    ])
+    assert atc.main() == 0
+    assert readme.read_text() == before
+    assert "Review instructions" in pr.read_text()
+
+
+def test_main_records_rejected_candidates(monkeypatch, tmp_path):
+    top10 = {
+        "proposed": [
+            {"full_name": "owner/keep", "name": "Keep",
+             "html_url": "https://github.com/owner/keep",
+             "description": "Keep me.", "category": "Developer Tools & Libraries"},
+            {"full_name": "owner/reject", "name": "Reject",
+             "html_url": "https://github.com/owner/reject",
+             "description": "Reject me.", "category": "Developer Tools & Libraries"},
+        ],
+        "selected": [
+            {"full_name": "owner/keep", "name": "Keep",
+             "html_url": "https://github.com/owner/keep",
+             "description": "Keep me.", "category": "Developer Tools & Libraries"},
+        ],
+    }
+    inp, readme, pr, rejects = _setup(tmp_path, top10=top10)
+    monkeypatch.setattr(sys, "argv", [
+        "apply_top_candidates.py",
+        "--input", str(inp),
+        "--readme", str(readme),
+        "--pr-body-output", str(pr),
+        "--rejects", str(rejects),
+    ])
+    assert atc.main() == 0
+    payload = json.loads(rejects.read_text())
+    assert payload["rejected_count"] == 1
+    assert payload["rejected"][0]["full_name"] == "owner/reject"

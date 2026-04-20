@@ -65,3 +65,10 @@ body:
           required: true
         - label: I used a GitHub repository URL in the format https://github.com/owner/repo.
           required: true
+
+  - type: textarea
+    id: reconsideration_notes
+    attributes:
+      label: Reconsideration notes
+      description: Only fill this in if the repository is on the reject list and you want it reviewed anyway.
+      placeholder: Explain why this repository should still be considered.

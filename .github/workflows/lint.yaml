@@ -16,5 +16,5 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
 
-      - name: lint README
-        run: npx -y awesome-lint README.md
+      - name: lint repository
+        run: python scripts/lint_repo.py

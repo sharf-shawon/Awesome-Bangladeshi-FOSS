@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Tests",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Test File",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "pytest",
+        "${input:testFile}",
+        "-q"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Pytest Node",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "pytest",
+        "${input:pytestNode}",
+        "-q"
+      ],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint Repository",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "scripts/lint_repo.py"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "testFile",
+      "type": "promptString",
+      "description": "Pytest file path relative to the workspace",
+      "default": "tests/test_example.py"
+    },
+    {
+      "id": "pytestNode",
+      "type": "promptString",
+      "description": "Pytest node id, for example tests/test_example.py::TestClass::test_case",
+      "default": "tests/test_example.py::test_case"
+    }
+  ]
+}

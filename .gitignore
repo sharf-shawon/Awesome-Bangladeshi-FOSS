@@ -34,3 +34,10 @@ htmlcov/
 .env
 .env.*
 !.env.example
+
+# Versioned VS Code workspace settings
+!.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json

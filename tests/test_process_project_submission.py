@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import json
 from pathlib import Path
 from textwrap import dedent
 
@@ -27,7 +28,7 @@ _SECTION_README = dedent("""\
 
 
 def _issue_body(name="My Tool", url="https://github.com/owner/my-tool",
-                desc="A useful tool.", category="Web Applications"):
+                desc="A useful tool.", category="Web Applications", notes=""):
     return dedent(f"""\
         ### Project name
         {name}
@@ -37,7 +38,30 @@ def _issue_body(name="My Tool", url="https://github.com/owner/my-tool",
         {desc}
         ### Category
         {category}
+        ### Reconsideration notes
+        {notes}
     """)
+
+
+def _write_reject_list(path: Path, repos: list[str] | None = None) -> Path:
+    data = {
+        "generated_at": "2026-04-20T00:00:00+00:00",
+        "rejected_count": len(repos or []),
+        "rejected": [
+            {
+                "full_name": repo.replace("https://github.com/", ""),
+                "name": repo.split("/")[-1],
+                "html_url": repo,
+                "description": "Rejected repository",
+                "source": "test",
+                "reason": "test",
+                "rejected_at": "2026-04-20T00:00:00+00:00",
+            }
+            for repo in (repos or [])
+        ],
+    }
+    path.write_text(json.dumps(data), encoding="utf-8")
+    return path
 
 
 # ---------------------------------------------------------------------------
@@ -244,6 +268,7 @@ def test_main_inserts_entry_into_readme(monkeypatch, tmp_path):
     readme = tmp_path / "README.md"
     readme.write_text(_SECTION_README, encoding="utf-8")
     monkeypatch.setattr(pps, "README_PATH", readme)
+    monkeypatch.setattr(pps, "REJECT_LIST_PATH", _write_reject_list(tmp_path / "rejected_projects.json"))
     monkeypatch.setenv("ISSUE_BODY", _issue_body(
         name="Beta App",
         url="https://github.com/owner/beta-app",
@@ -270,6 +295,7 @@ def test_main_invalid_submission_returns_error(monkeypatch, tmp_path):
     readme = tmp_path / "README.md"
     readme.write_text(_SECTION_README, encoding="utf-8")
     monkeypatch.setattr(pps, "README_PATH", readme)
+    monkeypatch.setattr(pps, "REJECT_LIST_PATH", _write_reject_list(tmp_path / "rejected_projects.json"))
     monkeypatch.setenv("ISSUE_BODY", _issue_body(url="https://example.com/not/github"))
     monkeypatch.setenv("ISSUE_NUMBER", "1")
     monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
@@ -278,6 +304,7 @@ def test_main_invalid_submission_returns_error(monkeypatch, tmp_path):
 
 def test_main_missing_readme_returns_error(monkeypatch, tmp_path):
     monkeypatch.setattr(pps, "README_PATH", tmp_path / "NOFILE.md")
+    monkeypatch.setattr(pps, "REJECT_LIST_PATH", _write_reject_list(tmp_path / "rejected_projects.json"))
     monkeypatch.setenv("ISSUE_BODY", _issue_body())
     monkeypatch.setenv("ISSUE_NUMBER", "2")
     monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
@@ -289,6 +316,7 @@ def test_main_duplicate_url_returns_error(monkeypatch, tmp_path):
     readme = tmp_path / "README.md"
     readme.write_text(_SECTION_README, encoding="utf-8")
     monkeypatch.setattr(pps, "README_PATH", readme)
+    monkeypatch.setattr(pps, "REJECT_LIST_PATH", _write_reject_list(tmp_path / "rejected_projects.json"))
     # Use a URL that already exists in _SECTION_README
     body = _issue_body(
         name="Alpha Duplicate",
@@ -299,3 +327,39 @@ def test_main_duplicate_url_returns_error(monkeypatch, tmp_path):
     monkeypatch.setenv("ISSUE_NUMBER", "3")
     monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
     assert pps.main() == 1
+
+
+def test_main_rejected_repo_requires_notes(monkeypatch, tmp_path):
+    readme = tmp_path / "README.md"
+    readme.write_text(_SECTION_README, encoding="utf-8")
+    rejected = _write_reject_list(tmp_path / "rejected_projects.json", ["https://github.com/owner/rejected-tool"])
+    monkeypatch.setattr(pps, "README_PATH", readme)
+    monkeypatch.setattr(pps, "REJECT_LIST_PATH", rejected)
+    monkeypatch.setenv("ISSUE_BODY", _issue_body(
+        name="Rejected Tool",
+        url="https://github.com/owner/rejected-tool",
+        desc="Needs reconsideration.",
+        notes="",
+    ))
+    monkeypatch.setenv("ISSUE_NUMBER", "4")
+    monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    assert pps.main() == 1
+
+
+def test_main_rejected_repo_with_notes_is_allowed(monkeypatch, tmp_path):
+    readme = tmp_path / "README.md"
+    readme.write_text(_SECTION_README, encoding="utf-8")
+    rejected = _write_reject_list(tmp_path / "rejected_projects.json", ["https://github.com/owner/rejected-tool"])
+    monkeypatch.setattr(pps, "README_PATH", readme)
+    monkeypatch.setattr(pps, "REJECT_LIST_PATH", rejected)
+    monkeypatch.setenv("ISSUE_BODY", _issue_body(
+        name="Rejected Tool",
+        url="https://github.com/owner/rejected-tool",
+        desc="Needs reconsideration.",
+        notes="This repo is now maintained and fills a gap in the list.",
+    ))
+    monkeypatch.setenv("ISSUE_NUMBER", "5")
+    monkeypatch.delenv("GITHUB_OUTPUT", raising=False)
+    assert pps.main() == 0
+    payload = json.loads(rejected.read_text())
+    assert payload["rejected_count"] == 0

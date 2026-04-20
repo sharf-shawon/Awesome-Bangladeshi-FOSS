@@ -10,18 +10,20 @@ For Better Experience use the web version: [sharf-shawon.github.io/Awesome-Bangl
 ## Contents
 
 <!--lint disable awesome-toc-->
-- [About](#about)
-  - [How entries are selected](#how-entries-are-selected)
-- [Web Applications](#web-applications)
-- [Mobile Apps](#mobile-apps)
-- [Developer Tools & Libraries](#developer-tools--libraries)
-- [Government & Utility Services](#government--utility-services)
-- [Fintech & Payments](#fintech--payments)
-- [Other FOSS Projects](#other-foss-projects)
-- [Awesome Lists & Resource Collections](#awesome-lists--resource-collections)
-- [Contributing](#contributing)
-- [Automation](#automation)
-- [License](#license)
+- [Awesome Bangladeshi FOSS](#awesome-bangladeshi-foss)
+  - [Contents](#contents)
+  - [About](#about)
+    - [How entries are selected](#how-entries-are-selected)
+  - [Web Applications](#web-applications)
+  - [Mobile Apps](#mobile-apps)
+  - [Developer Tools \& Libraries](#developer-tools--libraries)
+  - [Government \& Utility Services](#government--utility-services)
+  - [Fintech \& Payments](#fintech--payments)
+  - [Other FOSS Projects](#other-foss-projects)
+  - [Awesome Lists \& Resource Collections](#awesome-lists--resource-collections)
+  - [Contributing](#contributing)
+  - [Automation](#automation)
+  - [License](#license)
 <!--lint enable awesome-toc-->
 
 ## About
@@ -55,7 +57,6 @@ Projects should have:
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
 - [Zooming Classroom](https://github.com/yeazin/Zooming-cls) - Online classroom platform built with Django for Bangladeshi students.
 
-[Back to top](#contents)
 
 ## Mobile Apps
 
@@ -66,7 +67,6 @@ Projects should have:
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
 - [SUic Player](https://github.com/soiadmahedi/SUic-Player) - Android audio and video player built on AndroidX Media3 ExoPlayer.
 
-[Back to top](#contents)
 
 ## Developer Tools & Libraries
 
@@ -131,7 +131,6 @@ Projects should have:
 - [WordPress Settings API Class](https://github.com/tareq1988/wordpress-settings-api-class) - PHP wrapper simplifying WordPress options panels using the Settings API.
 - [WP Eloquent](https://github.com/tareq1988/wp-eloquent) - Library for using Laravel's Eloquent ORM inside WordPress plugins and themes.
 
-[Back to top](#contents)
 
 ## Government & Utility Services
 
@@ -147,7 +146,6 @@ Projects should have:
 - [Medicinedb](https://github.com/WSAyan/medicinedb) - SQLite medicine database with JSON and CSV exports focused on the Bangladesh market.
 - [ProxyBD](https://github.com/fahimscirex/proxybd) - Auto-updated list of Bangladeshi proxy servers for research and testing.
 
-[Back to top](#contents)
 
 ## Fintech & Payments
 
@@ -163,7 +161,6 @@ Projects should have:
 - [Paysenz](https://github.com/alamgircsebd/paysenz) - Online payment gateway integration library for Bangladeshi merchants.
 - [SSLCommerz WooCommerce](https://github.com/sslcommerz/SSLCommerz-Woocommerce) - WooCommerce plugin for the Bangladeshi SSLCommerz payment gateway.
 
-[Back to top](#contents)
 
 ## Other FOSS Projects
 
@@ -173,7 +170,7 @@ Projects should have:
 - [bangla-wordlist](https://github.com/tahmid02016/bangla-wordlist) - Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work.
 - [BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis](https://github.com/fahad35/BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis) - Lexicon of 61k+ Bangla words labeled with positive, negative and neutral sentiment for sentiment analysis and opinion mining.
 - [BDMC](https://github.com/MAHADI-143/BDMC) - Free Bangladeshi and Indian Random Number Cloning Tool.
-- [Express-js-tutorial-bangla](https://github.com/rupomsoft/Express-js-tutorial-bangla) - Express-js-tutorial-bangla.
+- [Express-js-tutorial-bangla](https://github.com/rupomsoft/Express-js-tutorial-bangla) - Express.js tutorial in Bangla for developers learning the framework.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
 - [host](https://github.com/htr-tech/host) - Expose your LocalHost with this tool.
@@ -183,7 +180,6 @@ Projects should have:
 - [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React Bangla Tutorial - স্টেপ বাই স্টেপ ফলো করে রিয়েক্ট শিখুন।.
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 
-[Back to top](#contents)
 
 ## Awesome Lists & Resource Collections
 
@@ -196,7 +192,6 @@ Projects should have:
 - [DL-Sneak-Peek](https://github.com/menon92/DL-Sneak-Peek) - Deep learning Bangla resources using TensorFlow.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
 
-[Back to top](#contents)
 
 ## Contributing
 
@@ -206,9 +201,10 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 The `lint` workflow runs `awesome-lint` for awesome-list quality checks.
 The `validate-readme` workflow enforces project entry format and GitHub repository link rules.
-The `project-submission` workflow validates issue-template submissions, comments with fix instructions on failures, creates a PR on success, and enables auto-merge for that PR.
+The `project-submission` workflow validates issue-template submissions, checks the reject list, comments with fix instructions on failures, creates a PR on success, and enables auto-merge for that PR.
 The `auto-merge` workflow enables auto-merge for eligible non-draft pull requests once required checks pass.
 The `post-merge-submission` workflow comments on the source issue, closes it when possible, leaves a prompt to close it manually if needed, and deletes merged `automation/project-submission-*` branches.
+The `monthly-discovery` workflow opens a review PR with the proposed candidates and a `selected` list that maintainers can trim before merge; the `post-merge-monthly-discovery` workflow applies the chosen entries, updates the reject list, and removes the temporary review files afterward.
 The `sync-projects-json` workflow regenerates `data/projects.json` from README project entries and auto-commits sync updates on pull requests (same-repo branches) and pushes.
 The `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
 

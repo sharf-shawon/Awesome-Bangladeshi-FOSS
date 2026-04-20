@@ -544,6 +544,15 @@ def test_main_skips_no_bd_signal(monkeypatch, tmp_path):
     assert json.loads(out.read_text())["selected_count"] == 0
 
 
+def test_main_skips_rejected_repo(monkeypatch, tmp_path):
+    monkeypatch.setattr(far, "load_rejected_repo_refs", lambda: {"bd-org/cool-tool", "https://github.com/bd-org/cool-tool"})
+    rc, out = _run_main(monkeypatch, tmp_path, [_make_cand()])
+    assert rc == 0
+    payload = json.loads(out.read_text())
+    assert payload["selected_count"] == 0
+    assert payload["skipped_count"] >= 1
+
+
 def test_main_respects_limit(monkeypatch, tmp_path):
     candidates = [
         _make_cand(full_name=f"org/repo{i}", html_url=f"https://github.com/org/repo{i}")

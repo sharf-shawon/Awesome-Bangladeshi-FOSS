@@ -129,43 +129,42 @@ jobs:
           name: top-candidates
           path: data
 
-      - name: apply top candidates to README
-        run: python scripts/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md
-
-      - name: regenerate projects JSON from README
-        run: python scripts/generate_projects_json.py
-
-      - name: validate README links
-        run: python scripts/validate_readme_links.py
-
-      - name: detect changes
-        id: changes
+      - name: inspect proposed candidate count
+        id: count
         run: |
-          if git diff --quiet; then
-            echo "has_changes=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_changes=true" >> "$GITHUB_OUTPUT"
-          fi
+          count=$(python - <<'PY'
+import json
+from pathlib import Path
+payload = json.loads(Path('data/top10_to_add.json').read_text(encoding='utf-8'))
+print(int(payload.get('selected_count') or 0))
+PY
+)
+          echo "selected_count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: prepare monthly review bundle
+        if: steps.count.outputs.selected_count != '0'
+        run: python scripts/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md --review-only
 
       - name: compute month tag
-        if: steps.changes.outputs.has_changes == 'true'
+        if: steps.count.outputs.selected_count != '0'
         id: month
         run: echo "tag=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
 
       - name: create pull request
-        if: steps.changes.outputs.has_changes == 'true'
+        if: steps.count.outputs.selected_count != '0'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
-          branch: auto/add-bd-foss-${{ steps.month.outputs.tag }}
+          commit-message: "chore: review monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
+          branch: auto/review-bd-foss-${{ steps.month.outputs.tag }}
           base: ${{ github.event.repository.default_branch }}
-          title: "chore: add monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
+          title: "chore: review monthly Bangladeshi FOSS candidates (${{ steps.month.outputs.tag }})"
           body-path: data/monthly_pr_body.md
           draft: false
           labels: |
             automated-submission
+            monthly-discovery
 
       - name: no-op log
-        if: steps.changes.outputs.has_changes != 'true'
+        if: steps.count.outputs.selected_count == '0'
         run: echo "No new qualifying repositories found; no PR created."

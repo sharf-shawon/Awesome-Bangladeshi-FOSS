@@ -25,6 +25,7 @@ from typing import Any
 import requests
 
 from ai_utils import classify_and_score
+from reject_list import load_rejected_repo_refs, normalize_repo_ref
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -192,6 +193,17 @@ def sort_key(candidate: dict[str, Any]) -> tuple[float, int]:
     return (float(candidate.get("rank_score") or 0), int(candidate.get("stargazers_count") or 0))
 
 
+def candidate_repo_refs(candidate: dict[str, Any]) -> set[str]:
+    refs: set[str] = set()
+    full_name = normalize_repo_ref(str(candidate.get("full_name") or ""))
+    html_url = normalize_repo_ref(str(candidate.get("html_url") or ""))
+    if full_name:
+        refs.add(full_name)
+    if html_url:
+        refs.add(html_url)
+    return refs
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", default=str(DEFAULT_INPUT), help="Augmented candidates JSON path")
@@ -212,6 +224,7 @@ def main() -> int:
     payload = json.loads(input_path.read_text(encoding="utf-8"))
     candidates = payload.get("candidates") or []
     existing_repo_names = load_existing_repo_names(projects_path)
+    rejected_repo_refs = load_rejected_repo_refs()
     session = build_session()
 
     selected: list[dict[str, Any]] = []
@@ -222,6 +235,9 @@ def main() -> int:
             skipped += 1
             continue
         if full_name.lower() in existing_repo_names:
+            skipped += 1
+            continue
+        if candidate_repo_refs(candidate) & rejected_repo_refs:
             skipped += 1
             continue
         if candidate.get("fork") or candidate.get("archived"):
@@ -265,6 +281,26 @@ def main() -> int:
         "input_candidate_count": len(candidates),
         "skipped_count": skipped,
         "selected_count": len(top_selected),
+        "proposed_count": len(selected),
+        "proposed": [
+            {
+                "full_name": c.get("full_name"),
+                "name": c.get("name") or str(c.get("full_name", "")).split("/")[-1],
+                "html_url": c.get("html_url"),
+                "description": c.get("description"),
+                "category": c.get("category"),
+                "license": c.get("license"),
+                "stars": int(c.get("stargazers_count") or 0),
+                "forks": int(c.get("forks_count") or 0),
+                "updated_at": c.get("updated_at"),
+                "source": c.get("source"),
+                "owner_location": c.get("owner_location"),
+                "ai_scores": c.get("ai_scores"),
+                "ai_notes": c.get("ai_notes"),
+                "rank_score": c.get("rank_score"),
+            }
+            for c in selected
+        ],
         "selected": [
             {
                 "full_name": c.get("full_name"),

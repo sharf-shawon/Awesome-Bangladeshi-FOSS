@@ -8,9 +8,12 @@ import re
 import sys
 from pathlib import Path
 
+from reject_list import load_rejected_repo_refs, normalize_repo_ref, update_rejected_projects
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 README_PATH = REPO_ROOT / "README.md"
+REJECT_LIST_PATH = REPO_ROOT / "data" / "rejected_projects.json"
 
 GITHUB_REPO_RE = re.compile(r"^https://github\.com/[^/\s)]+/[^/\s)#]+/?$")
 ENTRY_RE = re.compile(r"^- \[(?P<name>[^\]]+)\]\((?P<link>[^)]+)\) - (?P<desc>.+)$")
@@ -72,6 +75,11 @@ def parse_submission(issue_body: str) -> tuple[str, str, str, str]:
         raise ValueError("Short description must be concise (220 characters max)")
 
     return project_name, repo_url.rstrip("/"), description, category
+
+
+def extract_reconsideration_notes(issue_body: str) -> str:
+    notes = extract_field(issue_body, "Reconsideration notes")
+    return normalize_whitespace(notes)
 
 
 def build_entry_line(name: str, repo_url: str, description: str) -> str:
@@ -150,6 +158,19 @@ def main() -> int:
         print(f"Submission validation failed: {exc}")
         return 1
 
+    rejected_repo_refs = load_rejected_repo_refs(REJECT_LIST_PATH)
+    submission_ref = normalize_repo_ref(repo_url)
+    remove_from_reject_list = False
+    if submission_ref in rejected_repo_refs:
+        reconsideration_notes = extract_reconsideration_notes(issue_body)
+        if not reconsideration_notes:
+            print(
+                "Submission validation failed: this repository is on the reject list. "
+                "Please add a short 'Reconsideration notes' explanation describing why it should be accepted."
+            )
+            return 1
+        remove_from_reject_list = True
+
     if not README_PATH.exists():
         print(f"README not found: {README_PATH}")
         return 1
@@ -168,6 +189,8 @@ def main() -> int:
         return 1
 
     README_PATH.write_text(updated, encoding="utf-8")
+    if remove_from_reject_list:
+        update_rejected_projects(REJECT_LIST_PATH, remove=[repo_url])
 
     issue_suffix = f" #{issue_number}" if issue_number else ""
     pr_title = f"Add {project_name} to {category}{issue_suffix}"
