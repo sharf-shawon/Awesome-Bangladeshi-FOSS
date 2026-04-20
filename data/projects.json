@@ -128,12 +128,6 @@
     },
     {
       "category": "Developer Tools & Libraries",
-      "name": "aeroftp",
-      "repository": "https://github.com/axpdev-lab/aeroftp",
-      "description": "AeroFTP is a Cross-platform desktop client for FTP, FTPS, SFTP, WebDAV, S3-compatible storage, GitHub, and Cloud."
-    },
-    {
-      "category": "Developer Tools & Libraries",
       "name": "Avro Keyboard",
       "repository": "https://github.com/mugli/Avro-Keyboard",
       "description": "Unicode-compliant Bangla input method editor for Windows."
@@ -755,12 +749,6 @@
       "name": "Made In Bangladesh",
       "repository": "https://github.com/made-in-bangladesh/made-in-bangladesh",
       "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
-    },
-    {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "PiratesTv",
-      "repository": "https://github.com/FunctionError/PiratesTv",
-      "description": "📢 This project is not maintained anymore 📢."
     }
   ]
 }
