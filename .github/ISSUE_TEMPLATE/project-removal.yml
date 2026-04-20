@@ -1,0 +1,41 @@
+name: Request Project Removal
+description: Request removal of a project from the Awesome Bangladeshi FOSS list.
+title: "[Removal]"
+labels:
+  - project-removal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request removing a project from the list.
+
+        If you are the repository owner, your request can be auto-merged after checks pass.
+        Non-owner requests will still create a PR, but require maintainer review.
+
+  - type: input
+    id: repository_url
+    attributes:
+      label: Repository URL
+      description: Must be a GitHub repository URL.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for removal
+      description: Briefly explain why this project should be removed from the list.
+      placeholder: The project is no longer maintained and should be removed.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Removal checklist
+      options:
+        - label: I understand this request will create an automated pull request.
+          required: true
+        - label: I used a GitHub repository URL in the format https://github.com/owner/repo.
+          required: true

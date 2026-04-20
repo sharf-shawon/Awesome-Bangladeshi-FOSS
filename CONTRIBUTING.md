@@ -28,8 +28,10 @@ If you use the issue template, automation validates your submission, creates a P
 - Avoid duplicate entries.
 - Links must point to GitHub repository URLs in this format: `https://github.com/owner/repo`.
 - Project Submission Issues must include all required information.
+- Repositories in removed and rejected lists are blocked from automated re-submission.
 - Pull requests must pass all GitHub Actions checks (`lint` and `validate-readme`).
 - Valid and eligible Submission Issues and non-draft pull requests are auto-merged after repository rules and required checks are satisfied.
+- Acceptance thresholds for automation (for example minimum stars) are managed in `data/project_requirements.json`.
 
 ## Local setup
 

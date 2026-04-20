@@ -22,25 +22,15 @@ def main() -> int:
 
     errors: list[str] = []
     seen_links: dict[str, int] = {}
-    current_section: str | None = None
 
     for line_number, raw_line in enumerate(README_PATH.read_text(encoding="utf-8").splitlines(), start=1):
         line = raw_line.strip()
-
-        if line.startswith("## "):
-            current_section = line[3:].strip()
-            continue
 
         match = ENTRY_RE.match(line)
         if not match:
             continue
 
-        name = match.group("name").strip()
         link = match.group("link").strip()
-        desc = match.group("desc").strip()
-
-        if not desc:
-            errors.append(f"Line {line_number}: description cannot be empty.")
 
         if not GITHUB_REPO_RE.match(link):
             errors.append(
@@ -65,5 +55,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     sys.exit(main())

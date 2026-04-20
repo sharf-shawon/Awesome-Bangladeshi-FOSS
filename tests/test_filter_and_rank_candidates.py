@@ -185,6 +185,16 @@ def test_has_min_signal(stars, forks, issues, expected):
     assert far.has_min_signal(cand) is expected
 
 
+@pytest.mark.parametrize("stars,minimum,expected", [
+    (10, 10, True),
+    (9, 10, False),
+    (0, 0, True),
+])
+def test_has_minimum_stars(stars, minimum, expected):
+    cand = {"stargazers_count": stars}
+    assert far.has_minimum_stars(cand, minimum) is expected
+
+
 # ---------------------------------------------------------------------------
 # activity_score
 # ---------------------------------------------------------------------------
@@ -425,6 +435,7 @@ def _run_main(monkeypatch, tmp_path, candidates, projects_data=None, limit=10):
         "scores": {"relevance": 4.5, "usefulness": 4.0, "maturity": 3.5},
         "notes": "test",
     })
+    monkeypatch.setattr(far, "load_project_requirements", lambda: {"minimum_stars": 10})
     monkeypatch.setattr(far, "time", mock.MagicMock())
     monkeypatch.setattr(sys, "argv", [
         "filter_and_rank_candidates.py",
@@ -515,6 +526,13 @@ def test_main_skips_low_signal(monkeypatch, tmp_path):
     assert json.loads(out.read_text())["selected_count"] == 0
 
 
+def test_main_skips_under_minimum_stars(monkeypatch, tmp_path):
+    _, out = _run_main(monkeypatch, tmp_path, [_make_cand(stargazers_count=9, forks_count=20, open_issues_count=20)])
+    payload = json.loads(out.read_text())
+    assert payload["selected_count"] == 0
+    assert payload["requirements"]["minimum_stars"] == 10
+
+
 def test_main_skips_no_bd_signal(monkeypatch, tmp_path):
     monkeypatch.setattr(far, "fetch_owner_location", lambda s, l: "Germany")
     monkeypatch.setattr(far, "fetch_readme_snippet",
@@ -546,6 +564,15 @@ def test_main_skips_no_bd_signal(monkeypatch, tmp_path):
 
 def test_main_skips_rejected_repo(monkeypatch, tmp_path):
     monkeypatch.setattr(far, "load_rejected_repo_refs", lambda: {"bd-org/cool-tool", "https://github.com/bd-org/cool-tool"})
+    rc, out = _run_main(monkeypatch, tmp_path, [_make_cand()])
+    assert rc == 0
+    payload = json.loads(out.read_text())
+    assert payload["selected_count"] == 0
+    assert payload["skipped_count"] >= 1
+
+
+def test_main_skips_removed_repo(monkeypatch, tmp_path):
+    monkeypatch.setattr(far, "load_removed_repo_refs", lambda: {"bd-org/cool-tool", "https://github.com/bd-org/cool-tool"})
     rc, out = _run_main(monkeypatch, tmp_path, [_make_cand()])
     assert rc == 0
     payload = json.loads(out.read_text())

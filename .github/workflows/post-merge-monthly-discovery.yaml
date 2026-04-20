@@ -36,8 +36,8 @@ jobs:
       - name: regenerate projects JSON from README
         run: python scripts/generate_projects_json.py
 
-      - name: validate README links
-        run: python scripts/validate_readme_links.py
+      - name: run repository validation gate
+        run: python scripts/lint_repo.py
 
       - name: commit monthly discovery follow-up
         uses: stefanzweifel/git-auto-commit-action@v5

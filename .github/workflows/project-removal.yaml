@@ -1,4 +1,4 @@
-name: project-submission
+name: project-removal
 
 on:
   issues:
@@ -14,8 +14,8 @@ permissions:
   issues: write
 
 jobs:
-  create-submission-pr:
-    if: contains(github.event.issue.labels.*.name, 'project-submission') || startsWith(github.event.issue.title, '[Submission]') || contains(github.event.issue.body, '### Project name')
+  create-removal-pr:
+    if: contains(github.event.issue.labels.*.name, 'project-removal') || startsWith(github.event.issue.title, '[Removal]') || contains(github.event.issue.body, '### Repository URL')
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -26,15 +26,16 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: prepare README update from issue
+      - name: prepare removal update from issue
         id: prepare
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set +e
-          python scripts/process_project_submission.py 2>&1 | tee prepare.log
+          python scripts/process_project_removal.py 2>&1 | tee prepare.log
           status=${PIPESTATUS[0]}
           echo "status=$status" >> "$GITHUB_OUTPUT"
           echo "log<<EOF" >> "$GITHUB_OUTPUT"
@@ -50,14 +51,12 @@ jobs:
           script: |
             const log = process.env.FAILURE_LOG || 'No details were captured.';
             const body = [
-              'The project submission could not be processed because validation failed.',
+              'The project removal request could not be processed because validation failed.',
               '',
               'How to fix it:',
-              '- Ensure all required fields are filled in the issue template.',
-              '- Use a GitHub repository URL in the format https://github.com/owner/repo.',
-              '- Choose one of the listed categories from the template.',
-              '- Keep the description short and meaningful.',
-              '- Avoid duplicate repositories that already exist in README.',
+              '- Ensure the repository URL is present and in the format https://github.com/owner/repo.',
+              '- Ensure the repository is currently listed in README.',
+              '- Ensure the reason for removal is included and concise.',
               '',
               'Validation details:',
               '```text',
@@ -75,6 +74,10 @@ jobs:
       - name: stop after prepare failure
         if: steps.prepare.outputs.status != '0'
         run: exit 1
+
+      - name: regenerate projects JSON from README
+        if: steps.prepare.outputs.status == '0'
+        run: python scripts/generate_projects_json.py
 
       - name: run repository validation gate
         id: validation
@@ -97,14 +100,7 @@ jobs:
           script: |
             const log = process.env.FAILURE_LOG || 'No details were captured.';
             const body = [
-              'The generated README entry failed the repository validation gate.',
-              '',
-              'How to fix it:',
-              '- Ensure submission fields are valid and complete.',
-              '- Make sure the repository is not already listed in README.',
-              '- Ensure the repository satisfies current project requirements (for example minimum stars).',
-              '- Keep the entry format exactly as: - [Name](https://github.com/owner/repo) - Short, meaningful description.',
-              '- Ensure the README passes both awesome-lint and link validation checks.',
+              'The generated removal change failed the repository validation gate.',
               '',
               'Gate output:',
               '```text',
@@ -130,14 +126,14 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: add project submission from issue #${{ github.event.issue.number }}"
+          commit-message: "chore: remove project from issue #${{ github.event.issue.number }}"
           title: ${{ steps.prepare.outputs.pr_title }}
           body: ${{ steps.prepare.outputs.pr_body }}
           branch: ${{ steps.prepare.outputs.branch_name }}
           base: ${{ github.event.repository.default_branch }}
           labels: |
             automated-submission
-            ready-to-merge
+            project-removal
 
       - name: comment pull request creation failure
         if: steps.create-pr.conclusion == 'failure' && !steps.create-pr.outputs.pull-request-number
@@ -148,15 +144,10 @@ jobs:
             const compareUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/compare/main...${branchName}?expand=1`;
 
             const body = [
-              'I prepared the submission branch, but could not create a pull request automatically.',
+              'I prepared the removal branch, but could not create a pull request automatically.',
               '',
-              'Reason: GitHub Actions is currently not permitted to create pull requests in this repository.',
-              '',
-              'How to fix:',
-              '- In repository settings, go to Actions > General > Workflow permissions.',
-              '- Enable: Allow GitHub Actions to create and approve pull requests.',
-              '',
-              `Manual fallback: open a PR from this compare view: ${compareUrl}`
+              'Manual fallback: open a PR from this compare view:',
+              compareUrl
             ].join('\n');
 
             await github.rest.issues.createComment({
@@ -173,21 +164,28 @@ jobs:
       - name: comment with pull request link
         if: steps.create-pr.outputs.pull-request-number && steps.create-pr.outputs.pull-request-operation == 'created'
         uses: actions/github-script@v7
+        env:
+          OWNER_VERIFIED: ${{ steps.prepare.outputs.owner_verified }}
         with:
           script: |
             const prNumber = `${{ steps.create-pr.outputs.pull-request-number }}`;
             const prUrl = `${{ steps.create-pr.outputs.pull-request-url }}`;
+            const ownerVerified = (process.env.OWNER_VERIFIED || '').toLowerCase() === 'true';
+
+            const body = ownerVerified
+              ? `Thanks for the removal request. I created #${prNumber}: ${prUrl}\n\nRepository ownership was verified, so this PR will be auto-merged when required checks pass.`
+              : `Thanks for the removal request. I created #${prNumber}: ${prUrl}\n\nRepository ownership could not be verified for the issue author. Maintainer review is required before merge.`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `Thanks for the submission. I created #${prNumber}: ${prUrl}\n\nIt will be auto-merged once all required checks pass.`
+              body
             });
 
-      - name: enable auto-merge for created PR
+      - name: enable auto-merge for owner-verified removal
         id: enable-automerge
-        if: steps.create-pr.outputs.pull-request-number
+        if: steps.create-pr.outputs.pull-request-number && steps.prepare.outputs.owner_verified == 'true'
         continue-on-error: true
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
@@ -196,7 +194,7 @@ jobs:
           merge-method: merge
 
       - name: comment auto-merge enablement failure
-        if: steps.create-pr.outputs.pull-request-number && steps.enable-automerge.conclusion == 'failure'
+        if: steps.create-pr.outputs.pull-request-number && steps.prepare.outputs.owner_verified == 'true' && steps.enable-automerge.conclusion == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
@@ -204,14 +202,7 @@ jobs:
             const body = [
               `Pull request #${prNumber} was created successfully, but auto-merge could not be enabled.`,
               '',
-              'Likely reason: branch protection/required status checks are not configured for `main`.',
-              '',
-              'How to fix:',
-              '- Go to Settings > Branches > Add rule for `main`.',
-              '- Enable required status checks (and optionally require pull request before merging).',
-              '- Keep repository auto-merge enabled in repository settings.',
-              '',
-              `After that, enable auto-merge on PR #${prNumber} from the PR page.`
+              'Please check branch protection and required checks configuration for the default branch.'
             ].join('\n');
 
             await github.rest.issues.createComment({

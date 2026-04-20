@@ -8,12 +8,18 @@ import re
 import sys
 from pathlib import Path
 
+import requests
+
+from project_requirements import load_project_requirements
+from removed_list import load_removed_repo_refs
 from reject_list import load_rejected_repo_refs, normalize_repo_ref, update_rejected_projects
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 README_PATH = REPO_ROOT / "README.md"
 REJECT_LIST_PATH = REPO_ROOT / "data" / "rejected_projects.json"
+REMOVED_LIST_PATH = REPO_ROOT / "data" / "removed_projects.json"
+API_BASE = "https://api.github.com"
 
 GITHUB_REPO_RE = re.compile(r"^https://github\.com/[^/\s)]+/[^/\s)#]+/?$")
 ENTRY_RE = re.compile(r"^- \[(?P<name>[^\]]+)\]\((?P<link>[^)]+)\) - (?P<desc>.+)$")
@@ -80,6 +86,33 @@ def parse_submission(issue_body: str) -> tuple[str, str, str, str]:
 def extract_reconsideration_notes(issue_body: str) -> str:
     notes = extract_field(issue_body, "Reconsideration notes")
     return normalize_whitespace(notes)
+
+
+def extract_owner_repo(repo_url: str) -> str:
+    normalized = repo_url.rstrip("/")
+    parts = normalized.split("/")
+    return "/".join(parts[-2:])
+
+
+def build_session() -> requests.Session:
+    session = requests.Session()
+    token = os.environ.get("GITHUB_TOKEN", "").strip()
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "awesome-bd-foss-submission",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    session.headers.update(headers)
+    return session
+
+
+def fetch_repo_stars(session: requests.Session, owner_repo: str) -> int | None:
+    response = session.get(f"{API_BASE}/repos/{owner_repo}", timeout=30)
+    if response.status_code >= 400:
+        return None
+    payload = response.json()
+    return int(payload.get("stargazers_count") or 0)
 
 
 def build_entry_line(name: str, repo_url: str, description: str) -> str:
@@ -158,8 +191,31 @@ def main() -> int:
         print(f"Submission validation failed: {exc}")
         return 1
 
+    requirements = load_project_requirements()
+    minimum_stars = int(requirements.get("minimum_stars") or 0)
+    owner_repo = extract_owner_repo(repo_url)
+    session = build_session()
+    stars = fetch_repo_stars(session, owner_repo)
+    if stars is None:
+        print("Submission validation failed: could not verify GitHub repository metadata. Please try again.")
+        return 1
+    if stars < minimum_stars:
+        print(
+            "Submission validation failed: repository does not meet minimum star requirement "
+            f"({stars} < {minimum_stars})."
+        )
+        return 1
+
     rejected_repo_refs = load_rejected_repo_refs(REJECT_LIST_PATH)
+    removed_repo_refs = load_removed_repo_refs(REMOVED_LIST_PATH)
     submission_ref = normalize_repo_ref(repo_url)
+    if submission_ref in removed_repo_refs:
+        print(
+            "Submission validation failed: this repository was previously removed and cannot be added "
+            "through submission automation."
+        )
+        return 1
+
     remove_from_reject_list = False
     if submission_ref in rejected_repo_refs:
         reconsideration_notes = extract_reconsideration_notes(issue_body)
@@ -182,10 +238,6 @@ def main() -> int:
         updated = insert_entry_in_section(readme_text, category, entry)
     except ValueError as exc:
         print(f"README update failed: {exc}")
-        return 1
-
-    if updated == readme_text:
-        print("No README changes detected")
         return 1
 
     README_PATH.write_text(updated, encoding="utf-8")
@@ -214,5 +266,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     sys.exit(main())

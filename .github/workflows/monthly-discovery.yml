@@ -1,8 +1,6 @@
 name: monthly-discovery
 
 on:
-  schedule:
-    - cron: "0 3 1 * *"
   workflow_dispatch:
 
 permissions:

@@ -32,8 +32,9 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 
 ### How entries are selected
 
-Projects should have:
+[Submit Project Here](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/issues/new?template=project-submission.yml). Submitted projects should have:
 
+- At least 10 Repo Stars
 - An open source license.
 - Active maintenance when possible.
 - Clear documentation.
@@ -41,7 +42,6 @@ Projects should have:
 
 ## Web Applications
 
-- [Awesome-Bangladeshi-FOSS](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS) - A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 - [Bangladesh Income Tax Calculator](https://github.com/ssi-anik/bd-income-tax-calculator) - Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law.
 - [Bangladesh Renovation Platform](https://github.com/shamspias/Bangladesh-Renovation-Platform) - Civic engagement platform for proposing ideas, reporting problems, and sharing solutions.
 - [Bangladesh Tech Companies](https://github.com/MBSTUPC/tech-companies-in-bangladesh) - Community-maintained directory of tech companies in Bangladesh for job seekers and networking.
@@ -203,6 +203,7 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 The `lint` workflow runs `awesome-lint` for awesome-list quality checks.
 The `validate-readme` workflow enforces project entry format and GitHub repository link rules.
 The `project-submission` workflow validates issue-template submissions, checks the reject list, comments with fix instructions on failures, creates a PR on success, and enables auto-merge for that PR.
+The `project-removal` workflow processes removal requests from a dedicated issue template, verifies repository ownership, and creates a PR that updates README, projects JSON, and the removed list.
 The `auto-merge` workflow enables auto-merge for eligible non-draft pull requests once required checks pass.
 The `post-merge-submission` workflow comments on the source issue, closes it when possible, leaves a prompt to close it manually if needed, and deletes merged `automation/project-submission-*` branches.
 The `monthly-discovery` workflow opens a review PR with the proposed candidates and a `selected` list that maintainers can trim before merge; the `post-merge-monthly-discovery` workflow applies the chosen entries, updates the reject list, and removes the temporary review files afterward.

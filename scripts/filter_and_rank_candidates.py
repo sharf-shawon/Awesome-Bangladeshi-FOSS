@@ -25,6 +25,8 @@ from typing import Any
 import requests
 
 from ai_utils import classify_and_score
+from project_requirements import load_project_requirements
+from removed_list import load_removed_repo_refs
 from reject_list import load_rejected_repo_refs, normalize_repo_ref
 
 
@@ -163,6 +165,11 @@ def has_min_signal(candidate: dict[str, Any]) -> bool:
     return stars >= 3 or forks >= 2 or issues >= 3
 
 
+def has_minimum_stars(candidate: dict[str, Any], minimum_stars: int) -> bool:
+    stars = int(candidate.get("stargazers_count") or 0)
+    return stars >= minimum_stars
+
+
 def activity_score(candidate: dict[str, Any]) -> float:
     stars = int(candidate.get("stargazers_count") or 0)
     forks = int(candidate.get("forks_count") or 0)
@@ -225,6 +232,9 @@ def main() -> int:
     candidates = payload.get("candidates") or []
     existing_repo_names = load_existing_repo_names(projects_path)
     rejected_repo_refs = load_rejected_repo_refs()
+    removed_repo_refs = load_removed_repo_refs()
+    requirements = load_project_requirements()
+    minimum_stars = int(requirements.get("minimum_stars") or 0)
     session = build_session()
 
     selected: list[dict[str, Any]] = []
@@ -238,6 +248,9 @@ def main() -> int:
             skipped += 1
             continue
         if candidate_repo_refs(candidate) & rejected_repo_refs:
+            skipped += 1
+            continue
+        if candidate_repo_refs(candidate) & removed_repo_refs:
             skipped += 1
             continue
         if candidate.get("fork") or candidate.get("archived"):
@@ -261,6 +274,9 @@ def main() -> int:
         if not has_min_signal(candidate):
             skipped += 1
             continue
+        if not has_minimum_stars(candidate, minimum_stars):
+            skipped += 1
+            continue
         if not has_bangladeshi_signal(candidate, owner_location, readme_snippet):
             skipped += 1
             continue
@@ -280,6 +296,7 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "input_candidate_count": len(candidates),
         "skipped_count": skipped,
+        "requirements": requirements,
         "selected_count": len(top_selected),
         "proposed_count": len(selected),
         "proposed": [
@@ -326,5 +343,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     raise SystemExit(main())
