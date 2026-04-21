@@ -54,7 +54,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
 - [Node.js Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
-- [OSINT-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.
+- [Osint-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.
 - [Prochaar](https://github.com/CodeForBangladesh/prochaar) - Rails API backend for broadcasting missing person alerts across Bangladesh.
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
 - [Zooming Classroom](https://github.com/yeazin/Zooming-cls) - Online classroom platform built with Django for Bangladeshi students.
@@ -131,7 +131,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Talk](https://github.com/nahid/talk) - Laravel-based real-time user messaging and chat package.
 - [Thoth Blueprint](https://github.com/AHS12/thoth-blueprint) - A free, powerful database design tool that allows you to create, update, visualize and export your database schema with an intuitive drag-and-drop editor. Generate migration files for popular frameworks/ORM.
 - [validus](https://github.com/shopnilsazal/validus) - Lightweight Python string validation library for common data patterns.
-- [Video Editor](https://github.com/bilashcse/video-editor) - API based Online Video Editor NodeJs, AngularJs & FFMPEG based web video editor.
+- [Video Editor](https://github.com/bilashcse/video-editor) - API based Online Video Editor Node.js, AngularJs & FFmpeg based web video editor.
 - [WordPress Settings API Class](https://github.com/tareq1988/wordpress-settings-api-class) - PHP wrapper simplifying WordPress options panels using the Settings API.
 - [WP Eloquent](https://github.com/tareq1988/wp-eloquent) - Library for using Laravel's Eloquent ORM inside WordPress plugins and themes.
 
