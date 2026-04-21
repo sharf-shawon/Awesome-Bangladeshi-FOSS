@@ -179,6 +179,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [js.zonayed.me](https://github.com/zonayedpca/js.zonayed.me) - সম্পূর্ণ বাংলায় হাতেকলমে জাভাস্ক্রিপ্ট শিখুন(ওয়েবসাইট রিপো).
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
 - [Node.js-Tutorial-Bangla](https://github.com/rupomsoft/Node.js-Tutorial-Bangla) - In this comprehensive series, we dive into the world of Node.js, exploring its features, functionalities, and best.
+- [RailwayMatrixBD](https://github.com/AhmedTrooper/RailwayMatrixBD) - A desktop application to find tickets of Bangladesh railwyas in single click, and if direct ticket was not found, find segmented ticket...
 - [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React Bangla Tutorial - স্টেপ বাই স্টেপ ফলো করে রিয়েক্ট শিখুন।.
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 
