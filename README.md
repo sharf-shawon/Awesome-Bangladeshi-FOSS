@@ -49,6 +49,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [bdapis](https://github.com/AbmSourav/bdapis) - REST API service exposing Bangladesh administrative locations for client applications.
 - [Co-ronaBD.info](https://github.com/KhanShaheb34/Co-ronaBD.info) - Interactive dashboard visualizing Bangladesh COVID-19 case statistics and trends.
 - [CoronaInfoBD](https://github.com/TeamTigers/coronainfobd) - Real-time coronavirus tracker for Bangladesh with data visualization and awareness content.
+- [Fetchy Neon](https://github.com/prassamin/fetchy) - An open-source media downloader built to be fast, flexible, and beautifully modern. Whether you're here to build, contribute, or just peep under the hood, you're in for a treat.
 - [FinanceFrz](https://github.com/sharf-shawon/FinanceFrz) - Personal finance web app for tracking income and expenses, built as a real-world budgeting tool.
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
