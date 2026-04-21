@@ -10,31 +10,41 @@ SUBMISSION_WORKFLOW_PATH = REPO_ROOT / ".github" / "workflows" / "project-submis
 REMOVAL_WORKFLOW_PATH = REPO_ROOT / ".github" / "workflows" / "project-removal.yaml"
 
 
-def test_project_submission_workflow_installs_automation_dependencies():
-    workflow = SUBMISSION_WORKFLOW_PATH.read_text(encoding="utf-8")
-    assert "name: install automation dependencies" in workflow
-    assert "python -m pip install -r automation-requirements.txt" in workflow
+def _find_step_index(lines: list[str], step_name: str) -> int:
+    for idx, line in enumerate(lines):
+        if line.strip() == f"- name: {step_name}":
+            return idx
+    return -1
+
+
+def _assert_dependency_install_step(workflow_path: Path, prepare_step_name: str) -> None:
+    lines = workflow_path.read_text(encoding="utf-8").splitlines()
+
+    install_step_idx = _find_step_index(lines, "install automation dependencies")
+    prepare_step_idx = _find_step_index(lines, prepare_step_name)
+    assert install_step_idx != -1
+    assert prepare_step_idx != -1
+    assert install_step_idx < prepare_step_idx
+
+    next_step_idx = len(lines)
+    for idx in range(install_step_idx + 1, len(lines)):
+        if lines[idx].strip().startswith("- name: "):
+            next_step_idx = idx
+            break
+
+    install_step_block = "\n".join(lines[install_step_idx:next_step_idx])
+    assert "run: python -m pip install -r automation-requirements.txt" in install_step_block
 
 
 def test_project_submission_workflow_installs_dependencies_before_prepare_step():
-    workflow = SUBMISSION_WORKFLOW_PATH.read_text(encoding="utf-8")
-    install_idx = workflow.find("python -m pip install -r automation-requirements.txt")
-    prepare_idx = workflow.find("name: prepare README update from issue")
-    assert install_idx != -1
-    assert prepare_idx != -1
-    assert install_idx < prepare_idx
-
-
-def test_project_removal_workflow_installs_automation_dependencies():
-    workflow = REMOVAL_WORKFLOW_PATH.read_text(encoding="utf-8")
-    assert "name: install automation dependencies" in workflow
-    assert "python -m pip install -r automation-requirements.txt" in workflow
+    _assert_dependency_install_step(
+        SUBMISSION_WORKFLOW_PATH,
+        "prepare README update from issue",
+    )
 
 
 def test_project_removal_workflow_installs_dependencies_before_prepare_step():
-    workflow = REMOVAL_WORKFLOW_PATH.read_text(encoding="utf-8")
-    install_idx = workflow.find("python -m pip install -r automation-requirements.txt")
-    prepare_idx = workflow.find("name: prepare removal update from issue")
-    assert install_idx != -1
-    assert prepare_idx != -1
-    assert install_idx < prepare_idx
+    _assert_dependency_install_step(
+        REMOVAL_WORKFLOW_PATH,
+        "prepare removal update from issue",
+    )
