@@ -1,7 +1,7 @@
 <!--lint disable awesome-github-->
 # Awesome Bangladeshi FOSS 
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml) ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855)
 
 A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 
