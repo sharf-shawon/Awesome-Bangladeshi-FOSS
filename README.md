@@ -173,6 +173,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [bangla-wordlist](https://github.com/tahmid02016/bangla-wordlist) - Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work.
 - [BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis](https://github.com/fahad35/BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis) - Lexicon of 61k+ Bangla words labeled with positive, negative and neutral sentiment for sentiment analysis and opinion mining.
 - [BDMC](https://github.com/MAHADI-143/BDMC) - Free Bangladeshi and Indian Random Number Cloning Tool.
+- [Click Guardian](https://github.com/ahs12/click-guardian) - An application that prevents accidental double-clicks by introducing a customizable delay between mouse clicks.
 - [Express-js-tutorial-bangla](https://github.com/rupomsoft/Express-js-tutorial-bangla) - Express.js tutorial in Bangla for developers learning the framework.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 
