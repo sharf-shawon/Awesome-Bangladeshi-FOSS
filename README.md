@@ -130,6 +130,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Swift Debouncer](https://github.com/webadnan/swift-debouncer) - Simple Swift debouncer utility for throttling method calls in iOS apps.
 - [Talk](https://github.com/nahid/talk) - Laravel-based real-time user messaging and chat package.
 - [validus](https://github.com/shopnilsazal/validus) - Lightweight Python string validation library for common data patterns.
+- [Video Editor](https://github.com/bilashcse/video-editor) - API based Online Video Editor NodeJs, AngularJs & FFMPEG based web video editor.
 - [WordPress Settings API Class](https://github.com/tareq1988/wordpress-settings-api-class) - PHP wrapper simplifying WordPress options panels using the Settings API.
 - [WP Eloquent](https://github.com/tareq1988/wp-eloquent) - Library for using Laravel's Eloquent ORM inside WordPress plugins and themes.
 
