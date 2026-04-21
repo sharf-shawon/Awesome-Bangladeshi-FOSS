@@ -44,6 +44,12 @@
     },
     {
       "category": "Web Applications",
+      "name": "Fetchy Neon",
+      "repository": "https://github.com/prassamin/fetchy",
+      "description": "An open-source media downloader built to be fast, flexible, and beautifully modern. Whether you're here to build, contribute, or just peep under the hood, you're in for a treat."
+    },
+    {
+      "category": "Web Applications",
       "name": "FinanceFrz",
       "repository": "https://github.com/sharf-shawon/FinanceFrz",
       "description": "Personal finance web app for tracking income and expenses, built as a real-world budgeting tool."
@@ -68,7 +74,7 @@
     },
     {
       "category": "Web Applications",
-      "name": "OSINT-Tools-Bangladesh",
+      "name": "Osint-Tools-Bangladesh",
       "repository": "https://github.com/paulpogoda/OSINT-Tools-Bangladesh",
       "description": "Curated portal of Bangladesh-focused OSINT and public data resources."
     },
@@ -470,9 +476,21 @@
     },
     {
       "category": "Developer Tools & Libraries",
+      "name": "Thoth Blueprint",
+      "repository": "https://github.com/AHS12/thoth-blueprint",
+      "description": "A free, powerful database design tool that allows you to create, update, visualize and export your database schema with an intuitive drag-and-drop editor. Generate migration files for popular frameworks/ORM."
+    },
+    {
+      "category": "Developer Tools & Libraries",
       "name": "validus",
       "repository": "https://github.com/shopnilsazal/validus",
       "description": "Lightweight Python string validation library for common data patterns."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "Video Editor",
+      "repository": "https://github.com/bilashcse/video-editor",
+      "description": "API based Online Video Editor Node.js, AngularJs & FFmpeg based web video editor."
     },
     {
       "category": "Developer Tools & Libraries",
@@ -656,6 +674,12 @@
     },
     {
       "category": "Other FOSS Projects",
+      "name": "Click Guardian",
+      "repository": "https://github.com/ahs12/click-guardian",
+      "description": "An application that prevents accidental double-clicks by introducing a customizable delay between mouse clicks."
+    },
+    {
+      "category": "Other FOSS Projects",
       "name": "Express-js-tutorial-bangla",
       "repository": "https://github.com/rupomsoft/Express-js-tutorial-bangla",
       "description": "Express.js tutorial in Bangla for developers learning the framework."
@@ -689,6 +713,12 @@
       "name": "Node.js-Tutorial-Bangla",
       "repository": "https://github.com/rupomsoft/Node.js-Tutorial-Bangla",
       "description": "In this comprehensive series, we dive into the world of Node.js, exploring its features, functionalities, and best."
+    },
+    {
+      "category": "Other FOSS Projects",
+      "name": "RailwayMatrixBD",
+      "repository": "https://github.com/AhmedTrooper/RailwayMatrixBD",
+      "description": "A desktop application to find tickets of Bangladesh railwyas in single click, and if direct ticket was not found, find segmented ticket..."
     },
     {
       "category": "Other FOSS Projects",
