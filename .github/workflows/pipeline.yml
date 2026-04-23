@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
   issues:
-    types: [opened, edited, reopened]
+    types: [opened, edited, reopened, labeled]
   workflow_dispatch:
 
 concurrency:
@@ -106,7 +106,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python src/process_issue.py "${{ github.event.issue.number }}" "${{ github.event.issue.title }}" "${{ github.event.issue.body }}" "${{ github.event.issue.user.login }}" > process_output.txt 2>&1
+          # Pass labels as a comma-separated string
+          LABELS=$(echo '${{ toJson(github.event.issue.labels.*.name) }}' | jq -r 'join(",")')
+          python src/process_issue.py "${{ github.event.issue.number }}" "${{ github.event.issue.title }}" "${{ github.event.issue.body }}" "${{ github.event.issue.user.login }}" "$LABELS" > process_output.txt 2>&1
           cat process_output.txt
           
           if grep -q "DATA_UPDATED" process_output.txt; then

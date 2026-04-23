@@ -133,7 +133,7 @@ def test_process_removal_owner_verified(mock_get, mock_data_paths):
     with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
          patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
         
-        result = process_removal(fields, "owner")
+        result = process_removal(fields, "owner", labels=[])
         assert result is True
         
         with open(mock_data_paths["PROJECTS_PATH"], "r") as f:
@@ -170,12 +170,139 @@ def test_process_removal_not_owner(mock_get, mock_data_paths):
     with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
          patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
         
-        result = process_removal(fields, "other-user")
+        result = process_removal(fields, "other-user", labels=[])
         assert result is True # Returns True because it's still a "change" (moved to removed list)
         
         with open(mock_data_paths["REMOVED_PATH"], "r") as f:
             data = json.load(f)
             assert data["removed"][0]["owner_verified"] is False
+
+@patch("src.process_issue.requests.get")
+def test_process_removal_maintainer_authorized(mock_get, mock_data_paths):
+    # Setup existing project
+    projects_data = {"projects": [{
+        "category": "Web Applications",
+        "name": "Target Project",
+        "repository": "https://github.com/owner/target",
+        "description": "To be removed."
+    }]}
+    with open(mock_data_paths["PROJECTS_PATH"], "w") as f:
+        json.dump(projects_data, f)
+        
+    mock_meta = MagicMock()
+    mock_meta.status_code = 200
+    mock_meta.json.return_value = {"owner": {"login": "owner"}}
+    mock_get.return_value = mock_meta
+    
+    fields = {
+        "repository_url": "https://github.com/owner/target",
+        "reason": "Test removal"
+    }
+    
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
+        
+        # 'sharf-shawon' is in MAINTAINERS
+        result = process_removal(fields, "sharf-shawon", labels=[])
+        assert result is True
+        
+        with open(mock_data_paths["REMOVED_PATH"], "r") as f:
+            data = json.load(f)
+            assert data["removed"][0]["owner_verified"] is True
+
+@patch("src.process_issue.requests.get")
+def test_process_removal_label_confirmed(mock_get, mock_data_paths):
+    # Setup existing project
+    projects_data = {"projects": [{
+        "category": "Web Applications",
+        "name": "Target Project",
+        "repository": "https://github.com/owner/target",
+        "description": "To be removed."
+    }]}
+    with open(mock_data_paths["PROJECTS_PATH"], "w") as f:
+        json.dump(projects_data, f)
+        
+    mock_meta = MagicMock()
+    mock_meta.status_code = 200
+    mock_meta.json.return_value = {"owner": {"login": "owner"}}
+    mock_get.return_value = mock_meta
+    
+    fields = {
+        "repository_url": "https://github.com/owner/target",
+        "reason": "Test removal"
+    }
+    
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
+        
+        result = process_removal(fields, "random-user", labels=["confirm-delete"])
+        assert result is True
+        
+        with open(mock_data_paths["REMOVED_PATH"], "r") as f:
+            data = json.load(f)
+            # owner_verified is True only if is_owner or is_maintainer
+            # Label confirmed authorized the removal but doesn't necessarily mean owner_verified is True for the entry
+            # Actually, looking at process_issue.py: "owner_verified": is_owner or is_maintainer
+            assert data["removed"][0]["owner_verified"] is False
+
+@patch("src.process_issue.requests.get")
+def test_process_removal_404_maintainer(mock_get, mock_data_paths):
+    # Setup existing project
+    projects_data = {"projects": [{
+        "category": "Web Applications",
+        "name": "Target Project",
+        "repository": "https://github.com/owner/target",
+        "description": "To be removed."
+    }]}
+    with open(mock_data_paths["PROJECTS_PATH"], "w") as f:
+        json.dump(projects_data, f)
+        
+    # Mock a 404 or failed API call
+    mock_get.side_effect = Exception("404 Not Found")
+    
+    fields = {
+        "repository_url": "https://github.com/owner/target",
+        "reason": "Test removal"
+    }
+    
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
+        
+        result = process_removal(fields, "sharf-shawon", labels=[])
+        assert result is True
+        
+        with open(mock_data_paths["REMOVED_PATH"], "r") as f:
+            data = json.load(f)
+            assert data["removed"][0]["owner_verified"] is True
+
+@patch("src.process_issue.requests.get")
+def test_process_removal_404_non_owner(mock_get, mock_data_paths, capsys):
+    # Setup existing project
+    projects_data = {"projects": [{
+        "category": "Web Applications",
+        "name": "Target Project",
+        "repository": "https://github.com/owner/target",
+        "description": "To be removed."
+    }]}
+    with open(mock_data_paths["PROJECTS_PATH"], "w") as f:
+        json.dump(projects_data, f)
+        
+    # Mock a 404 or failed API call
+    mock_get.side_effect = Exception("404 Not Found")
+    
+    fields = {
+        "repository_url": "https://github.com/owner/target",
+        "reason": "Test removal"
+    }
+    
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
+        
+        result = process_removal(fields, "random-user", labels=[])
+        assert result is True
+        
+        captured = capsys.readouterr()
+        assert "MANUAL_REVIEW" in captured.out
 
 @patch("src.process_issue.requests.get")
 def test_process_submission_duplicate(mock_get, mock_data_paths):
@@ -338,3 +465,34 @@ def test_main_invalid_title():
     with patch("sys.argv", ["process_issue.py", "1", "Invalid", "body", "author"]):
         main()
         # Should not raise SystemExit or call sys.exit
+
+def test_load_json_invalid(tmp_path):
+    invalid_file = tmp_path / "invalid.json"
+    invalid_file.write_text("not json")
+    from src.process_issue import load_json
+    assert load_json(invalid_file, default={"test": 1}) == {"test": 1}
+    assert load_json(invalid_file) == []
+
+def test_parse_issue_extra_coverage():
+    body = """
+### Project name
+Multi-line
+project name
+
+### Category
+Web
+- [x] This is a checkbox
+- [ ] Another one
+"""
+    fields = parse_issue(body)
+    assert fields["project_name"] == "Multi-line project name"
+    assert fields["category"] == "Web"
+
+def test_get_repo_meta_invalid_url():
+    from src.process_issue import get_repo_meta
+    assert get_repo_meta("https://example.com/user/repo") is None
+
+def test_main_insufficient_args():
+    with patch("sys.argv", ["process_issue.py"]), patch("sys.stdout", new=MagicMock()) as mock_stdout:
+        main()
+        # Should print usage and return

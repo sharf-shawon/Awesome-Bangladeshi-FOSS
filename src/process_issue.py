@@ -20,6 +20,9 @@ HEADERS = {
 if GITHUB_TOKEN:
     HEADERS["Authorization"] = f"Bearer {GITHUB_TOKEN}"
 
+# List of repository maintainers who can authorize deletions
+MAINTAINERS = {"sharf-shawon"}
+
 def load_json(path, default=None):
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
@@ -53,8 +56,6 @@ def parse_issue(body):
         if current_key:
             # Handle checkboxes
             if line.startswith("- [") and "]" in line:
-                is_checked = "[x]" in line.lower()
-                # Store checkbox status if needed, but usually we just need the text
                 continue
             
             if current_key not in fields:
@@ -144,7 +145,7 @@ def process_submission(fields, issue_author):
     
     # Add to list
     projects_data["projects"].append(new_project)
-    # Sort by name within category (optional, but good for consistency)
+    # Sort by name within category
     projects_data["projects"].sort(key=lambda p: (p["category"], p["name"].lower()))
     
     save_json(PROJECTS_PATH, projects_data)
@@ -161,9 +162,10 @@ def process_submission(fields, issue_author):
     print(f"SUCCESS: Added '{project_name}' to '{category}'.")
     return True
 
-def process_removal(fields, issue_author):
+def process_removal(fields, issue_author, labels=None):
     repo_url = fields.get("repository_url")
     reason = fields.get("reason_for_removal") or fields.get("reason")
+    labels = labels or []
     
     if not (repo_url and reason):
         print(f"ERROR: Missing required fields for removal. Found: {list(fields.keys())}")
@@ -179,13 +181,22 @@ def process_removal(fields, issue_author):
         print(f"ERROR: Project not found in the list: {repo_url}")
         return False
         
-    # Verify ownership
+    # Verify authorization
+    # 1. Author is a maintainer of Awesome Bangladeshi FOSS
+    # 2. Author is the owner of the project being removed
+    # 3. Label "confirm-delete" is present
+    
     meta = get_repo_meta(repo_url)
     is_owner = False
     repo_owner_login = ""
     if meta:
         repo_owner_login = meta.get("owner", {}).get("login", "").lower()
         is_owner = repo_owner_login == issue_author.lower()
+    
+    is_maintainer = issue_author.lower() in MAINTAINERS
+    is_confirmed = "confirm-delete" in labels
+    
+    authorized = is_owner or is_maintainer or is_confirmed
         
     # Remove from projects
     projects_data["projects"] = [p for p in projects_data["projects"] if normalize_url(p["repository"]) != norm_url]
@@ -200,26 +211,31 @@ def process_removal(fields, issue_author):
         "reason": reason,
         "requested_by": issue_author,
         "repo_owner": repo_owner_login,
-        "owner_verified": is_owner
+        "owner_verified": is_owner or is_maintainer # If maintainer removes, we consider it verified
     }
     removed_data["removed"].append(removed_entry)
     removed_data["removed_count"] = len(removed_data["removed"])
     save_json(REMOVED_PATH, removed_data)
     
-    status = "SUCCESS" if is_owner else "MANUAL_REVIEW"
-    if is_owner:
-        print(f"SUCCESS: Removed '{project['name']}' (Owner verified).")
+    if authorized:
+        auth_source = "Owner verified" if is_owner else ("Maintainer authorized" if is_maintainer else "Label confirmed")
+        print(f"SUCCESS: Removed '{project['name']}' ({auth_source}).")
     else:
+        # Note: If it's a 404, meta is None, so repo_owner_login is empty.
+        # This triggers MANUAL_REVIEW unless authorized by maintainer or label.
         print(f"MANUAL_REVIEW: Removal requested by non-owner @{issue_author}. Owner is @{repo_owner_login}.")
     
     return True
 
 def main():
     if len(sys.argv) < 5:
-        print("Usage: python src/process_issue.py <number> <title> <body> <author>")
+        print("Usage: python src/process_issue.py <number> <title> <body> <author> [labels]")
         return
         
     issue_number, title, body, author = sys.argv[1:5]
+    labels_str = sys.argv[5] if len(sys.argv) > 5 else ""
+    labels = [l.strip().lower() for l in labels_str.split(",") if l.strip()]
+    
     title_lower = title.lower()
     
     fields = parse_issue(body)
@@ -231,7 +247,7 @@ def main():
     if is_add:
         changed = process_submission(fields, author)
     elif is_remove:
-        changed = process_removal(fields, author)
+        changed = process_removal(fields, author, labels)
     else:
         print(f"ERROR: Issue title '{title}' must contain '[Submission]' or '[Removal]'.")
         
