@@ -72,7 +72,6 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Avro.py](https://github.com/hitblast/avro.py) - Python implementation of the Avro phonetic Bangla input method for Unicode Bengali typing.
 - [BangalASR](https://github.com/menon92/BangalASR) - Transformer-based Bangla automatic speech recognition system.
 - [Bangla BERT](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
-- [Bangla NLP Parallel Dataset Tools](https://github.com/likhonsheikh54/BanglaNLP) - Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets.
 - [Bangla TTS](https://github.com/zabir-nabil/bangla-tts) - Real-time multilingual Bangla and English text-to-speech synthesis library.
 - [BanglaSpeech2Text](https://github.com/shhossain/BanglaSpeech2Text) - Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition.
 - [Bengali Alphabet](https://github.com/lifeparticle/Bengali-Alphabet) - Dataset and resources for Bengali characters, useful for OCR and Bangla language computing.

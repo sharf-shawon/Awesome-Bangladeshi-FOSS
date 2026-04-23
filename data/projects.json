@@ -80,12 +80,6 @@
     },
     {
       "category": "Developer Tools & Libraries",
-      "name": "Bangla NLP Parallel Dataset Tools",
-      "repository": "https://github.com/likhonsheikh54/BanglaNLP",
-      "description": "Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets."
-    },
-    {
-      "category": "Developer Tools & Libraries",
       "name": "Bangla TTS",
       "repository": "https://github.com/zabir-nabil/bangla-tts",
       "description": "Real-time multilingual Bangla and English text-to-speech synthesis library."

@@ -1,5 +1,16 @@
 {
   "generated_at": "2026-04-20T00:00:00+00:00",
-  "removed_count": 0,
-  "removed": []
+  "removed_count": 1,
+  "removed": [
+    {
+      "name": "Bangla NLP Parallel Dataset Tools",
+      "html_url": "https://github.com/likhonsheikh54/BanglaNLP",
+      "description": "Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets.",
+      "category": "Developer Tools & Libraries",
+      "reason": "Bangla NLP Parallel Dataset Tools  REPO no longer exist  and should be removed",
+      "requested_by": "sharf-shawon",
+      "repo_owner": "",
+      "owner_verified": false
+    }
+  ]
 }
