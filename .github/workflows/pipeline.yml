@@ -70,6 +70,9 @@ jobs:
 
   # 3. Processing and Deployment Phase
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: test
     concurrency:
       group: deploy-lock-${{ github.ref }}
