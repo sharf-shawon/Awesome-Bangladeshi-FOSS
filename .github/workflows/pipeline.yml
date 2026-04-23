@@ -175,50 +175,22 @@ jobs:
 
           # Check for WAITING_FOR_STARS in process_output.txt
           if grep -q "WAITING_FOR_STARS" process_output.txt; then
-            COMMENT="### ⏳ Waiting for Minimum Stars
-
-This project does not currently meet the minimum stars requirement. The issue will remain open until the repository reaches the required number of stars. Please re-request review after the threshold is met.
-
-**Logs:**
-\`\`\`
-$OUTPUT
-\`\`\`"
+            COMMENT=$(printf '### ⏳ Waiting for Minimum Stars\n\nThis project does not currently meet the minimum stars requirement. The issue will remain open until the repository reaches the required number of stars. Please re-request review after the threshold is met.\n\n**Logs:**\n```\n%s\n```' "$OUTPUT")
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
             gh issue edit "$ISSUE_NUMBER" --add-label "waiting for stars"
             exit 0
           fi
 
           if [ "$STATUS" == "success" ]; then
-            COMMENT="### ✅ Request Processed Successfully
-
-The changes have been applied to the list and the README has been updated.
-
-**Logs:**
-\`\`\`
-$OUTPUT
-\`\`\`"
+            COMMENT=$(printf '### ✅ Request Processed Successfully\n\nThe changes have been applied to the list and the README has been updated.\n\n**Logs:**\n```\n%s\n```' "$OUTPUT")
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
             gh issue close "$ISSUE_NUMBER" --reason "completed"
           elif [ "$STATUS" == "manual" ]; then
-            COMMENT="### ⏳ Request Pending Manual Review
-
-This request requires manual intervention from a maintainer.
-
-**Details:**
-\`\`\`
-$OUTPUT
-\`\`\`"
+            COMMENT=$(printf '### ⏳ Request Pending Manual Review\n\nThis request requires manual intervention from a maintainer.\n\n**Details:**\n```\n%s\n```' "$OUTPUT")
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
             gh issue edit "$ISSUE_NUMBER" --add-label "manual-review"
           elif [ "$STATUS" == "failure" ]; then
-            COMMENT="### ❌ Request Failed Validation
-
-The automation could not process your request.
-
-**Errors:**
-\`\`\`
-$OUTPUT
-\`\`\`"
+            COMMENT=$(printf '### ❌ Request Failed Validation\n\nThe automation could not process your request.\n\n**Errors:**\n```\n%s\n```' "$OUTPUT")
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
           fi
 

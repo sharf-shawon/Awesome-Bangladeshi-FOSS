@@ -1,6 +1,8 @@
 name: monthly-discovery
 
 on:
+  schedule:
+    - cron: '0 3 1 * *'
   workflow_dispatch:
 
 permissions:
@@ -133,11 +135,11 @@ jobs:
           count=$(python -c "import json, pathlib; payload = json.loads(pathlib.Path('data/top10_to_add.json').read_text(encoding='utf-8')); print(int(payload.get('selected_count') or 0))")
           echo "selected_count=$count" >> "$GITHUB_OUTPUT"
 
-        - name: prune invalid or under-starred projects
-          run: python src/prune_projects.py
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+      - name: prune invalid or under-starred projects
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python src/prune_projects.py
+
       - name: prepare monthly review bundle
         if: steps.count.outputs.selected_count != '0'
         run: python src/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md --review-only
