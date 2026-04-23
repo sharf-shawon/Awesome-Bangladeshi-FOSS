@@ -28,5 +28,3 @@ body:
       label: Reason for removal
       description: Briefly explain why this project should be removed from the list.
       placeholder: The project is no longer maintained and should be removed.
-    validations:
-      required: true
