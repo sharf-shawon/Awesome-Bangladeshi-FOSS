@@ -129,8 +129,8 @@ def process_submission(fields, issue_author):
         
     stars = meta.get("stargazers_count", 0)
     if stars < min_stars:
-        print(f"ERROR: Project does not meet the minimum star requirement ({stars} < {min_stars}).")
-        return False
+        print(f"WAITING_FOR_STARS: Project does not meet the minimum star requirement ({stars} < {min_stars}).")
+        return "waiting_for_stars"
     
     # Ensure description ends with a period
     if not description.endswith((".", "!", "?")):
@@ -243,16 +243,18 @@ def main():
     is_add = "submission" in title_lower or "[submission]" in title_lower
     is_remove = "removal" in title_lower or "[removal]" in title_lower
     
-    changed = False
+    result = False
     if is_add:
-        changed = process_submission(fields, author)
+        result = process_submission(fields, author)
     elif is_remove:
-        changed = process_removal(fields, author, labels)
+        result = process_removal(fields, author, labels)
     else:
         print(f"ERROR: Issue title '{title}' must contain '[Submission]' or '[Removal]'.")
-        
-    if changed:
+
+    if result == True:
         print("DATA_UPDATED")
+    elif result == "waiting_for_stars":
+        print("WAITING_FOR_STARS")
 
 if __name__ == "__main__":
     main()

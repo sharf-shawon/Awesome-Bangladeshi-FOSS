@@ -106,7 +106,7 @@ def test_process_submission_low_stars(mock_get, mock_data_paths):
          patch("src.process_issue.CONFIG_PATH", mock_data_paths["CONFIG_PATH"]):
         
         result = process_submission(fields, "author-user")
-        assert result is False
+        assert result == "waiting_for_stars"
 
 @patch("src.process_issue.requests.get")
 def test_process_removal_owner_verified(mock_get, mock_data_paths):

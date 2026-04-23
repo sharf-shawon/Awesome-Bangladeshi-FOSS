@@ -159,7 +159,7 @@ jobs:
             echo "No changes to commit."
           fi
 
-      - name: Comment and Close Issue
+      - name: Comment, Label, and Close Issue
         if: github.event_name == 'issues' && always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -167,43 +167,58 @@ jobs:
           if [ ! -f process_output.txt ]; then
             exit 0
           fi
-          
+
           OUTPUT=$(cat process_output.txt)
           STATUS="${{ steps.process.outputs.status }}"
           CHANGED="${{ steps.process.outputs.changed }}"
           ISSUE_NUMBER="${{ github.event.issue.number }}"
-          
+
+          # Check for WAITING_FOR_STARS in process_output.txt
+          if grep -q "WAITING_FOR_STARS" process_output.txt; then
+            COMMENT="### ⏳ Waiting for Minimum Stars
+
+This project does not currently meet the minimum stars requirement. The issue will remain open until the repository reaches the required number of stars. Please re-request review after the threshold is met.
+
+**Logs:**
+\`\`\`
+$OUTPUT
+\`\`\`"
+            gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
+            gh issue edit "$ISSUE_NUMBER" --add-label "waiting for stars"
+            exit 0
+          fi
+
           if [ "$STATUS" == "success" ]; then
             COMMENT="### ✅ Request Processed Successfully
-            
-            The changes have been applied to the list and the README has been updated.
-            
-            **Logs:**
-            \`\`\`
-            $OUTPUT
-            \`\`\`"
+
+The changes have been applied to the list and the README has been updated.
+
+**Logs:**
+\`\`\`
+$OUTPUT
+\`\`\`"
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
             gh issue close "$ISSUE_NUMBER" --reason "completed"
           elif [ "$STATUS" == "manual" ]; then
             COMMENT="### ⏳ Request Pending Manual Review
-            
-            This request requires manual intervention from a maintainer.
-            
-            **Details:**
-            \`\`\`
-            $OUTPUT
-            \`\`\`"
+
+This request requires manual intervention from a maintainer.
+
+**Details:**
+\`\`\`
+$OUTPUT
+\`\`\`"
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
             gh issue edit "$ISSUE_NUMBER" --add-label "manual-review"
           elif [ "$STATUS" == "failure" ]; then
             COMMENT="### ❌ Request Failed Validation
-            
-            The automation could not process your request.
-            
-            **Errors:**
-            \`\`\`
-            $OUTPUT
-            \`\`\`"
+
+The automation could not process your request.
+
+**Errors:**
+\`\`\`
+$OUTPUT
+\`\`\`"
             gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
           fi
 
