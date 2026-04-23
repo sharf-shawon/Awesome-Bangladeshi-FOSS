@@ -1,136 +1,58 @@
 {
   "projects": [
     {
-      "category": "Web Applications",
-      "name": "Bangladesh Income Tax Calculator",
-      "repository": "https://github.com/ssi-anik/bd-income-tax-calculator",
-      "description": "Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Awesome Open Source Bangladesh",
+      "repository": "https://github.com/hackversedev/awesome-opensource-bangladesh",
+      "description": "Community-maintained list of open source projects and contributors from Bangladesh."
     },
     {
-      "category": "Web Applications",
-      "name": "Bangladesh Renovation Platform",
-      "repository": "https://github.com/shamspias/Bangladesh-Renovation-Platform",
-      "description": "Civic engagement platform for proposing ideas, reporting problems, and sharing solutions."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Awesome Open Source by Country or Region",
+      "repository": "https://github.com/slowernews/awesome-open-source-by-country-or-region",
+      "description": "Global index of country-specific open source lists, including Bangladesh-focused resources."
     },
     {
-      "category": "Web Applications",
-      "name": "Bangladesh Tech Companies",
-      "repository": "https://github.com/MBSTUPC/tech-companies-in-bangladesh",
-      "description": "Community-maintained directory of tech companies in Bangladesh for job seekers and networking."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Bangla All Programming Resources",
+      "repository": "https://github.com/BanglaProgramming/Bangla-All-Programming-Resources",
+      "description": "Bangla programming tutorials and references organized by core CS topics."
     },
     {
-      "category": "Web Applications",
-      "name": "BanglaGeoAPI",
-      "repository": "https://github.com/thecodermehedi/BanglaGeoAPI",
-      "description": "RESTful API server for Bangladesh administrative geo data built with Node.js and TypeScript."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Bangla Programming Resources",
+      "repository": "https://github.com/me-shaon/bangla-programming-resources",
+      "description": "Curated Bangla learning materials across algorithms, data structures, and software fundamentals."
     },
     {
-      "category": "Web Applications",
-      "name": "bdapis",
-      "repository": "https://github.com/AbmSourav/bdapis",
-      "description": "REST API service exposing Bangladesh administrative locations for client applications."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Bangla-NLP-Dataset",
+      "repository": "https://github.com/Foysal87/Bangla-NLP-Dataset",
+      "description": "Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources."
     },
     {
-      "category": "Web Applications",
-      "name": "Co-ronaBD.info",
-      "repository": "https://github.com/KhanShaheb34/Co-ronaBD.info",
-      "description": "Interactive dashboard visualizing Bangladesh COVID-19 case statistics and trends."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "BD-public-api-datasets",
+      "repository": "https://github.com/SohanChy/BD-public-api-datasets",
+      "description": "Collective list of Bangladeshi public APIs and datasets aggregated from government and local services."
     },
     {
-      "category": "Web Applications",
-      "name": "CoronaInfoBD",
-      "repository": "https://github.com/TeamTigers/coronainfobd",
-      "description": "Real-time coronavirus tracker for Bangladesh with data visualization and awareness content."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "DL-Sneak-Peek",
+      "repository": "https://github.com/menon92/DL-Sneak-Peek",
+      "description": "Deep learning Bangla resources using TensorFlow."
     },
     {
-      "category": "Web Applications",
-      "name": "Fetchy Neon",
-      "repository": "https://github.com/prassamin/fetchy",
-      "description": "An open-source media downloader built to be fast, flexible, and beautifully modern. Whether you're here to build, contribute, or just peep under the hood, you're in for a treat."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "hp-t630-pfsense",
+      "repository": "https://github.com/sharf-shawon/hp-t630-pfsense",
+      "description": "pfSense Router on HP T630 thin client with an additional Realtek 2.5gb NIC."
     },
     {
-      "category": "Web Applications",
-      "name": "FinanceFrz",
-      "repository": "https://github.com/sharf-shawon/FinanceFrz",
-      "description": "Personal finance web app for tracking income and expenses, built as a real-world budgeting tool."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Goodwork",
-      "repository": "https://github.com/Hasnayeen/goodwork",
-      "description": "Self-hosted project management and team collaboration platform for software teams."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Movement Pass Clone",
-      "repository": "https://github.com/yeazin/Movement-Pass-Clone",
-      "description": "Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Node.js Professionals",
-      "repository": "https://github.com/devfikdark/nodeJS-Professionals",
-      "description": "Node.js notes and resource site translated into Bangla for Bangladeshi developers."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Osint-Tools-Bangladesh",
-      "repository": "https://github.com/paulpogoda/OSINT-Tools-Bangladesh",
-      "description": "Curated portal of Bangladesh-focused OSINT and public data resources."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Prochaar",
-      "repository": "https://github.com/CodeForBangladesh/prochaar",
-      "description": "Rails API backend for broadcasting missing person alerts across Bangladesh."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Stack Unboxed",
-      "repository": "https://github.com/yeasin2002/Stack-Unboxed",
-      "description": "Bangla programming learning platform with tutorials and web development guides."
-    },
-    {
-      "category": "Web Applications",
-      "name": "Zooming Classroom",
-      "repository": "https://github.com/yeazin/Zooming-cls",
-      "description": "Online classroom platform built with Django for Bangladeshi students."
-    },
-    {
-      "category": "Mobile Apps",
-      "name": "Android Week View",
-      "repository": "https://github.com/aniruddh-0701/Android-Week-View",
-      "description": "Android library for displaying calendar week views with customizable day and event layouts."
-    },
-    {
-      "category": "Mobile Apps",
-      "name": "Bangla-Dictionary",
-      "repository": "https://github.com/rafi-kamal/Bangla-Dictionary",
-      "description": "Open source English-to-Bangla dictionary app for Android based on Ankur.org's Bangla-English dictionary database."
-    },
-    {
-      "category": "Mobile Apps",
-      "name": "COVID-19 Bangladesh Android",
-      "repository": "https://github.com/SaadAAkash/COVID-19-Bangladesh-Android",
-      "description": "Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh."
-    },
-    {
-      "category": "Mobile Apps",
-      "name": "Incredible Bangladesh",
-      "repository": "https://github.com/asnbd/incredible-bangladesh",
-      "description": "Tourism guide Android app showcasing Bangladeshi attractions with maps and location details."
-    },
-    {
-      "category": "Mobile Apps",
-      "name": "Missing Person Mobile App",
-      "repository": "https://github.com/CodeForBangladesh/missing-person-mobile-app",
-      "description": "NativeScript mobile client for reporting and locating missing persons in Bangladesh."
-    },
-    {
-      "category": "Mobile Apps",
-      "name": "SUic Player",
-      "repository": "https://github.com/soiadmahedi/SUic-Player",
-      "description": "Android audio and video player built on AndroidX Media3 ExoPlayer."
+      "category": "Awesome Lists & Resource Collections",
+      "name": "Made In Bangladesh",
+      "repository": "https://github.com/made-in-bangladesh/made-in-bangladesh",
+      "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
     },
     {
       "category": "Developer Tools & Libraries",
@@ -164,15 +86,15 @@
     },
     {
       "category": "Developer Tools & Libraries",
-      "name": "BanglaSpeech2Text",
-      "repository": "https://github.com/shhossain/BanglaSpeech2Text",
-      "description": "Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition."
-    },
-    {
-      "category": "Developer Tools & Libraries",
       "name": "Bangla TTS",
       "repository": "https://github.com/zabir-nabil/bangla-tts",
       "description": "Real-time multilingual Bangla and English text-to-speech synthesis library."
+    },
+    {
+      "category": "Developer Tools & Libraries",
+      "name": "BanglaSpeech2Text",
+      "repository": "https://github.com/shhossain/BanglaSpeech2Text",
+      "description": "Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition."
     },
     {
       "category": "Developer Tools & Libraries",
@@ -272,6 +194,12 @@
     },
     {
       "category": "Developer Tools & Libraries",
+      "name": "go-trigger",
+      "repository": "https://github.com/sadlil/go-trigger",
+      "description": "Global event dispatcher library for Go using string-based trigger IDs."
+    },
+    {
+      "category": "Developer Tools & Libraries",
       "name": "gohttp",
       "repository": "https://github.com/nahid/gohttp",
       "description": "Developer-friendly HTTP client library for Go applications."
@@ -281,12 +209,6 @@
       "name": "gojsonq",
       "repository": "https://github.com/thedevsaddam/gojsonq",
       "description": "Go package for querying complex JSON data structures with a fluent API."
-    },
-    {
-      "category": "Developer Tools & Libraries",
-      "name": "go-trigger",
-      "repository": "https://github.com/sadlil/go-trigger",
-      "description": "Global event dispatcher library for Go using string-based trigger IDs."
     },
     {
       "category": "Developer Tools & Libraries",
@@ -505,6 +427,72 @@
       "description": "Library for using Laravel's Eloquent ORM inside WordPress plugins and themes."
     },
     {
+      "category": "Fintech & Payments",
+      "name": "all-bd-mobile-payments-gateway",
+      "repository": "https://github.com/wp-plugins/all-bd-mobile-payments-gateway",
+      "description": "WooCommerce plugin integrating multiple Bangladeshi mobile payment gateways."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "bkash-js",
+      "repository": "https://github.com/ShejanMahamud/bkash-js",
+      "description": "TypeScript SDK for bKash Checkout URL-based payments with webhook and lifecycle helpers."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "bkash-payment-gateway",
+      "repository": "https://github.com/shahriar-shojib/bkash-payment-gateway",
+      "description": "Node.js and TypeScript library for accepting bKash payments from backend services."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "django-bkash",
+      "repository": "https://github.com/sharf-shawon/django-bkash",
+      "description": "Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "django-bulksms-bd",
+      "repository": "https://github.com/sharf-shawon/django-bulksms-bd",
+      "description": "Django package for integrating the BulkSMSBD.net SMS API with retries, logging, and Bangladeshi number helpers."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "edd-bkash-gateway",
+      "repository": "https://github.com/kapilpaul/edd-bkash-gateway",
+      "description": "Easy Digital Downloads plugin adding bKash payment gateway support."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "laravel-bkash",
+      "repository": "https://github.com/abdursoft/laravel-bkash",
+      "description": "Laravel package for integrating bKash tokenized payment APIs."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "Muthofun SMS Gateway",
+      "repository": "https://github.com/Shipu/muthofun-sms-gateway",
+      "description": "PHP and Laravel client for integrating the Bangladeshi Muthofun SMS gateway."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "Nagad API",
+      "repository": "https://github.com/arif98741/nagadApi",
+      "description": "PHP SDK for integrating Nagad mobile payment gateway APIs."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "Paysenz",
+      "repository": "https://github.com/alamgircsebd/paysenz",
+      "description": "Online payment gateway integration library for Bangladeshi merchants."
+    },
+    {
+      "category": "Fintech & Payments",
+      "name": "SSLCommerz WooCommerce",
+      "repository": "https://github.com/sslcommerz/SSLCommerz-Woocommerce",
+      "description": "WooCommerce plugin for the Bangladeshi SSLCommerz payment gateway."
+    },
+    {
       "category": "Government & Utility Services",
       "name": "Bangladesh GeoCode",
       "repository": "https://github.com/nuhil/bangladesh-geocode",
@@ -571,70 +559,40 @@
       "description": "Auto-updated list of Bangladeshi proxy servers for research and testing."
     },
     {
-      "category": "Fintech & Payments",
-      "name": "all-bd-mobile-payments-gateway",
-      "repository": "https://github.com/wp-plugins/all-bd-mobile-payments-gateway",
-      "description": "WooCommerce plugin integrating multiple Bangladeshi mobile payment gateways."
+      "category": "Mobile Apps",
+      "name": "Android Week View",
+      "repository": "https://github.com/aniruddh-0701/Android-Week-View",
+      "description": "Android library for displaying calendar week views with customizable day and event layouts."
     },
     {
-      "category": "Fintech & Payments",
-      "name": "bkash-js",
-      "repository": "https://github.com/ShejanMahamud/bkash-js",
-      "description": "TypeScript SDK for bKash Checkout URL-based payments with webhook and lifecycle helpers."
+      "category": "Mobile Apps",
+      "name": "Bangla-Dictionary",
+      "repository": "https://github.com/rafi-kamal/Bangla-Dictionary",
+      "description": "Open source English-to-Bangla dictionary app for Android based on Ankur.org's Bangla-English dictionary database."
     },
     {
-      "category": "Fintech & Payments",
-      "name": "bkash-payment-gateway",
-      "repository": "https://github.com/shahriar-shojib/bkash-payment-gateway",
-      "description": "Node.js and TypeScript library for accepting bKash payments from backend services."
+      "category": "Mobile Apps",
+      "name": "COVID-19 Bangladesh Android",
+      "repository": "https://github.com/SaadAAkash/COVID-19-Bangladesh-Android",
+      "description": "Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh."
     },
     {
-      "category": "Fintech & Payments",
-      "name": "django-bkash",
-      "repository": "https://github.com/sharf-shawon/django-bkash",
-      "description": "Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants."
+      "category": "Mobile Apps",
+      "name": "Incredible Bangladesh",
+      "repository": "https://github.com/asnbd/incredible-bangladesh",
+      "description": "Tourism guide Android app showcasing Bangladeshi attractions with maps and location details."
     },
     {
-      "category": "Fintech & Payments",
-      "name": "django-bulksms-bd",
-      "repository": "https://github.com/sharf-shawon/django-bulksms-bd",
-      "description": "Django package for integrating the BulkSMSBD.net SMS API with retries, logging, and Bangladeshi number helpers."
+      "category": "Mobile Apps",
+      "name": "Missing Person Mobile App",
+      "repository": "https://github.com/CodeForBangladesh/missing-person-mobile-app",
+      "description": "NativeScript mobile client for reporting and locating missing persons in Bangladesh."
     },
     {
-      "category": "Fintech & Payments",
-      "name": "edd-bkash-gateway",
-      "repository": "https://github.com/kapilpaul/edd-bkash-gateway",
-      "description": "Easy Digital Downloads plugin adding bKash payment gateway support."
-    },
-    {
-      "category": "Fintech & Payments",
-      "name": "laravel-bkash",
-      "repository": "https://github.com/abdursoft/laravel-bkash",
-      "description": "Laravel package for integrating bKash tokenized payment APIs."
-    },
-    {
-      "category": "Fintech & Payments",
-      "name": "Muthofun SMS Gateway",
-      "repository": "https://github.com/Shipu/muthofun-sms-gateway",
-      "description": "PHP and Laravel client for integrating the Bangladeshi Muthofun SMS gateway."
-    },
-    {
-      "category": "Fintech & Payments",
-      "name": "Nagad API",
-      "repository": "https://github.com/arif98741/nagadApi",
-      "description": "PHP SDK for integrating Nagad mobile payment gateway APIs."
-    },
-    {
-      "category": "Fintech & Payments",
-      "name": "Paysenz",
-      "repository": "https://github.com/alamgircsebd/paysenz",
-      "description": "Online payment gateway integration library for Bangladeshi merchants."
-    },
-    {
-      "category": "Fintech & Payments",
-      "name": "SSLCommerz WooCommerce",
-      "repository": "https://github.com/sslcommerz/SSLCommerz-Woocommerce",
-      "description": "WooCommerce plugin for the Bangladeshi SSLCommerz payment gateway."
+      "category": "Mobile Apps",
+      "name": "SUic Player",
+      "repository": "https://github.com/soiadmahedi/SUic-Player",
+      "description": "Android audio and video player built on AndroidX Media3 ExoPlayer."
     },
     {
       "category": "Other FOSS Projects",
@@ -733,52 +691,100 @@
       "description": "Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "Awesome Open Source Bangladesh",
-      "repository": "https://github.com/hackversedev/awesome-opensource-bangladesh",
-      "description": "Community-maintained list of open source projects and contributors from Bangladesh."
+      "category": "Web Applications",
+      "name": "Bangladesh Income Tax Calculator",
+      "repository": "https://github.com/ssi-anik/bd-income-tax-calculator",
+      "description": "Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "Awesome Open Source by Country or Region",
-      "repository": "https://github.com/slowernews/awesome-open-source-by-country-or-region",
-      "description": "Global index of country-specific open source lists, including Bangladesh-focused resources."
+      "category": "Web Applications",
+      "name": "Bangladesh Renovation Platform",
+      "repository": "https://github.com/shamspias/Bangladesh-Renovation-Platform",
+      "description": "Civic engagement platform for proposing ideas, reporting problems, and sharing solutions."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "Bangla All Programming Resources",
-      "repository": "https://github.com/BanglaProgramming/Bangla-All-Programming-Resources",
-      "description": "Bangla programming tutorials and references organized by core CS topics."
+      "category": "Web Applications",
+      "name": "Bangladesh Tech Companies",
+      "repository": "https://github.com/MBSTUPC/tech-companies-in-bangladesh",
+      "description": "Community-maintained directory of tech companies in Bangladesh for job seekers and networking."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "Bangla Programming Resources",
-      "repository": "https://github.com/me-shaon/bangla-programming-resources",
-      "description": "Curated Bangla learning materials across algorithms, data structures, and software fundamentals."
+      "category": "Web Applications",
+      "name": "BanglaGeoAPI",
+      "repository": "https://github.com/thecodermehedi/BanglaGeoAPI",
+      "description": "RESTful API server for Bangladesh administrative geo data built with Node.js and TypeScript."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "Bangla-NLP-Dataset",
-      "repository": "https://github.com/Foysal87/Bangla-NLP-Dataset",
-      "description": "Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources."
+      "category": "Web Applications",
+      "name": "bdapis",
+      "repository": "https://github.com/AbmSourav/bdapis",
+      "description": "REST API service exposing Bangladesh administrative locations for client applications."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "BD-public-api-datasets",
-      "repository": "https://github.com/SohanChy/BD-public-api-datasets",
-      "description": "Collective list of Bangladeshi public APIs and datasets aggregated from government and local services."
+      "category": "Web Applications",
+      "name": "Co-ronaBD.info",
+      "repository": "https://github.com/KhanShaheb34/Co-ronaBD.info",
+      "description": "Interactive dashboard visualizing Bangladesh COVID-19 case statistics and trends."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "DL-Sneak-Peek",
-      "repository": "https://github.com/menon92/DL-Sneak-Peek",
-      "description": "Deep learning Bangla resources using TensorFlow."
+      "category": "Web Applications",
+      "name": "CoronaInfoBD",
+      "repository": "https://github.com/TeamTigers/coronainfobd",
+      "description": "Real-time coronavirus tracker for Bangladesh with data visualization and awareness content."
     },
     {
-      "category": "Awesome Lists & Resource Collections",
-      "name": "Made In Bangladesh",
-      "repository": "https://github.com/made-in-bangladesh/made-in-bangladesh",
-      "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
+      "category": "Web Applications",
+      "name": "Fetchy Neon",
+      "repository": "https://github.com/prassamin/fetchy",
+      "description": "An open-source media downloader built to be fast, flexible, and beautifully modern. Whether you're here to build, contribute, or just peep under the hood, you're in for a treat."
+    },
+    {
+      "category": "Web Applications",
+      "name": "FinanceFrz",
+      "repository": "https://github.com/sharf-shawon/FinanceFrz",
+      "description": "Personal finance web app for tracking income and expenses, built as a real-world budgeting tool."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Goodwork",
+      "repository": "https://github.com/Hasnayeen/goodwork",
+      "description": "Self-hosted project management and team collaboration platform for software teams."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Movement Pass Clone",
+      "repository": "https://github.com/yeazin/Movement-Pass-Clone",
+      "description": "Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Node.js Professionals",
+      "repository": "https://github.com/devfikdark/nodeJS-Professionals",
+      "description": "Node.js notes and resource site translated into Bangla for Bangladeshi developers."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Osint-Tools-Bangladesh",
+      "repository": "https://github.com/paulpogoda/OSINT-Tools-Bangladesh",
+      "description": "Curated portal of Bangladesh-focused OSINT and public data resources."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Prochaar",
+      "repository": "https://github.com/CodeForBangladesh/prochaar",
+      "description": "Rails API backend for broadcasting missing person alerts across Bangladesh."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Stack Unboxed",
+      "repository": "https://github.com/yeasin2002/Stack-Unboxed",
+      "description": "Bangla programming learning platform with tutorials and web development guides."
+    },
+    {
+      "category": "Web Applications",
+      "name": "Zooming Classroom",
+      "repository": "https://github.com/yeazin/Zooming-cls",
+      "description": "Online classroom platform built with Django for Bangladeshi students."
     }
   ]
 }
