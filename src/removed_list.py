@@ -32,7 +32,10 @@ def _entry_refs(entry: dict[str, Any]) -> set[str]:
 def load_removed_entries(path: Path = DEFAULT_PATH) -> list[dict[str, Any]]:
     if not path.exists():
         return []
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return []
     entries = payload.get("removed") or []
     if not isinstance(entries, list):
         return []

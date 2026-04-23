@@ -20,12 +20,12 @@ jobs:
           python-version: "3.x"
 
       - name: install automation dependencies
-        run: python -m pip install -r automation-requirements.txt
+        run: python -m pip install -r requirements.txt
 
       - name: discover candidates from GitHub search
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/discover_candidates.py --output data/candidates.json
+        run: python src/discover_candidates.py --output data/candidates.json
 
       - name: upload candidates artifact
         uses: actions/upload-artifact@v4
@@ -47,7 +47,7 @@ jobs:
           python-version: "3.x"
 
       - name: install automation dependencies
-        run: python -m pip install -r automation-requirements.txt
+        run: python -m pip install -r requirements.txt
 
       - name: download candidates artifact
         uses: actions/download-artifact@v4
@@ -60,7 +60,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REDDIT_TOKEN: ${{ secrets.REDDIT_TOKEN }}
           SEARCH_API_KEY: ${{ secrets.SEARCH_API_KEY }}
-        run: python scripts/augment_candidates_with_social.py --input data/candidates.json --output data/candidates_augmented.json
+        run: python src/augment_candidates_with_social.py --input data/candidates.json --output data/candidates_augmented.json
 
       - name: upload augmented candidates artifact
         uses: actions/upload-artifact@v4
@@ -82,7 +82,7 @@ jobs:
           python-version: "3.x"
 
       - name: install automation dependencies
-        run: python -m pip install -r automation-requirements.txt
+        run: python -m pip install -r requirements.txt
 
       - name: download augmented candidates artifact
         uses: actions/download-artifact@v4
@@ -95,7 +95,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-        run: python scripts/filter_and_rank_candidates.py --input data/candidates_augmented.json --projects data/projects.json --output data/top10_to_add.json --limit 10
+        run: python src/filter_and_rank_candidates.py --input data/candidates_augmented.json --projects data/projects.json --output data/top10_to_add.json --limit 10
 
       - name: upload top candidates artifact
         uses: actions/upload-artifact@v4
@@ -119,7 +119,7 @@ jobs:
           python-version: "3.x"
 
       - name: install automation dependencies
-        run: python -m pip install -r automation-requirements.txt
+        run: python -m pip install -r requirements.txt
 
       - name: download top candidates artifact
         uses: actions/download-artifact@v4
@@ -135,7 +135,7 @@ jobs:
 
       - name: prepare monthly review bundle
         if: steps.count.outputs.selected_count != '0'
-        run: python scripts/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md --review-only
+        run: python src/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md --review-only
 
       - name: compute month tag
         if: steps.count.outputs.selected_count != '0'

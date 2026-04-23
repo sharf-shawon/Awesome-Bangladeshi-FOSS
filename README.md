@@ -1,11 +1,11 @@
 <!--lint disable awesome-github-->
 # Awesome Bangladeshi FOSS 
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml) ![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855&style=flat)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml) ![Visitors](https://api.Visitorbadge.io/api/combined?path=https%3A%2F%2FGitHub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855&style=flat)
 
 A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 
-For Better Experience use the web version: [sharf-shawon.github.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.github.io/Awesome-Bangladeshi-FOSS/)
+For Better Experience use the web version: [sharf-shawon.GitHub.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.GitHub.io/Awesome-Bangladeshi-FOSS/)
 
 ## Contents
 
@@ -23,7 +23,7 @@ For Better Experience use the web version: [sharf-shawon.github.io/Awesome-Bangl
   - [Awesome Lists \& Resource Collections](#awesome-lists--resource-collections)
   - [Contributing](#contributing)
   - [Automation](#automation)
-  - [License](#license)
+  - [License Agreement](#license-agreement)
 <!--lint enable awesome-toc-->
 
 ## About
@@ -34,11 +34,11 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 
 [Submit Project Here](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/issues/new?template=project-submission.yml). Submitted projects should have:
 
-- At least 10 Repo Stars
-- An open source license.
-- Active maintenance when possible.
-- Clear documentation.
-- Real-world usefulness.
+1. At least 10 Repo Stars.
+2. An open source license.
+3. Active maintenance when possible.
+4. Clear documentation.
+5. Real-world usefulness.
 
 ## Web Applications
 
@@ -64,7 +64,7 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 ## Mobile Apps
 
 - [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Android library for displaying calendar week views with customizable day and event layouts.
-- [Bangla-Dictionary](https://github.com/rafi-kamal/Bangla-Dictionary) - Open source English‑to‑Bangla dictionary app for Android based on Ankur.org’s Bangla‑English dictionary database.
+- [Bangla-Dictionary](https://github.com/rafi-kamal/Bangla-Dictionary) - Open source English-to-Bangla dictionary app for Android based on Ankur.org's Bangla-English dictionary database.
 - [COVID-19 Bangladesh Android](https://github.com/SaadAAkash/COVID-19-Bangladesh-Android) - Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh.
 - [Incredible Bangladesh](https://github.com/asnbd/incredible-bangladesh) - Tourism guide Android app showcasing Bangladeshi attractions with maps and location details.
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
@@ -178,13 +178,12 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Click Guardian](https://github.com/ahs12/click-guardian) - An application that prevents accidental double-clicks by introducing a customizable delay between mouse clicks.
 - [Express-js-tutorial-bangla](https://github.com/rupomsoft/Express-js-tutorial-bangla) - Express.js tutorial in Bangla for developers learning the framework.
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
-
-- [host](https://github.com/htr-tech/host) - Expose your LocalHost with this tool.
-- [js.zonayed.me](https://github.com/zonayedpca/js.zonayed.me) - সম্পূর্ণ বাংলায় হাতেকলমে জাভাস্ক্রিপ্ট শিখুন(ওয়েবসাইট রিপো).
+- [Host](https://github.com/htr-tech/host) - Tool to expose your localhost to the internet.
+- [js.zonayed.me](https://github.com/zonayedpca/js.zonayed.me) - JavaScript programming learning resource website and repository written in Bangla.
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
-- [Node.js-Tutorial-Bangla](https://github.com/rupomsoft/Node.js-Tutorial-Bangla) - In this comprehensive series, we dive into the world of Node.js, exploring its features, functionalities, and best.
-- [RailwayMatrixBD](https://github.com/AhmedTrooper/RailwayMatrixBD) - A desktop application to find tickets of Bangladesh railwyas in single click, and if direct ticket was not found, find segmented ticket...
-- [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React Bangla Tutorial - স্টেপ বাই স্টেপ ফলো করে রিয়েক্ট শিখুন।.
+- [Node.js-Tutorial-Bangla](https://github.com/rupomsoft/Node.js-Tutorial-Bangla) - Comprehensive tutorial series exploring Node.js features and functionalities.
+- [RailwayMatrixBD](https://github.com/AhmedTrooper/RailwayMatrixBD) - Desktop application to find tickets for Bangladesh railways, including segmented ticket path finding.
+- [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React programming tutorial series written in Bangla for Bangladeshi developers.
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 
 
@@ -206,19 +205,9 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ## Automation
 
-The `lint` workflow runs `awesome-lint` for awesome-list quality checks.
-The `validate-readme` workflow enforces project entry format and GitHub repository link rules.
-The `project-submission` workflow validates issue-template submissions, checks the reject list, comments with fix instructions on failures, creates a PR on success, and enables auto-merge for that PR.
-The `project-removal` workflow processes removal requests from a dedicated issue template, verifies repository ownership, and creates a PR that updates README, projects JSON, and the removed list.
-The `auto-merge` workflow enables auto-merge for eligible non-draft pull requests once required checks pass.
-The `post-merge-submission` workflow comments on the source issue, closes it when possible, leaves a prompt to close it manually if needed, and deletes merged `automation/project-submission-*` branches.
-The `monthly-discovery` workflow opens a review PR with the proposed candidates and a `selected` list that maintainers can trim before merge; the `post-merge-monthly-discovery` workflow applies the chosen entries, updates the reject list, and removes the temporary review files afterward.
-The `sync-projects-json` workflow regenerates `data/projects.json` from README project entries and auto-commits sync updates on pull requests (same-repo branches) and pushes.
-The `deploy-pages` workflow automatically publishes the list to GitHub Pages on every push to `main`.
+The project uses GitHub Actions for continuous integration and automated discovery. The [CI/CD Pipeline](.github/workflows/pipeline.yml) handles data validation, README generation, and issue processing. The [Monthly Discovery](.github/workflows/monthly-discovery.yml) workflow periodically searches for and proposes new Bangladeshi FOSS projects for review.
 
-<!--lint disable awesome-license-->
-## License
+## [License Agreement](license)
 
-Distributed under the [MIT License](license).
-<!--lint enable awesome-license-->
+Distributed under the MIT license.
 <!--lint enable awesome-github-->
