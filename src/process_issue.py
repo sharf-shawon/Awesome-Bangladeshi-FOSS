@@ -109,15 +109,15 @@ def process_submission(fields, issue_author):
         return False
         
     # Check removed list
-    if any(normalize_url(p.get("html_url", "")) == norm_url for p in removed_data["removed"]):
+    if any(normalize_url(p.get("html_url") or p.get("repository") or "") == norm_url for p in removed_data.get("removed", [])):
         print(f"ERROR: Project was previously removed and cannot be re-added automatically: {repo_url}")
         return False
         
     # Check rejected list
-    is_rejected = any(normalize_url(p.get("repository", "")) == norm_url for p in rejected_data["rejected"])
+    is_rejected = any(normalize_url(p.get("html_url") or p.get("repository") or "") == norm_url for p in rejected_data.get("rejected", []))
     reconsideration = fields.get("reconsideration_notes")
-    if is_rejected and not reconsideration:
-        print(f"ERROR: Project is on the rejected list. Please provide reconsideration notes.")
+    if is_rejected and (not reconsideration or reconsideration.strip().lower() == "_no response_"):
+        print(f"ERROR: Project is on the rejected list. Please provide reconsideration notes explaining what has changed.")
         return False
         
     # Fetch stars and validate
@@ -151,7 +151,10 @@ def process_submission(fields, issue_author):
     
     # If it was in rejected list, remove it
     if is_rejected:
-        rejected_data["rejected"] = [p for p in rejected_data["rejected"] if normalize_url(p.get("repository", "")) != norm_url]
+        rejected_data["rejected"] = [
+            p for p in rejected_data.get("rejected", []) 
+            if normalize_url(p.get("html_url") or p.get("repository") or "") != norm_url
+        ]
         rejected_data["rejected_count"] = len(rejected_data["rejected"])
         save_json(REJECTED_PATH, rejected_data)
         
@@ -234,8 +237,6 @@ def main():
         
     if changed:
         print("DATA_UPDATED")
-    else:
-        sys.exit(1)
 
 if __name__ == "__main__":
     main()

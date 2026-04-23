@@ -227,10 +227,18 @@ def test_process_submission_removed_list(mock_get, mock_data_paths):
 
 @patch("src.process_issue.requests.get")
 def test_process_submission_rejected_no_notes(mock_get, mock_data_paths):
+    mock_meta = MagicMock()
+    mock_meta.status_code = 200
+    mock_meta.json.return_value = {"stargazers_count": 25}
+    mock_get.return_value = mock_meta
+    
     # Setup rejected project
-    rejected_data = {"rejected": [{
-        "repository": "https://github.com/user/rejected"
-    }]}
+    rejected_data = {
+        "rejected": [{
+            "repository": "https://github.com/user/rejected"
+        }],
+        "rejected_count": 1
+    }
     with open(mock_data_paths["REJECTED_PATH"], "w") as f:
         json.dump(rejected_data, f)
         
@@ -241,7 +249,10 @@ def test_process_submission_rejected_no_notes(mock_get, mock_data_paths):
         "category": "Web Applications"
     }
     
-    with patch("src.process_issue.REJECTED_PATH", mock_data_paths["REJECTED_PATH"]):
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]), \
+         patch("src.process_issue.REJECTED_PATH", mock_data_paths["REJECTED_PATH"]), \
+         patch("src.process_issue.CONFIG_PATH", mock_data_paths["CONFIG_PATH"]):
         result = process_submission(fields, "author-user")
         assert result is False
 
@@ -253,9 +264,12 @@ def test_process_submission_rejected_with_notes(mock_get, mock_data_paths):
     mock_get.return_value = mock_meta
     
     # Setup rejected project
-    rejected_data = {"rejected": [{
-        "repository": "https://github.com/user/rejected"
-    }], "rejected_count": 1}
+    rejected_data = {
+        "rejected": [{
+            "repository": "https://github.com/user/rejected"
+        }],
+        "rejected_count": 1
+    }
     with open(mock_data_paths["REJECTED_PATH"], "w") as f:
         json.dump(rejected_data, f)
         
@@ -268,6 +282,7 @@ def test_process_submission_rejected_with_notes(mock_get, mock_data_paths):
     }
     
     with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]), \
          patch("src.process_issue.REJECTED_PATH", mock_data_paths["REJECTED_PATH"]), \
          patch("src.process_issue.CONFIG_PATH", mock_data_paths["CONFIG_PATH"]):
         
@@ -277,6 +292,7 @@ def test_process_submission_rejected_with_notes(mock_get, mock_data_paths):
         with open(mock_data_paths["REJECTED_PATH"], "r") as f:
             data = json.load(f)
             assert len(data["rejected"]) == 0
+            assert data["rejected_count"] == 0
 
 @patch("src.process_issue.requests.get")
 def test_process_submission_api_failure(mock_get, mock_data_paths):
@@ -319,7 +335,6 @@ def test_main_removal(mock_data_paths):
         mock_rem.assert_called_once()
 
 def test_main_invalid_title():
-    with patch("sys.argv", ["process_issue.py", "1", "Invalid", "body", "author"]), \
-         patch("sys.exit") as mock_exit:
+    with patch("sys.argv", ["process_issue.py", "1", "Invalid", "body", "author"]):
         main()
-        mock_exit.assert_called_with(1)
+        # Should not raise SystemExit or call sys.exit
