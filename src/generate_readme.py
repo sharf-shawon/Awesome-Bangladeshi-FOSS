@@ -17,6 +17,20 @@ def clean_description(desc):
     if not desc:
         return ""
     desc = desc.strip()
+    
+    # Replace curly quotes and non-standard dashes
+    replacements = {
+        "’": "'",
+        "‘": "'",
+        "“": '"',
+        "”": '"',
+        "‑": "-",
+        "–": "-",
+        "—": "-"
+    }
+    for old, new in replacements.items():
+        desc = desc.replace(old, new)
+
     # Remove prohibited words (case-insensitive)
     prohibited = ["awesome", "best", "great", "excellent", "amazing", "wonderful", "cool"]
     for word in prohibited:
@@ -53,7 +67,7 @@ def generate_toc(categories):
     toc += [
         "  - [Contributing](#contributing)",
         "  - [Automation](#automation)",
-        "  - [License](#license)",
+        "  - [License Agreement](#license-agreement)",
         "<!--lint enable awesome-toc-->"
     ]
     return "\n".join(toc)
@@ -78,12 +92,12 @@ def main():
         "# Awesome Bangladeshi FOSS ",
         "",
         "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) "
-        "[![CI/CD Pipeline](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/pipeline.yml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/pipeline.yml) "
-        "![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855&style=flat)",
+        "[![CI/CD Pipeline](https://GitHub.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/pipeline.yml/badge.svg)](https://GitHub.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/pipeline.yml) "
+        "![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2FGitHub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855&style=flat)",
         "",
         "A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.",
         "",
-        "For Better Experience use the web version: [sharf-shawon.github.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.github.io/Awesome-Bangladeshi-FOSS/)",
+        "For Better Experience use the web version: [sharf-shawon.GitHub.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.github.io/Awesome-Bangladeshi-FOSS/)",
         "",
         generate_toc(categories),
         "",
@@ -97,10 +111,7 @@ def main():
         "",
         "#### Requirements",
         "",
-        "- **Genuine FOSS:** Must have an open source license.",
-        "- **Popularity:** At least 10 Repo Stars.",
-        "- **Quality:** Clear documentation and real-world usefulness.",
-        "- **Maintenance:** Active maintenance when possible.",
+        "Submitted projects must be **Genuine FOSS** with an open source license, have at least **10 Repo Stars**, provide **Clear documentation**, and show **Real-world usefulness**.",
         ""
     ]
     
@@ -134,7 +145,7 @@ def main():
         "",
         "This list is partially maintained using automated scripts. Submissions and removals are processed via GitHub Issues.",
         "",
-        "## License",
+        "## License Agreement",
         "",
         "[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)",
         "",

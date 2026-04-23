@@ -1,11 +1,11 @@
 <!--lint disable awesome-github-->
 # Awesome Bangladeshi FOSS 
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![lint](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/lint.yaml) [![validate-readme](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/validate-readme.yaml) [![deploy-pages](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml/badge.svg)](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/deploy-pages.yaml) ![Visitors](https://api.Visitorbadge.io/api/combined?path=https%3A%2F%2FGitHub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855&style=flat)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![CI/CD Pipeline](https://GitHub.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/pipeline.yml/badge.svg)](https://GitHub.com/sharf-shawon/Awesome-Bangladeshi-FOSS/actions/workflows/pipeline.yml) ![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2FGitHub.com%2Fsharf-shawon%2FAwesome-Bangladeshi-FOSS&labelColor=%233f4850&countColor=%2330c855&style=flat)
 
 A curated list of high-quality free and open source software created in or actively maintained from Bangladesh.
 
-For Better Experience use the web version: [sharf-shawon.GitHub.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.GitHub.io/Awesome-Bangladeshi-FOSS/)
+For Better Experience use the web version: [sharf-shawon.GitHub.io/Awesome-Bangladeshi-FOSS](https://sharf-shawon.github.io/Awesome-Bangladeshi-FOSS/)
 
 ## Contents
 
@@ -13,14 +13,14 @@ For Better Experience use the web version: [sharf-shawon.GitHub.io/Awesome-Bangl
 - [Awesome Bangladeshi FOSS](#awesome-bangladeshi-foss)
   - [Contents](#contents)
   - [About](#about)
-    - [How entries are selected](#how-entries-are-selected)
+    - [How to contribute](#-how-to-contribute)
   - [Web Applications](#web-applications)
   - [Mobile Apps](#mobile-apps)
-  - [Developer Tools \& Libraries](#developer-tools--libraries)
-  - [Government \& Utility Services](#government--utility-services)
-  - [Fintech \& Payments](#fintech--payments)
+  - [Developer Tools & Libraries](#developer-tools-\&-libraries)
+  - [Government & Utility Services](#government-\&-utility-services)
+  - [Fintech & Payments](#fintech-\&-payments)
   - [Other FOSS Projects](#other-foss-projects)
-  - [Awesome Lists \& Resource Collections](#awesome-lists--resource-collections)
+  - [Awesome Lists & Resource Collections](#awesome-lists-\&-resource-collections)
   - [Contributing](#contributing)
   - [Automation](#automation)
   - [License Agreement](#license-agreement)
@@ -30,15 +30,13 @@ For Better Experience use the web version: [sharf-shawon.GitHub.io/Awesome-Bangl
 
 This list curates high-quality FOSS built in or actively maintained from Bangladesh. It highlights useful projects for real-world use, but it is not an exhaustive directory.
 
-### How entries are selected
+### 🚀 How to contribute
 
-[Submit Project Here](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/issues/new?template=project-submission.yml). Submitted projects should have:
+To add a project to this list, please **[Submit a New Project here](https://github.com/sharf-shawon/Awesome-Bangladeshi-FOSS/issues/new?template=project-submission.yml)**.
 
-1. At least 10 Repo Stars.
-2. An open source license.
-3. Active maintenance when possible.
-4. Clear documentation.
-5. Real-world usefulness.
+#### Requirements
+
+Submitted projects must be **Genuine FOSS** with an open source license, have at least **10 Repo Stars**, provide **Clear documentation**, and show **Real-world usefulness**.
 
 ## Web Applications
 
@@ -55,11 +53,9 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
 - [Node.js Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
 - [Osint-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.
-- [Passport Management System](https://github.com/md-sazzadul-islam/passport-management-system) - Designed to streamline and manage processes related to passport and visa management.
 - [Prochaar](https://github.com/CodeForBangladesh/prochaar) - Rails API backend for broadcasting missing person alerts across Bangladesh.
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
 - [Zooming Classroom](https://github.com/yeazin/Zooming-cls) - Online classroom platform built with Django for Bangladeshi students.
-
 
 ## Mobile Apps
 
@@ -70,7 +66,6 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
 - [SUic Player](https://github.com/soiadmahedi/SUic-Player) - Android audio and video player built on AndroidX Media3 ExoPlayer.
 
-
 ## Developer Tools & Libraries
 
 - [Avro Keyboard](https://github.com/mugli/Avro-Keyboard) - Unicode-compliant Bangla input method editor for Windows.
@@ -78,8 +73,8 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [BangalASR](https://github.com/menon92/BangalASR) - Transformer-based Bangla automatic speech recognition system.
 - [Bangla BERT](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
 - [Bangla NLP Parallel Dataset Tools](https://github.com/likhonsheikh54/BanglaNLP) - Toolkit for scraping, aligning, and filtering Bangla-English parallel news datasets.
-- [BanglaSpeech2Text](https://github.com/shhossain/BanglaSpeech2Text) - Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition.
 - [Bangla TTS](https://github.com/zabir-nabil/bangla-tts) - Real-time multilingual Bangla and English text-to-speech synthesis library.
+- [BanglaSpeech2Text](https://github.com/shhossain/BanglaSpeech2Text) - Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition.
 - [Bengali Alphabet](https://github.com/lifeparticle/Bengali-Alphabet) - Dataset and resources for Bengali characters, useful for OCR and Bangla language computing.
 - [Bengali Dictionary](https://github.com/MinhasKamal/BengaliDictionary) - Large Bengali word and translation collection suitable for spell checkers and NLP tools.
 - [BNLP](https://github.com/sagorbrur/bnlp) - Bengali NLP toolkit with tokenization, embeddings, POS tagging, and NER.
@@ -96,9 +91,9 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [EMQX Web Hook](https://github.com/emqx/emqx-web-hook) - Web hook plugin for the EMQX MQTT broker.
 - [Gittivity](https://github.com/s1s1ty/gittivity) - Desktop notifier for GitHub activity written in Python.
 - [go-avro-phonetic](https://github.com/sadlil/go-avro-phonetic) - Golang implementation of the Avro phonetic Bangla input method.
+- [go-trigger](https://github.com/sadlil/go-trigger) - Global event dispatcher library for Go using string-based trigger IDs.
 - [gohttp](https://github.com/nahid/gohttp) - Developer-friendly HTTP client library for Go applications.
 - [gojsonq](https://github.com/thedevsaddam/gojsonq) - Go package for querying complex JSON data structures with a fluent API.
-- [go-trigger](https://github.com/sadlil/go-trigger) - Global event dispatcher library for Go using string-based trigger IDs.
 - [Gouberfmt](https://github.com/GophersBD/gouberfmt) - Go static analysis tool to check code against the Uber Go style guide.
 - [govalidator](https://github.com/thedevsaddam/govalidator) - Request validation library for Go inspired by Laravel validation rules.
 - [Hacker-Playbook-Utility](https://github.com/shepherd-06/Hacker-Playbook-Utility) - Python-powered Bash utility to automate installation of Hacker Playbook tools.
@@ -136,21 +131,19 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [WordPress Settings API Class](https://github.com/tareq1988/wordpress-settings-api-class) - PHP wrapper simplifying WordPress options panels using the Settings API.
 - [WP Eloquent](https://github.com/tareq1988/wp-eloquent) - Library for using Laravel's Eloquent ORM inside WordPress plugins and themes.
 
-
 ## Government & Utility Services
 
 - [Bangladesh GeoCode](https://github.com/nuhil/bangladesh-geocode) - Bangladesh administrative geocode dataset in SQL, CSV, JSON, XML, and PHP formats.
 - [Bangladesh GeoCode PHP](https://github.com/exceptio/bangladesh-geocode) - PHP library providing Bangladesh division, district, and upazila data for applications.
 - [Bangladesh GeoJSON](https://github.com/ifahimreza/bangladesh-geojson) - GeoJSON boundary data for Bangladesh divisions, districts, and upazilas.
 - [Bangladesh Unified SIM Codes](https://github.com/dibbockb/Bangladesh-Unified-SIM-Codes) - Comprehensive USSD, SMS, and short codes for all Bangladeshi mobile operators.
-- [Bangladeshi Geo Data](https://github.com/engrasel/bangladeshi-geo-data) - npm package exposing administrative and city data for Bangladesh.
+- [Bangladeshi Geo Data](https://github.com/engrasel/bangladeshi-geo-data) - Npm package exposing administrative and city data for Bangladesh.
 - [battery-monitor](https://github.com/maateen/battery-monitor) - Linux desktop utility that notifies users about battery state changes.
 - [Brightness Controller](https://github.com/LordAmit/Brightness) - GUI tool to control display brightness on multi-monitor Linux setups.
 - [CPID](https://github.com/niyazed/cpid) - Categorized cattle price image dataset with labeled photos for price prediction and classification research.
 - [laravel-bangladesh-geocode](https://github.com/devfaysal/laravel-bangladesh-geocode) - Laravel package for seeding and querying Bangladesh administrative location data.
 - [Medicinedb](https://github.com/WSAyan/medicinedb) - SQLite medicine database with JSON and CSV exports focused on the Bangladesh market.
 - [ProxyBD](https://github.com/fahimscirex/proxybd) - Auto-updated list of Bangladeshi proxy servers for research and testing.
-
 
 ## Fintech & Payments
 
@@ -165,7 +158,6 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Nagad API](https://github.com/arif98741/nagadApi) - PHP SDK for integrating Nagad mobile payment gateway APIs.
 - [Paysenz](https://github.com/alamgircsebd/paysenz) - Online payment gateway integration library for Bangladeshi merchants.
 - [SSLCommerz WooCommerce](https://github.com/sslcommerz/SSLCommerz-Woocommerce) - WooCommerce plugin for the Bangladeshi SSLCommerz payment gateway.
-
 
 ## Other FOSS Projects
 
@@ -186,7 +178,6 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React programming tutorial series written in Bangla for Bangladeshi developers.
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 
-
 ## Awesome Lists & Resource Collections
 
 - [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
@@ -196,18 +187,18 @@ This list curates high-quality FOSS built in or actively maintained from Banglad
 - [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
 - [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
 - [DL-Sneak-Peek](https://github.com/menon92/DL-Sneak-Peek) - Deep learning Bangla resources using TensorFlow.
-- [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - Awesome list of frameworks, libraries, and software made in Bangladesh.
-
+- [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - List of frameworks, libraries, and software made in Bangladesh.
 
 ## Contributing
 
-Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+[Contributions of any kind welcome, just follow the guidelines](contributing.md)!
 
 ## Automation
 
-The project uses GitHub Actions for continuous integration and automated discovery. The [CI/CD Pipeline](.github/workflows/pipeline.yml) handles data validation, README generation, and issue processing. The [Monthly Discovery](.github/workflows/monthly-discovery.yml) workflow periodically searches for and proposes new Bangladeshi FOSS projects for review.
+This list is partially maintained using automated scripts. Submissions and removals are processed via GitHub Issues.
 
-## [License Agreement](license)
+## License Agreement
 
-Distributed under the MIT license.
-<!--lint enable awesome-github-->
+[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, all contributors have waived all copyright and related or neighboring rights to this work.

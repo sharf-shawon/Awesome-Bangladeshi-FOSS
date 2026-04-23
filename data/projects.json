@@ -106,7 +106,7 @@
       "category": "Mobile Apps",
       "name": "Bangla-Dictionary",
       "repository": "https://github.com/rafi-kamal/Bangla-Dictionary",
-      "description": "Open source English‑to‑Bangla dictionary app for Android based on Ankur.org’s Bangla‑English dictionary database."
+      "description": "Open source English-to-Bangla dictionary app for Android based on Ankur.org's Bangla-English dictionary database."
     },
     {
       "category": "Mobile Apps",
@@ -692,15 +692,15 @@
     },
     {
       "category": "Other FOSS Projects",
-      "name": "host",
+      "name": "Host",
       "repository": "https://github.com/htr-tech/host",
-      "description": "Expose your LocalHost with this tool."
+      "description": "Tool to expose your localhost to the internet."
     },
     {
       "category": "Other FOSS Projects",
       "name": "js.zonayed.me",
       "repository": "https://github.com/zonayedpca/js.zonayed.me",
-      "description": "সম্পূর্ণ বাংলায় হাতেকলমে জাভাস্ক্রিপ্ট শিখুন(ওয়েবসাইট রিপো)."
+      "description": "JavaScript programming learning resource website and repository written in Bangla."
     },
     {
       "category": "Other FOSS Projects",
@@ -712,19 +712,19 @@
       "category": "Other FOSS Projects",
       "name": "Node.js-Tutorial-Bangla",
       "repository": "https://github.com/rupomsoft/Node.js-Tutorial-Bangla",
-      "description": "In this comprehensive series, we dive into the world of Node.js, exploring its features, functionalities, and best."
+      "description": "Comprehensive tutorial series exploring Node.js features and functionalities."
     },
     {
       "category": "Other FOSS Projects",
       "name": "RailwayMatrixBD",
       "repository": "https://github.com/AhmedTrooper/RailwayMatrixBD",
-      "description": "A desktop application to find tickets of Bangladesh railwyas in single click, and if direct ticket was not found, find segmented ticket..."
+      "description": "Desktop application to find tickets for Bangladesh railways, including segmented ticket path finding."
     },
     {
       "category": "Other FOSS Projects",
       "name": "react-bangla-tutorial",
       "repository": "https://github.com/codedbyMojnu/react-bangla-tutorial",
-      "description": "React Bangla Tutorial - স্টেপ বাই স্টেপ ফলো করে রিয়েক্ট শিখুন।."
+      "description": "React programming tutorial series written in Bangla for Bangladeshi developers."
     },
     {
       "category": "Other FOSS Projects",
