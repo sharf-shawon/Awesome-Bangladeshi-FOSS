@@ -64,13 +64,18 @@ It is no longer maintained.
 def test_process_submission_success(mock_get, mock_data_paths):
     mock_meta = MagicMock()
     mock_meta.status_code = 200
-    mock_meta.json.return_value = {"stargazers_count": 25}
+    mock_meta.json.return_value = {
+        "stargazers_count": 25,
+        "name": "New Project",
+        "description": "A new project",
+        "html_url": "https://github.com/user/new-repo",
+        "full_name": "user/new-repo",
+        "owner": {"login": "user"},
+    }
     mock_get.return_value = mock_meta
     
     fields = {
-        "project_name": "New Project",
         "repository_url": "https://github.com/user/new-repo",
-        "description": "A new project",
         "category": "Web Applications"
     }
     
@@ -92,13 +97,18 @@ def test_process_submission_success(mock_get, mock_data_paths):
 def test_process_submission_low_stars(mock_get, mock_data_paths):
     mock_meta = MagicMock()
     mock_meta.status_code = 200
-    mock_meta.json.return_value = {"stargazers_count": 5}
+    mock_meta.json.return_value = {
+        "stargazers_count": 5,
+        "name": "New Project",
+        "description": "A new project",
+        "html_url": "https://github.com/user/new-repo",
+        "full_name": "user/new-repo",
+        "owner": {"login": "user"},
+    }
     mock_get.return_value = mock_meta
     
     fields = {
-        "project_name": "New Project",
         "repository_url": "https://github.com/user/new-repo",
-        "description": "A new project",
         "category": "Web Applications"
     }
     
@@ -446,6 +456,43 @@ def test_process_removal_not_found(mock_data_paths):
     with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]):
         result = process_removal(fields, "author")
         assert result is False
+
+def test_process_removal_already_removed_noop(mock_data_paths):
+    removed_data = {"removed": [{"html_url": "https://github.com/user/removed"}]}
+    with open(mock_data_paths["REMOVED_PATH"], "w") as f:
+        json.dump(removed_data, f)
+
+    fields = {"repository_url": "https://github.com/user/removed", "reason": "test"}
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
+        result = process_removal(fields, "author")
+        assert result is False
+
+@patch("src.process_issue.requests.get")
+def test_process_removal_matches_url_variants(mock_get, mock_data_paths):
+    projects_data = {"projects": [{
+        "category": "Web Applications",
+        "name": "Target Project",
+        "repository": "https://github.com/Owner/Target.git",
+        "description": "To be removed."
+    }]}
+    with open(mock_data_paths["PROJECTS_PATH"], "w") as f:
+        json.dump(projects_data, f)
+
+    mock_meta = MagicMock()
+    mock_meta.status_code = 200
+    mock_meta.json.return_value = {
+        "owner": {"login": "owner"},
+        "full_name": "owner/target",
+        "stargazers_count": 10,
+    }
+    mock_get.return_value = mock_meta
+
+    fields = {"repository_url": "https://github.com/owner/target/", "reason": "test"}
+    with patch("src.process_issue.PROJECTS_PATH", mock_data_paths["PROJECTS_PATH"]), \
+         patch("src.process_issue.REMOVED_PATH", mock_data_paths["REMOVED_PATH"]):
+        result = process_removal(fields, "owner")
+        assert result is True
 
 def test_main_submission(mock_data_paths):
     with patch("sys.argv", ["process_issue.py", "1", "[Submission]", "### Project name\nTest", "author"]), \
