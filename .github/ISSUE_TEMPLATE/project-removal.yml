@@ -11,6 +11,7 @@ body:
 
         If you are the repository owner, your request can be auto-merged after checks pass.
         Non-owner requests will still create a PR, but require maintainer review.
+        Repository metadata is fetched from GitHub automatically when possible.
 
   - type: input
     id: repository_url
@@ -27,15 +28,3 @@ body:
       label: Reason for removal
       description: Briefly explain why this project should be removed from the list.
       placeholder: The project is no longer maintained and should be removed.
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: checks
-    attributes:
-      label: Removal checklist
-      options:
-        - label: I understand this request will create an automated pull request.
-          required: true
-        - label: I used a GitHub repository URL in the format https://github.com/owner/repo.
-          required: true
