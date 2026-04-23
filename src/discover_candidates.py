@@ -2,7 +2,7 @@
 """Discover Bangladeshi FOSS candidate repositories from GitHub search.
 
 Usage:
-  python scripts/discover_candidates.py --output data/candidates.json
+  python src/discover_candidates.py --output data/candidates.json
 
 Environment:
   GITHUB_TOKEN (optional but recommended): GitHub API token.
@@ -25,8 +25,20 @@ import requests
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = REPO_ROOT / "data" / "candidates.json"
+DEFAULT_CONFIG = REPO_ROOT / "data" / "discovery_config.json"
 API_BASE = "https://api.github.com"
 GITHUB_REPO_URL_RE = re.compile(r"^https://github\.com/[^/\s]+/[^/\s]+/?$")
+
+
+def load_config(path: Path) -> dict[str, Any]:
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                logging.error("Failed to parse config file: %s", path)
+                return {}
+    return {}
 
 
 def build_session() -> requests.Session:
@@ -95,18 +107,22 @@ def normalize_repo_item(repo: dict[str, Any], source: str) -> dict[str, Any] | N
     }
 
 
-def discover_by_users(session: requests.Session) -> list[dict[str, Any]]:
-    logging.info("Searching users with location:Bangladesh")
+def discover_by_users(session: requests.Session, config: dict[str, Any]) -> list[dict[str, Any]]:
+    query = config.get("user_search_query", "location:Bangladesh")
+    max_users = config.get("max_users_to_fetch", 25)
+    per_page = config.get("user_repos_per_page", 30)
+
+    logging.info("Searching users with query: %s", query)
     users_payload = request_json(
         session,
         f"{API_BASE}/search/users",
-        params={"q": "location:Bangladesh", "per_page": 30, "page": 1},
+        params={"q": query, "per_page": max_users, "page": 1},
     )
     users = users_payload.get("items") or []
     logging.info("Found %d users in location search", len(users))
     candidates: list[dict[str, Any]] = []
 
-    for user in users[:25]:
+    for user in users[:max_users]:
         login = user.get("login")
         if not login:
             continue
@@ -114,36 +130,41 @@ def discover_by_users(session: requests.Session) -> list[dict[str, Any]]:
         repos = request_json(
             session,
             f"{API_BASE}/users/{login}/repos",
-            params={"sort": "updated", "per_page": 30, "type": "public"},
+            params={"sort": "updated", "per_page": per_page, "type": "public"},
         )
         if not isinstance(repos, list):
             continue
         for repo in repos:
             normalized = normalize_repo_item(repo, source=f"github_user_location:{login}")
             if normalized:
-                candidates.append(normalized)
+                # Optional filtering by stars at discovery time
+                if normalized["stargazers_count"] >= config.get("min_stars_for_candidate", 0):
+                    candidates.append(normalized)
         time.sleep(0.2)
     return candidates
 
 
-def discover_by_topics(session: requests.Session) -> list[dict[str, Any]]:
-    topic_queries = [
+def discover_by_topics(session: requests.Session, config: dict[str, Any]) -> list[dict[str, Any]]:
+    topic_queries = config.get("topic_queries", [
         "topic:bangladesh",
         "topic:bangla",
         "bangla in:name,description,readme",
         "bangladesh in:name,description,readme",
-    ]
+    ])
+    per_page = config.get("repo_search_per_page", 50)
+    min_stars = config.get("min_stars_for_candidate", 0)
+
     candidates: list[dict[str, Any]] = []
     for query in topic_queries:
         logging.info("Searching repositories with query: %s", query)
         payload = request_json(
             session,
             f"{API_BASE}/search/repositories",
-            params={"q": query, "sort": "updated", "order": "desc", "per_page": 50, "page": 1},
+            params={"q": query, "sort": "updated", "order": "desc", "per_page": per_page, "page": 1},
         )
         for item in payload.get("items") or []:
             normalized = normalize_repo_item(item, source=f"github_repo_search:{query}")
-            if normalized:
+            if normalized and normalized["stargazers_count"] >= min_stars:
                 candidates.append(normalized)
         time.sleep(0.3)
     return candidates
@@ -168,15 +189,18 @@ def dedupe_candidates(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output JSON file path")
+    parser.add_argument("--config", default=str(DEFAULT_CONFIG), help="Configuration JSON file path")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    config = load_config(Path(args.config))
+
     session = build_session()
-    user_candidates = discover_by_users(session)
-    topic_candidates = discover_by_topics(session)
+    user_candidates = discover_by_users(session, config)
+    topic_candidates = discover_by_topics(session, config)
     candidates = dedupe_candidates(user_candidates + topic_candidates)
 
     payload = {

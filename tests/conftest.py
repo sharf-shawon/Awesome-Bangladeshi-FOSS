@@ -1,9 +1,9 @@
-"""Shared pytest configuration and fixtures for all script tests.
+"""Shared pytest configuration and fixtures for all tests.
 
-Adds the scripts/ directory to sys.path before any test is collected so that
+Adds the src/ directory to sys.path before any test is collected so that
 modules like `ai_utils`, `discover_candidates`, etc. can be imported directly,
 and cross-module imports (e.g. `from ai_utils import classify_and_score`) resolve
-correctly without installing the scripts as a package.
+correctly without installing src as a package.
 """
 
 from __future__ import annotations
@@ -16,13 +16,15 @@ import pytest
 
 
 # ---------------------------------------------------------------------------
-# sys.path – must come before any test-module import collects script modules.
+# sys.path – must come before any test-module import collects modules.
 # ---------------------------------------------------------------------------
 REPO_ROOT = Path(__file__).parent.parent
-SCRIPTS_DIR = REPO_ROOT / "scripts"
+SRC_DIR = REPO_ROOT / "src"
 
-if str(SCRIPTS_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPTS_DIR))
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
 
 
 # ---------------------------------------------------------------------------

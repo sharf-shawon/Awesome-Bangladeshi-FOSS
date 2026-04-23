@@ -15,6 +15,17 @@ import pytest
 
 import discover_candidates as dc
 
+@pytest.fixture
+def sample_config():
+    return {
+        "user_search_query": "location:Bangladesh",
+        "max_users_to_fetch": 2,
+        "user_repos_per_page": 3,
+        "topic_queries": ["topic:bangladesh"],
+        "repo_search_per_page": 3,
+        "min_stars_for_candidate": 0
+    }
+
 
 # ---------------------------------------------------------------------------
 # build_session
@@ -212,7 +223,7 @@ _SAMPLE_REPO = {
 }
 
 
-def test_discover_by_users_returns_candidates(monkeypatch):
+def test_discover_by_users_returns_candidates(monkeypatch, sample_config):
     monkeypatch.setattr(dc, "time", mock.MagicMock())
 
     def _mock_request(session, url, params=None):
@@ -223,11 +234,11 @@ def test_discover_by_users_returns_candidates(monkeypatch):
         return {}
 
     with mock.patch.object(dc, "request_json", side_effect=_mock_request):
-        result = dc.discover_by_users(mock.MagicMock())
+        result = dc.discover_by_users(mock.MagicMock(), sample_config)
     assert any(r["full_name"] == "bd-user/tool" for r in result)
 
 
-def test_discover_by_users_skips_user_without_login(monkeypatch):
+def test_discover_by_users_skips_user_without_login(monkeypatch, sample_config):
     monkeypatch.setattr(dc, "time", mock.MagicMock())
 
     def _mock_request(session, url, params=None):
@@ -236,11 +247,11 @@ def test_discover_by_users_skips_user_without_login(monkeypatch):
         return []
 
     with mock.patch.object(dc, "request_json", side_effect=_mock_request):
-        result = dc.discover_by_users(mock.MagicMock())
+        result = dc.discover_by_users(mock.MagicMock(), sample_config)
     assert result == []
 
 
-def test_discover_by_users_skips_non_list_repos(monkeypatch):
+def test_discover_by_users_skips_non_list_repos(monkeypatch, sample_config):
     monkeypatch.setattr(dc, "time", mock.MagicMock())
 
     def _mock_request(session, url, params=None):
@@ -250,7 +261,7 @@ def test_discover_by_users_skips_non_list_repos(monkeypatch):
         return {"message": "Not Found"}
 
     with mock.patch.object(dc, "request_json", side_effect=_mock_request):
-        result = dc.discover_by_users(mock.MagicMock())
+        result = dc.discover_by_users(mock.MagicMock(), sample_config)
     assert result == []
 
 
@@ -258,19 +269,19 @@ def test_discover_by_users_skips_non_list_repos(monkeypatch):
 # discover_by_topics – mocked request_json
 # ---------------------------------------------------------------------------
 
-def test_discover_by_topics_returns_candidates(monkeypatch):
+def test_discover_by_topics_returns_candidates(monkeypatch, sample_config):
     monkeypatch.setattr(dc, "time", mock.MagicMock())
 
     with mock.patch.object(dc, "request_json", return_value={"items": [_SAMPLE_REPO]}):
-        result = dc.discover_by_topics(mock.MagicMock())
+        result = dc.discover_by_topics(mock.MagicMock(), sample_config)
     assert len(result) > 0
 
 
-def test_discover_by_topics_empty_items(monkeypatch):
+def test_discover_by_topics_empty_items(monkeypatch, sample_config):
     monkeypatch.setattr(dc, "time", mock.MagicMock())
 
     with mock.patch.object(dc, "request_json", return_value={"items": []}):
-        result = dc.discover_by_topics(mock.MagicMock())
+        result = dc.discover_by_topics(mock.MagicMock(), sample_config)
     assert result == []
 
 
@@ -279,13 +290,15 @@ def test_discover_by_topics_empty_items(monkeypatch):
 # ---------------------------------------------------------------------------
 
 def test_main_writes_candidates_file(monkeypatch, tmp_path):
-    monkeypatch.setattr(dc, "discover_by_users", lambda s: [
+    monkeypatch.setattr(dc, "discover_by_users", lambda s, c: [
         dc.normalize_repo_item(_SAMPLE_REPO, "github_user_location:bd-user")
     ])
-    monkeypatch.setattr(dc, "discover_by_topics", lambda s: [])
+    monkeypatch.setattr(dc, "discover_by_topics", lambda s, c: [])
 
     output_file = tmp_path / "candidates.json"
-    monkeypatch.setattr(sys, "argv", ["discover_candidates.py", "--output", str(output_file)])
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({}), encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["discover_candidates.py", "--output", str(output_file), "--config", str(config_file)])
     result = dc.main()
     assert result == 0
     data = json.loads(output_file.read_text())
@@ -297,11 +310,13 @@ def test_main_deduplicates_across_sources(monkeypatch, tmp_path):
     repo = dc.normalize_repo_item(_SAMPLE_REPO, "user_search")
     repo2 = dc.normalize_repo_item(_SAMPLE_REPO, "topic_search")  # same repo, different source
 
-    monkeypatch.setattr(dc, "discover_by_users", lambda s: [repo])
-    monkeypatch.setattr(dc, "discover_by_topics", lambda s: [repo2])
+    monkeypatch.setattr(dc, "discover_by_users", lambda s, c: [repo])
+    monkeypatch.setattr(dc, "discover_by_topics", lambda s, c: [repo2])
 
     output_file = tmp_path / "candidates.json"
-    monkeypatch.setattr(sys, "argv", ["discover_candidates.py", "--output", str(output_file)])
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({}), encoding="utf-8")
+    monkeypatch.setattr(sys, "argv", ["discover_candidates.py", "--output", str(output_file), "--config", str(config_file)])
     dc.main()
     data = json.loads(output_file.read_text())
     # Should be deduplicated to 1 candidate even though both sources found it

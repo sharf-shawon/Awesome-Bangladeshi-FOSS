@@ -2,7 +2,7 @@
 """Filter, classify, and rank discovered candidate repositories.
 
 Usage:
-  python scripts/filter_and_rank_candidates.py --input data/candidates_augmented.json --projects data/projects.json --output data/top10_to_add.json
+  python src/filter_and_rank_candidates.py --input data/candidates_augmented.json --projects data/projects.json --output data/top10_to_add.json
 
 Environment:
   GITHUB_TOKEN (optional but recommended): GitHub API token for README snippets and owner metadata.
@@ -25,7 +25,6 @@ from typing import Any
 import requests
 
 from ai_utils import classify_and_score
-from project_requirements import load_project_requirements
 from removed_list import load_removed_repo_refs
 from reject_list import load_rejected_repo_refs, normalize_repo_ref
 
@@ -34,23 +33,20 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = REPO_ROOT / "data" / "candidates_augmented.json"
 DEFAULT_PROJECTS = REPO_ROOT / "data" / "projects.json"
 DEFAULT_OUTPUT = REPO_ROOT / "data" / "top10_to_add.json"
+DEFAULT_CONFIG = REPO_ROOT / "data" / "discovery_config.json"
 API_BASE = "https://api.github.com"
 
-ALLOWED_LICENSE_PREFIXES = ("MIT", "Apache", "GPL", "AGPL", "LGPL", "BSD", "MPL", "ISC", "EPL", "CC0")
-BD_KEYWORDS = {
-    "bangla",
-    "বাংলা",
-    "bangladesh",
-    "dhaka",
-    "chattogram",
-    "bkash",
-    "nagad",
-    "bd",
-    "upazila",
-    "district",
-    "bengali",
-}
 README_ENTRY_REPO_RE = re.compile(r"^https://github\.com/([^/\s]+/[^/\s]+)/*$")
+
+
+def load_config(path: Path) -> dict[str, Any]:
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return {}
+    return {}
 
 
 def build_session() -> requests.Session:
@@ -104,10 +100,11 @@ def normalize_license_spdx(candidate: dict[str, Any]) -> str:
     return spdx
 
 
-def license_is_allowed(spdx: str) -> bool:
+def license_is_allowed(spdx: str, config: dict[str, Any]) -> bool:
     if not spdx or spdx.upper() == "NOASSERTION":
         return False
-    return any(spdx.startswith(prefix) for prefix in ALLOWED_LICENSE_PREFIXES)
+    allowed_prefixes = config.get("allowed_license_prefixes", [])
+    return any(spdx.startswith(prefix) for prefix in allowed_prefixes)
 
 
 def fetch_owner_location(session: requests.Session, owner_login: str) -> str:
@@ -134,7 +131,8 @@ def fetch_readme_snippet(session: requests.Session, full_name: str) -> str:
     return text[:600]
 
 
-def has_bangladeshi_signal(candidate: dict[str, Any], owner_location: str, readme_snippet: str) -> bool:
+def has_bangladeshi_signal(candidate: dict[str, Any], owner_location: str, readme_snippet: str, config: dict[str, Any]) -> bool:
+    keywords = config.get("bd_keywords", [])
     blob = " ".join(
         [
             candidate.get("full_name") or "",
@@ -148,21 +146,28 @@ def has_bangladeshi_signal(candidate: dict[str, Any], owner_location: str, readm
         return True
     if "bd" == owner_location.lower().strip():
         return True
-    return any(keyword in blob for keyword in BD_KEYWORDS)
+    return any(keyword in blob for keyword in keywords)
 
 
-def has_non_trivial_docs(candidate: dict[str, Any], readme_snippet: str) -> bool:
+def has_non_trivial_docs(candidate: dict[str, Any], readme_snippet: str, config: dict[str, Any]) -> bool:
+    min_desc = config.get("min_description_length", 25)
+    min_readme = config.get("min_readme_snippet_length", 180)
     description = (candidate.get("description") or "").strip()
-    if len(description) >= 25:
+    if len(description) >= min_desc:
         return True
-    return len(readme_snippet) >= 180
+    return len(readme_snippet) >= min_readme
 
 
-def has_min_signal(candidate: dict[str, Any]) -> bool:
+def has_min_signal(candidate: dict[str, Any], config: dict[str, Any]) -> bool:
     stars = int(candidate.get("stargazers_count") or 0)
     forks = int(candidate.get("forks_count") or 0)
     issues = int(candidate.get("open_issues_count") or 0)
-    return stars >= 3 or forks >= 2 or issues >= 3
+    
+    min_stars = config.get("min_discovery_stars", 3)
+    min_forks = config.get("min_discovery_forks", 2)
+    min_issues = config.get("min_discovery_issues", 3)
+    
+    return stars >= min_stars or forks >= min_forks or issues >= min_issues
 
 
 def has_minimum_stars(candidate: dict[str, Any], minimum_stars: int) -> bool:
@@ -216,6 +221,7 @@ def main() -> int:
     parser.add_argument("--input", default=str(DEFAULT_INPUT), help="Augmented candidates JSON path")
     parser.add_argument("--projects", default=str(DEFAULT_PROJECTS), help="Existing projects JSON path")
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output top candidates JSON path")
+    parser.add_argument("--config", default=str(DEFAULT_CONFIG), help="Configuration JSON file path")
     parser.add_argument("--limit", type=int, default=10, help="Max number of candidates to select")
     args = parser.parse_args()
 
@@ -225,6 +231,8 @@ def main() -> int:
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    config = load_config(Path(args.config))
+
     if not input_path.exists():
         raise FileNotFoundError(f"Input file not found: {input_path}")
 
@@ -233,8 +241,7 @@ def main() -> int:
     existing_repo_names = load_existing_repo_names(projects_path)
     rejected_repo_refs = load_rejected_repo_refs()
     removed_repo_refs = load_removed_repo_refs()
-    requirements = load_project_requirements()
-    minimum_stars = int(requirements.get("minimum_stars") or 0)
+    minimum_stars = int(config.get("minimum_stars") or 0)
     session = build_session()
 
     selected: list[dict[str, Any]] = []
@@ -258,7 +265,7 @@ def main() -> int:
             continue
 
         spdx = normalize_license_spdx(candidate)
-        if not license_is_allowed(spdx):
+        if not license_is_allowed(spdx, config):
             skipped += 1
             continue
 
@@ -268,16 +275,16 @@ def main() -> int:
         candidate["owner_location"] = owner_location
         candidate["readme_snippet"] = readme_snippet
 
-        if not has_non_trivial_docs(candidate, readme_snippet):
+        if not has_non_trivial_docs(candidate, readme_snippet, config):
             skipped += 1
             continue
-        if not has_min_signal(candidate):
+        if not has_min_signal(candidate, config):
             skipped += 1
             continue
         if not has_minimum_stars(candidate, minimum_stars):
             skipped += 1
             continue
-        if not has_bangladeshi_signal(candidate, owner_location, readme_snippet):
+        if not has_bangladeshi_signal(candidate, owner_location, readme_snippet, config):
             skipped += 1
             continue
 
@@ -296,7 +303,7 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "input_candidate_count": len(candidates),
         "skipped_count": skipped,
-        "requirements": requirements,
+        "config": config,
         "selected_count": len(top_selected),
         "proposed_count": len(selected),
         "proposed": [

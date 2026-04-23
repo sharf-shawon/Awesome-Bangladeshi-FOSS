@@ -1,0 +1,44 @@
+{
+  "minimum_stars": 10,
+  "user_search_query": "location:Bangladesh",
+  "max_users_to_fetch": 25,
+  "user_repos_per_page": 30,
+  "topic_queries": [
+    "topic:bangladesh",
+    "topic:bangla",
+    "bangla in:name,description,readme",
+    "bangladesh in:name,description,readme"
+  ],
+  "repo_search_per_page": 50,
+  "min_stars_for_candidate": 5,
+  "allowed_license_prefixes": [
+    "MIT",
+    "Apache",
+    "GPL",
+    "AGPL",
+    "LGPL",
+    "BSD",
+    "MPL",
+    "ISC",
+    "EPL",
+    "CC0"
+  ],
+  "bd_keywords": [
+    "bangla",
+    "বাংলা",
+    "bangladesh",
+    "dhaka",
+    "chattogram",
+    "bkash",
+    "nagad",
+    "bd",
+    "upazila",
+    "district",
+    "bengali"
+  ],
+  "min_description_length": 25,
+  "min_readme_snippet_length": 180,
+  "min_discovery_stars": 3,
+  "min_discovery_forks": 2,
+  "min_discovery_issues": 3
+}

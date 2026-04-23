@@ -2,7 +2,7 @@
 """Augment candidate repositories by scanning social/web sources for GitHub links.
 
 Usage:
-  python scripts/augment_candidates_with_social.py --input data/candidates.json --output data/candidates_augmented.json
+  python src/augment_candidates_with_social.py --input data/candidates.json --output data/candidates_augmented.json
 
 Environment:
   GITHUB_TOKEN (optional but recommended): GitHub API token for repo metadata.

@@ -1,0 +1,230 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  issues:
+    types: [opened, edited, reopened, labeled]
+  workflow_dispatch:
+
+# Global permissions
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  pages: write
+  id-token: write
+
+jobs:
+  # 1. Validation and Lint Phase
+  validation:
+    # On issues, only run if it has the correct labels or title
+    if: |
+      github.event_name != 'issues' || 
+      contains(github.event.issue.labels.*.name, 'project-submission') || 
+      contains(github.event.issue.labels.*.name, 'project-removal') ||
+      startsWith(github.event.issue.title, '[Submission]') ||
+      startsWith(github.event.issue.title, '[Removal]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate Data
+        run: python src/validate_data.py
+
+      - name: Lint README
+        run: |
+          npx -y awesome-lint README.md
+          python src/validate_readme_links.py
+
+  # 2. Testing Phase
+  test:
+    needs: validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run tests with coverage
+        run: pytest --cov=src --cov=tests --cov-report=xml --cov-report=term
+
+  # 3. Processing and Deployment Phase
+  deploy:
+    needs: test
+    concurrency:
+      group: deploy-lock-${{ github.ref }}
+      cancel-in-progress: false
+    if: |
+      github.event_name == 'push' || 
+      github.event_name == 'issues' ||
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Process Issue (If issue event)
+        id: process
+        if: github.event_name == 'issues'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python src/process_issue.py "${{ github.event.issue.number }}" "${{ github.event.issue.title }}" "${{ github.event.issue.body }}" "${{ github.event.issue.user.login }}" > process_output.txt 2>&1
+          cat process_output.txt
+          
+          if grep -q "DATA_UPDATED" process_output.txt; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+          
+          if grep -q "MANUAL_REVIEW:" process_output.txt; then
+            echo "status=manual" >> $GITHUB_OUTPUT
+          elif grep -q "ERROR:" process_output.txt; then
+            echo "status=failure" >> $GITHUB_OUTPUT
+          else
+            echo "status=success" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate README
+        run: python src/generate_readme.py
+
+      - name: Lint generated README
+        run: |
+          npx -y awesome-lint README.md
+          python src/validate_readme_links.py
+
+      - name: Commit and push changes
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json README.md
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: auto-update data and readme [skip ci]"
+            
+            MAX_RETRIES=5
+            for i in $(seq 1 $MAX_RETRIES); do
+              echo "Push attempt $i..."
+              if git push origin main; then
+                echo "Push successful!"
+                break
+              fi
+              echo "Push rejected. Syncing with remote and retrying..."
+              git fetch origin main
+              git rebase origin/main
+              sleep $((i * 2))
+            done
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Comment and Close Issue
+        if: github.event_name == 'issues' && always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ ! -f process_output.txt ]; then
+            exit 0
+          fi
+          
+          OUTPUT=$(cat process_output.txt)
+          STATUS="${{ steps.process.outputs.status }}"
+          CHANGED="${{ steps.process.outputs.changed }}"
+          ISSUE_NUMBER="${{ github.event.issue.number }}"
+          
+          if [ "$STATUS" == "success" ]; then
+            COMMENT="### ✅ Request Processed Successfully
+            
+            The changes have been applied to the list and the README has been updated.
+            
+            **Logs:**
+            \`\`\`
+            $OUTPUT
+            \`\`\`"
+            gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
+            gh issue close "$ISSUE_NUMBER" --reason "completed"
+          elif [ "$STATUS" == "manual" ]; then
+            COMMENT="### ⏳ Request Pending Manual Review
+            
+            This request requires manual intervention from a maintainer.
+            
+            **Details:**
+            \`\`\`
+            $OUTPUT
+            \`\`\`"
+            gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
+            gh issue edit "$ISSUE_NUMBER" --add-label "manual-review"
+          elif [ "$STATUS" == "failure" ]; then
+            COMMENT="### ❌ Request Failed Validation
+            
+            The automation could not process your request.
+            
+            **Errors:**
+            \`\`\`
+            $OUTPUT
+            \`\`\`"
+            gh issue comment "$ISSUE_NUMBER" --body "$COMMENT"
+          fi
+
+      # Deploy to GitHub Pages
+      - name: Setup pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Build with jekyll
+        if: github.event_name != 'pull_request'
+        run: |
+          cp README.md index.md
+          #jekyll build # Implicitly handled by jekyll-build-pages action
+          
+      - name: Build pages with jekyll
+        if: github.event_name != 'pull_request'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
+
+      - name: Upload artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to github pages
+        if: github.event_name != 'pull_request'
+        id: deployment
+        uses: actions/deploy-pages@v4

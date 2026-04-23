@@ -18,6 +18,18 @@ import pytest
 
 import filter_and_rank_candidates as far
 
+@pytest.fixture
+def sample_config():
+    return {
+        "minimum_stars": 10,
+        "allowed_license_prefixes": ["MIT", "Apache", "GPL", "AGPL", "LGPL", "BSD", "MPL", "ISC", "EPL", "CC0"],
+        "bd_keywords": ["bangla", "বাংলা", "bangladesh", "dhaka", "bkash", "bd", "bengali"],
+        "min_description_length": 25,
+        "min_readme_snippet_length": 180,
+        "min_discovery_stars": 3,
+        "min_discovery_forks": 2,
+        "min_discovery_issues": 3
+    }
 
 # ---------------------------------------------------------------------------
 # license_is_allowed
@@ -39,8 +51,8 @@ import filter_and_rank_candidates as far
     ("WTFPL", False),
     ("Proprietary", False),
 ])
-def test_license_is_allowed(spdx, expected):
-    assert far.license_is_allowed(spdx) is expected
+def test_license_is_allowed(spdx, expected, sample_config):
+    assert far.license_is_allowed(spdx, sample_config) is expected
 
 
 # ---------------------------------------------------------------------------
@@ -111,62 +123,62 @@ def _blank_cand(**kw):
     return defaults
 
 
-def test_has_bd_signal_location_bangladesh():
-    assert far.has_bangladeshi_signal(_blank_cand(), "Dhaka, Bangladesh", "") is True
+def test_has_bd_signal_location_bangladesh(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(), "Dhaka, Bangladesh", "", sample_config) is True
 
 
-def test_has_bd_signal_location_bd_exact():
-    assert far.has_bangladeshi_signal(_blank_cand(), "BD", "") is True
+def test_has_bd_signal_location_bd_exact(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(), "BD", "", sample_config) is True
 
 
-def test_has_bd_signal_location_bd_lowercase():
-    assert far.has_bangladeshi_signal(_blank_cand(), "bd", "") is True
+def test_has_bd_signal_location_bd_lowercase(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(), "bd", "", sample_config) is True
 
 
-def test_has_bd_signal_bangla_in_description():
-    assert far.has_bangladeshi_signal(_blank_cand(description="bangla NLP"), "", "") is True
+def test_has_bd_signal_bangla_in_description(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(description="bangla NLP"), "", "", sample_config) is True
 
 
-def test_has_bd_signal_bkash_in_topics():
-    assert far.has_bangladeshi_signal(_blank_cand(topics=["bkash"]), "", "") is True
+def test_has_bd_signal_bkash_in_topics(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(topics=["bkash"]), "", "", sample_config) is True
 
 
-def test_has_bd_signal_keyword_in_readme():
-    assert far.has_bangladeshi_signal(_blank_cand(), "Germany", "A Dhaka-based project") is True
+def test_has_bd_signal_keyword_in_readme(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(), "Germany", "A Dhaka-based project", sample_config) is True
 
 
-def test_has_bd_signal_bengali_keyword():
-    assert far.has_bangladeshi_signal(_blank_cand(description="bengali text"), "", "") is True
+def test_has_bd_signal_bengali_keyword(sample_config):
+    assert far.has_bangladeshi_signal(_blank_cand(description="bengali text"), "", "", sample_config) is True
 
 
-def test_has_bd_signal_no_signal_returns_false():
+def test_has_bd_signal_no_signal_returns_false(sample_config):
     cand = _blank_cand(full_name="user/generic", description="generic tool", topics=["python"])
-    assert far.has_bangladeshi_signal(cand, "Germany", "Generic readme text.") is False
+    assert far.has_bangladeshi_signal(cand, "Germany", "Generic readme text.", sample_config) is False
 
 
 # ---------------------------------------------------------------------------
 # has_non_trivial_docs
 # ---------------------------------------------------------------------------
 
-def test_has_non_trivial_docs_long_description():
-    assert far.has_non_trivial_docs({"description": "A" * 25}, "") is True
+def test_has_non_trivial_docs_long_description(sample_config):
+    assert far.has_non_trivial_docs({"description": "A" * 25}, "", sample_config) is True
 
 
-def test_has_non_trivial_docs_short_desc_long_readme():
-    assert far.has_non_trivial_docs({"description": "short"}, "R" * 180) is True
+def test_has_non_trivial_docs_short_desc_long_readme(sample_config):
+    assert far.has_non_trivial_docs({"description": "short"}, "R" * 180, sample_config) is True
 
 
-def test_has_non_trivial_docs_short_desc_short_readme():
-    assert far.has_non_trivial_docs({"description": "short"}, "R" * 100) is False
+def test_has_non_trivial_docs_short_desc_short_readme(sample_config):
+    assert far.has_non_trivial_docs({"description": "short"}, "R" * 100, sample_config) is False
 
 
-def test_has_non_trivial_docs_empty():
-    assert far.has_non_trivial_docs({"description": ""}, "") is False
+def test_has_non_trivial_docs_empty(sample_config):
+    assert far.has_non_trivial_docs({"description": ""}, "", sample_config) is False
 
 
-def test_has_non_trivial_docs_exactly_25_chars():
-    assert far.has_non_trivial_docs({"description": "A" * 24}, "") is False
-    assert far.has_non_trivial_docs({"description": "A" * 25}, "") is True
+def test_has_non_trivial_docs_exactly_25_chars(sample_config):
+    assert far.has_non_trivial_docs({"description": "A" * 24}, "", sample_config) is False
+    assert far.has_non_trivial_docs({"description": "A" * 25}, "", sample_config) is True
 
 
 # ---------------------------------------------------------------------------
@@ -180,9 +192,9 @@ def test_has_non_trivial_docs_exactly_25_chars():
     (2, 1, 2, False),
     (0, 0, 0, False),
 ])
-def test_has_min_signal(stars, forks, issues, expected):
+def test_has_min_signal(stars, forks, issues, expected, sample_config):
     cand = {"stargazers_count": stars, "forks_count": forks, "open_issues_count": issues}
-    assert far.has_min_signal(cand) is expected
+    assert far.has_min_signal(cand, sample_config) is expected
 
 
 @pytest.mark.parametrize("stars,minimum,expected", [
@@ -418,7 +430,7 @@ def _make_cand(**kw):
     return base
 
 
-def _run_main(monkeypatch, tmp_path, candidates, projects_data=None, limit=10):
+def _run_main(monkeypatch, tmp_path, candidates, projects_data=None, limit=10, config_data=None):
     """Set up temp files, mock all I/O, and invoke far.main()."""
     input_file = tmp_path / "aug.json"
     input_file.write_text(json.dumps({"candidates": candidates}), encoding="utf-8")
@@ -426,6 +438,20 @@ def _run_main(monkeypatch, tmp_path, candidates, projects_data=None, limit=10):
     projects_file = tmp_path / "projects.json"
     if projects_data is not None:
         projects_file.write_text(json.dumps(projects_data), encoding="utf-8")
+    
+    config_file = tmp_path / "config.json"
+    if config_data is None:
+        config_data = {
+            "minimum_stars": 10,
+            "allowed_license_prefixes": ["MIT", "Apache"],
+            "bd_keywords": ["bangladesh", "dhaka"],
+            "min_description_length": 25,
+            "min_readme_snippet_length": 180,
+            "min_discovery_stars": 3,
+            "min_discovery_forks": 2,
+            "min_discovery_issues": 3
+        }
+    config_file.write_text(json.dumps(config_data), encoding="utf-8")
 
     monkeypatch.setattr(far, "fetch_owner_location", lambda s, login: "Dhaka, Bangladesh")
     monkeypatch.setattr(far, "fetch_readme_snippet",
@@ -435,13 +461,13 @@ def _run_main(monkeypatch, tmp_path, candidates, projects_data=None, limit=10):
         "scores": {"relevance": 4.5, "usefulness": 4.0, "maturity": 3.5},
         "notes": "test",
     })
-    monkeypatch.setattr(far, "load_project_requirements", lambda: {"minimum_stars": 10})
     monkeypatch.setattr(far, "time", mock.MagicMock())
     monkeypatch.setattr(sys, "argv", [
         "filter_and_rank_candidates.py",
         "--input", str(input_file),
         "--projects", str(projects_file),
         "--output", str(output_file),
+        "--config", str(config_file),
         "--limit", str(limit),
     ])
     return far.main(), output_file
@@ -510,11 +536,23 @@ def test_main_skips_trivial_docs(monkeypatch, tmp_path):
     input_file.write_text(json.dumps({"candidates": [_make_cand(description="Tiny")]}),
                           encoding="utf-8")
     out = tmp_path / "out.json"
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({
+        "minimum_stars": 10,
+        "allowed_license_prefixes": ["MIT"],
+        "bd_keywords": ["bangladesh"],
+        "min_description_length": 25,
+        "min_readme_snippet_length": 180,
+        "min_discovery_stars": 3,
+        "min_discovery_forks": 2,
+        "min_discovery_issues": 3
+    }), encoding="utf-8")
     monkeypatch.setattr(sys, "argv", [
         "filter_and_rank_candidates.py",
         "--input", str(input_file),
         "--projects", str(tmp_path / "p.json"),
         "--output", str(out),
+        "--config", str(config_file),
     ])
     assert far.main() == 0
     assert json.loads(out.read_text())["selected_count"] == 0
@@ -530,7 +568,7 @@ def test_main_skips_under_minimum_stars(monkeypatch, tmp_path):
     _, out = _run_main(monkeypatch, tmp_path, [_make_cand(stargazers_count=9, forks_count=20, open_issues_count=20)])
     payload = json.loads(out.read_text())
     assert payload["selected_count"] == 0
-    assert payload["requirements"]["minimum_stars"] == 10
+    assert payload["config"]["minimum_stars"] == 10
 
 
 def test_main_skips_no_bd_signal(monkeypatch, tmp_path):
@@ -552,11 +590,23 @@ def test_main_skips_no_bd_signal(monkeypatch, tmp_path):
         )
     ]}), encoding="utf-8")
     out = tmp_path / "out.json"
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({
+        "minimum_stars": 10,
+        "allowed_license_prefixes": ["MIT"],
+        "bd_keywords": ["bangladesh"],
+        "min_description_length": 25,
+        "min_readme_snippet_length": 180,
+        "min_discovery_stars": 3,
+        "min_discovery_forks": 2,
+        "min_discovery_issues": 3
+    }), encoding="utf-8")
     monkeypatch.setattr(sys, "argv", [
         "filter_and_rank_candidates.py",
         "--input", str(input_file),
         "--projects", str(tmp_path / "p.json"),
         "--output", str(out),
+        "--config", str(config_file),
     ])
     assert far.main() == 0
     assert json.loads(out.read_text())["selected_count"] == 0
@@ -625,11 +675,23 @@ def test_main_sorted_by_rank_desc(monkeypatch, tmp_path):
     input_file = tmp_path / "a.json"
     input_file.write_text(json.dumps({"candidates": candidates}), encoding="utf-8")
     out = tmp_path / "out.json"
+    config_file = tmp_path / "config.json"
+    config_file.write_text(json.dumps({
+        "minimum_stars": 10,
+        "allowed_license_prefixes": ["MIT"],
+        "bd_keywords": ["bangladesh"],
+        "min_description_length": 25,
+        "min_readme_snippet_length": 180,
+        "min_discovery_stars": 3,
+        "min_discovery_forks": 2,
+        "min_discovery_issues": 3
+    }), encoding="utf-8")
     monkeypatch.setattr(sys, "argv", [
         "filter_and_rank_candidates.py",
         "--input", str(input_file),
         "--projects", str(tmp_path / "p.json"),
         "--output", str(out),
+        "--config", str(config_file),
         "--limit", "10",
     ])
     assert far.main() == 0

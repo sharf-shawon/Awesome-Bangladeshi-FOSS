@@ -2,7 +2,7 @@
 """Apply ranked candidates to README and data/projects.json-compatible source.
 
 Usage:
-  python scripts/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md
+  python src/apply_top_candidates.py --input data/top10_to_add.json --readme README.md --pr-body-output data/monthly_pr_body.md
 
 Notes:
   - Inserts entries in alphabetical order inside each section.
