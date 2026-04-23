@@ -457,7 +457,7 @@ def test_process_removal_not_found(mock_data_paths):
         result = process_removal(fields, "author")
         assert result is False
 
-def test_process_removal_already_removed_noop(mock_data_paths):
+def test_process_removal_already_removed_returns_false(mock_data_paths):
     removed_data = {"removed": [{"html_url": "https://github.com/user/removed"}]}
     with open(mock_data_paths["REMOVED_PATH"], "w") as f:
         json.dump(removed_data, f)

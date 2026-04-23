@@ -191,7 +191,8 @@ def process_submission(fields, issue_author):
         return False
     
     if not project_name:
-        project_name = meta.get("name") or (meta_full_name.split("/")[-1] if meta_full_name else "")
+        fallback_name = meta_full_name.split("/")[-1] if "/" in meta_full_name else meta_full_name
+        project_name = meta.get("name") or fallback_name
     if not description:
         description = meta.get("description")
     if not project_name or not description:
@@ -249,7 +250,7 @@ def process_removal(fields, issue_author, labels=None):
     project = next((p for p in projects_data["projects"] if entry_repo_refs(p) & input_refs), None)
     if not project:
         if any(entry_repo_refs(p) & input_refs for p in removed_data.get("removed", [])):
-            print(f"SUCCESS: Project already removed: {repo_url}")
+            print(f"INFO: Project already removed: {repo_url}")
             return False
         print(f"ERROR: Project not found in the list: {repo_url}")
         return False
