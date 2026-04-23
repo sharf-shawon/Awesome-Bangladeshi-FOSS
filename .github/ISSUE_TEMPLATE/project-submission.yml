@@ -9,16 +9,8 @@ body:
       value: |
         Thanks for sharing a project.
 
-        Please fill out all fields carefully. Valid submissions are converted into a pull request automatically.
-
-  - type: input
-    id: project_name
-    attributes:
-      label: Project name
-      description: The exact display name for the list entry.
-      placeholder: Example Project
-    validations:
-      required: true
+        Valid submissions are converted into a pull request automatically.
+        Project name, stars, owner, and repository description are fetched from GitHub automatically when possible.
 
   - type: input
     id: repository_url
@@ -32,11 +24,9 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Short description
-      description: One concise sentence explaining why this project is useful.
+      label: Custom description (optional)
+      description: Optional override if you want a description different from the repository description.
       placeholder: Brief, meaningful description of the project.
-    validations:
-      required: true
 
   - type: dropdown
     id: category
@@ -53,18 +43,6 @@ body:
         - Awesome Lists & Resource Collections
     validations:
       required: true
-
-  - type: checkboxes
-    id: checks
-    attributes:
-      label: Submission checklist
-      options:
-        - label: This project is genuinely free and open source.
-          required: true
-        - label: This submission is not a duplicate of an existing README entry.
-          required: true
-        - label: I used a GitHub repository URL in the format https://github.com/owner/repo.
-          required: true
 
   - type: textarea
     id: reconsideration_notes
