@@ -278,6 +278,12 @@
     },
     {
       "category": "Developer Tools & Libraries",
+      "name": "nhb-toolbox",
+      "repository": "https://github.com/nazmul-nhb/nhb-toolbox",
+      "description": "NHB Toolbox is a TypeScript utility library focused on solving real-world problems to boost productivity. The library is fully typed, ESM-ready, tree-shakable, and optimized for both frontend and backend use."
+    },
+    {
+      "category": "Developer Tools & Libraries",
       "name": "Number to Bangla",
       "repository": "https://github.com/RakibDevs/number-to-bangla",
       "description": "Laravel package to convert English numbers to Bangla digits, words, and money formats."

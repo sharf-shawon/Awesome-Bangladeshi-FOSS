@@ -105,6 +105,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Leet Easy](https://github.com/sudiptob2/leet-easy) - Tool that alerts when LeetCode publishes an easy daily coding challenge.
 - [Lumen Route List](https://github.com/appzcoder/lumen-route-list) - Lumen package to list and inspect application routes from the CLI.
 - [MRZ Parser](https://github.com/RakibDevs/mrz-parser) - PHP package for parsing machine-readable zone codes from travel documents.
+- [nhb-toolbox](https://github.com/nazmul-nhb/nhb-toolbox) - NHB Toolbox is a TypeScript utility library focused on solving real-world problems to boost productivity. The library is fully typed, ESM-ready, tree-shakable, and optimized for both frontend and backend use.
 - [Number to Bangla](https://github.com/RakibDevs/number-to-bangla) - Laravel package to convert English numbers to Bangla digits, words, and money formats.
 - [Olova](https://github.com/olovajs/olova) - Minimal JavaScript UI library for adding reactive behavior to web applications.
 - [OpenBangla Keyboard](https://github.com/OpenBangla/OpenBangla-Keyboard) - Open source Bangla input method for GNU/Linux with Avro phonetic and other layouts.
