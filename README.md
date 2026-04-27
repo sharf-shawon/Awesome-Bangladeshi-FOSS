@@ -53,6 +53,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
 - [Node.js Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
 - [Osint-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.
+- [prayer-time](https://github.com/NazmusSayad/prayer-time) - Accurate time for salah.
 - [Prochaar](https://github.com/CodeForBangladesh/prochaar) - Rails API backend for broadcasting missing person alerts across Bangladesh.
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
 - [Zooming Classroom](https://github.com/yeazin/Zooming-cls) - Online classroom platform built with Django for Bangladeshi students.

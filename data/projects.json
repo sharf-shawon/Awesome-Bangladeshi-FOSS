@@ -770,6 +770,12 @@
     },
     {
       "category": "Web Applications",
+      "name": "prayer-time",
+      "repository": "https://github.com/NazmusSayad/prayer-time",
+      "description": "Accurate time for salah."
+    },
+    {
+      "category": "Web Applications",
       "name": "Prochaar",
       "repository": "https://github.com/CodeForBangladesh/prochaar",
       "description": "Rails API backend for broadcasting missing person alerts across Bangladesh."
