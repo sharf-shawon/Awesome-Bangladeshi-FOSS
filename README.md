@@ -50,6 +50,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Fetchy Neon](https://github.com/prassamin/fetchy) - An open-source media downloader built to be fast, flexible, and beautifully modern. Whether you're here to build, contribute, or just peep under the hood, you're in for a treat.
 - [FinanceFrz](https://github.com/sharf-shawon/FinanceFrz) - Personal finance web app for tracking income and expenses, built as a real-world budgeting tool.
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
+- [KonSchool](https://github.com/maacpiash/KonSchool) - 🏫 🇧🇩 Fuzzy-AHP-based recommendation system for secondary schools in Bangladesh.
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
 - [Node.js Professionals](https://github.com/devfikdark/nodeJS-Professionals) - Node.js notes and resource site translated into Bangla for Bangladeshi developers.
 - [Osint-Tools-Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) - Curated portal of Bangladesh-focused OSINT and public data resources.

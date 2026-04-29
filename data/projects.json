@@ -764,6 +764,12 @@
     },
     {
       "category": "Web Applications",
+      "name": "KonSchool",
+      "repository": "https://github.com/maacpiash/KonSchool",
+      "description": "🏫 🇧🇩 Fuzzy-AHP-based recommendation system for secondary schools in Bangladesh."
+    },
+    {
+      "category": "Web Applications",
       "name": "Movement Pass Clone",
       "repository": "https://github.com/yeazin/Movement-Pass-Clone",
       "description": "Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns."
