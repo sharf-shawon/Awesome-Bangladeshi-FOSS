@@ -584,6 +584,12 @@
     },
     {
       "category": "Mobile Apps",
+      "name": "bKashQuickStarterAndroid",
+      "repository": "https://github.com/SaadAAkash/bKashQuickStarterAndroid",
+      "description": "Quick Starter Android Boilerplate for Easy bKash Integration."
+    },
+    {
+      "category": "Mobile Apps",
       "name": "COVID-19 Bangladesh Android",
       "repository": "https://github.com/SaadAAkash/COVID-19-Bangladesh-Android",
       "description": "Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh."

@@ -63,6 +63,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 
 - [Android Week View](https://github.com/aniruddh-0701/Android-Week-View) - Android library for displaying calendar week views with customizable day and event layouts.
 - [Bangla-Dictionary](https://github.com/rafi-kamal/Bangla-Dictionary) - Open source English-to-Bangla dictionary app for Android based on Ankur.org's Bangla-English dictionary database.
+- [bKashQuickStarterAndroid](https://github.com/SaadAAkash/bKashQuickStarterAndroid) - Quick Starter Android Boilerplate for Easy bKash Integration.
 - [COVID-19 Bangladesh Android](https://github.com/SaadAAkash/COVID-19-Bangladesh-Android) - Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh.
 - [Incredible Bangladesh](https://github.com/asnbd/incredible-bangladesh) - Tourism guide Android app showcasing Bangladeshi attractions with maps and location details.
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
