@@ -62,6 +62,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "Learning-CSE-at-EWU",
+      "repository": "https://github.com/Akhlak-Hossain-Jim/Learning-CSE-at-EWU",
+      "description": "What I have studied in CSE related to programming @ EWU will try to record here; and also other course materials."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "Made In Bangladesh",
       "repository": "https://github.com/made-in-bangladesh/made-in-bangladesh",
       "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
