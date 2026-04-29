@@ -186,6 +186,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Bangla All Programming Resources](https://github.com/BanglaProgramming/Bangla-All-Programming-Resources) - Bangla programming tutorials and references organized by core CS topics.
 - [Bangla Programming Resources](https://github.com/me-shaon/bangla-programming-resources) - Curated Bangla learning materials across algorithms, data structures, and software fundamentals.
 - [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
+- [bangladesh-2.0-initiatives](https://github.com/me-shaon/bangladesh-2.0-initiatives) - Archive of independent initiatives taken to reform Bangladesh.
 - [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
 - [DL-Sneak-Peek](https://github.com/menon92/DL-Sneak-Peek) - Deep learning Bangla resources using TensorFlow.
 - [hp-t630-pfsense](https://github.com/sharf-shawon/hp-t630-pfsense) - PfSense Router on HP T630 thin client with an additional Realtek 2.5gb NIC.

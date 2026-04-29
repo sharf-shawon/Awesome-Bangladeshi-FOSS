@@ -32,6 +32,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "bangladesh-2.0-initiatives",
+      "repository": "https://github.com/me-shaon/bangladesh-2.0-initiatives",
+      "description": "Archive of independent initiatives taken to reform Bangladesh."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "BD-public-api-datasets",
       "repository": "https://github.com/SohanChy/BD-public-api-datasets",
       "description": "Collective list of Bangladeshi public APIs and datasets aggregated from government and local services."
