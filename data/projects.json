@@ -50,6 +50,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "F1.VISA.USA",
+      "repository": "https://github.com/MahediKamal/F1.VISA.USA",
+      "description": "A complete guide—from taking the GRE to boarding the flight to the USA—experience from Bangladeshi student."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "hp-t630-pfsense",
       "repository": "https://github.com/sharf-shawon/hp-t630-pfsense",
       "description": "pfSense Router on HP T630 thin client with an additional Realtek 2.5gb NIC."

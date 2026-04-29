@@ -189,6 +189,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [bangladesh-2.0-initiatives](https://github.com/me-shaon/bangladesh-2.0-initiatives) - Archive of independent initiatives taken to reform Bangladesh.
 - [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
 - [DL-Sneak-Peek](https://github.com/menon92/DL-Sneak-Peek) - Deep learning Bangla resources using TensorFlow.
+- [F1.VISA.USA](https://github.com/MahediKamal/F1.VISA.USA) - A complete guide-from taking the GRE to boarding the flight to the USA-experience from Bangladeshi student.
 - [hp-t630-pfsense](https://github.com/sharf-shawon/hp-t630-pfsense) - PfSense Router on HP T630 thin client with an additional Realtek 2.5gb NIC.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - List of frameworks, libraries, and software made in Bangladesh.
 
