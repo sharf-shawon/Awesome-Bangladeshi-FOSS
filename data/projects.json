@@ -446,6 +446,12 @@
     },
     {
       "category": "Developer Tools & Libraries",
+      "name": "WordPress-Publishing-Skill-For-Claude",
+      "repository": "https://github.com/Asif2BD/WordPress-Publishing-Skill-For-Claude",
+      "description": "WordPress Publishing Skill For Claude."
+    },
+    {
+      "category": "Developer Tools & Libraries",
       "name": "WP Eloquent",
       "repository": "https://github.com/tareq1988/wp-eloquent",
       "description": "Library for using Laravel's Eloquent ORM inside WordPress plugins and themes."

@@ -133,6 +133,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [validus](https://github.com/shopnilsazal/validus) - Lightweight Python string validation library for common data patterns.
 - [Video Editor](https://github.com/bilashcse/video-editor) - API based Online Video Editor Node.js, AngularJs & FFmpeg based web video editor.
 - [WordPress Settings API Class](https://github.com/tareq1988/wordpress-settings-api-class) - PHP wrapper simplifying WordPress options panels using the Settings API.
+- [WordPress-Publishing-Skill-For-Claude](https://github.com/Asif2BD/WordPress-Publishing-Skill-For-Claude) - WordPress Publishing Skill For Claude.
 - [WP Eloquent](https://github.com/tareq1988/wp-eloquent) - Library for using Laravel's Eloquent ORM inside WordPress plugins and themes.
 
 ## Government & Utility Services
