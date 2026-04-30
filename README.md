@@ -77,6 +77,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Bangla BERT](https://github.com/sagorbrur/bangla-bert) - Resources and vocabulary for Bangla BERT models built on top of BNLP.
 - [Bangla TTS](https://github.com/zabir-nabil/bangla-tts) - Real-time multilingual Bangla and English text-to-speech synthesis library.
 - [BanglaSpeech2Text](https://github.com/shhossain/BanglaSpeech2Text) - Offline Bangla speech-to-text package fine-tuned from Whisper for high-quality recognition.
+- [bd-medicine-scraper](https://github.com/ahmedshahriar/bd-medicine-scraper) - Scrapy-Django PostgreSQL integrated API with Proxy IP configuration that scrapes all medicine data (meds, prices, generics, companies, indications) from Bangladesh (30k+ pages).
 - [Bengali Alphabet](https://github.com/lifeparticle/Bengali-Alphabet) - Dataset and resources for Bengali characters, useful for OCR and Bangla language computing.
 - [Bengali Dictionary](https://github.com/MinhasKamal/BengaliDictionary) - Large Bengali word and translation collection suitable for spell checkers and NLP tools.
 - [BNLP](https://github.com/sagorbrur/bnlp) - Bengali NLP toolkit with tokenization, embeddings, POS tagging, and NER.

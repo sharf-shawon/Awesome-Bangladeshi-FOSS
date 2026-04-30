@@ -110,6 +110,12 @@
     },
     {
       "category": "Developer Tools & Libraries",
+      "name": "bd-medicine-scraper",
+      "repository": "https://github.com/ahmedshahriar/bd-medicine-scraper",
+      "description": "Scrapy-Django PostgreSQL integrated API with Proxy IP configuration that scrapes all medicine data (meds, prices, generics, companies, indications) from Bangladesh (30k+ pages)."
+    },
+    {
+      "category": "Developer Tools & Libraries",
       "name": "Bengali Alphabet",
       "repository": "https://github.com/lifeparticle/Bengali-Alphabet",
       "description": "Dataset and resources for Bengali characters, useful for OCR and Bangla language computing."
