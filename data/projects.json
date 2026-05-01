@@ -62,6 +62,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "interview-questions-bangladesh",
+      "repository": "https://github.com/TamimEhsan/interview-questions-bangladesh",
+      "description": "A crowd sourced collection of interview questions asked in Bangladeshi Tech companies."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "Learning-CSE-at-EWU",
       "repository": "https://github.com/Akhlak-Hossain-Jim/Learning-CSE-at-EWU",
       "description": "What I have studied in CSE related to programming @ EWU will try to record here; and also other course materials."
