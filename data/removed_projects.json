@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-04-20T00:00:00+00:00",
-  "removed_count": 1,
+  "removed_count": 25,
   "removed": [
     {
       "name": "Bangla NLP Parallel Dataset Tools",
@@ -9,6 +9,246 @@
       "category": "Developer Tools & Libraries",
       "reason": "Bangla NLP Parallel Dataset Tools  REPO no longer exist  and should be removed",
       "requested_by": "sharf-shawon",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Bangla All Programming Resources",
+      "html_url": "https://github.com/BanglaProgramming/Bangla-All-Programming-Resources",
+      "description": "Bangla programming tutorials and references organized by core CS topics.",
+      "category": "Awesome Lists & Resource Collections",
+      "reason": "Stars below minimum (9 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "BD-public-api-datasets",
+      "html_url": "https://github.com/SohanChy/BD-public-api-datasets",
+      "description": "Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.",
+      "category": "Awesome Lists & Resource Collections",
+      "reason": "Stars below minimum (6 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Gouberfmt",
+      "html_url": "https://github.com/GophersBD/gouberfmt",
+      "description": "Go static analysis tool to check code against the Uber Go style guide.",
+      "category": "Developer Tools & Libraries",
+      "reason": "Stars below minimum (7 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "all-bd-mobile-payments-gateway",
+      "html_url": "https://github.com/wp-plugins/all-bd-mobile-payments-gateway",
+      "description": "WooCommerce plugin integrating multiple Bangladeshi mobile payment gateways.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (0 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "bkash-js",
+      "html_url": "https://github.com/ShejanMahamud/bkash-js",
+      "description": "TypeScript SDK for bKash Checkout URL-based payments with webhook and lifecycle helpers.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (3 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "django-bkash",
+      "html_url": "https://github.com/sharf-shawon/django-bkash",
+      "description": "Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (0 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "django-bulksms-bd",
+      "html_url": "https://github.com/sharf-shawon/django-bulksms-bd",
+      "description": "Django package for integrating the BulkSMSBD.net SMS API with retries, logging, and Bangladeshi number helpers.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (1 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "edd-bkash-gateway",
+      "html_url": "https://github.com/kapilpaul/edd-bkash-gateway",
+      "description": "Easy Digital Downloads plugin adding bKash payment gateway support.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (4 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "laravel-bkash",
+      "html_url": "https://github.com/abdursoft/laravel-bkash",
+      "description": "Laravel package for integrating bKash tokenized payment APIs.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (0 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Paysenz",
+      "html_url": "https://github.com/alamgircsebd/paysenz",
+      "description": "Online payment gateway integration library for Bangladeshi merchants.",
+      "category": "Fintech & Payments",
+      "reason": "Stars below minimum (1 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Bangladesh GeoCode PHP",
+      "html_url": "https://github.com/exceptio/bangladesh-geocode",
+      "description": "PHP library providing Bangladesh division, district, and upazila data for applications.",
+      "category": "Government & Utility Services",
+      "reason": "Repository not found or inaccessible.",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Bangladeshi Geo Data",
+      "html_url": "https://github.com/engrasel/bangladeshi-geo-data",
+      "description": "npm package exposing administrative and city data for Bangladesh.",
+      "category": "Government & Utility Services",
+      "reason": "Repository not found or inaccessible.",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "CPID",
+      "html_url": "https://github.com/niyazed/cpid",
+      "description": "Categorized cattle price image dataset with labeled photos for price prediction and classification research.",
+      "category": "Government & Utility Services",
+      "reason": "Stars below minimum (1 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Android Week View",
+      "html_url": "https://github.com/aniruddh-0701/Android-Week-View",
+      "description": "Android library for displaying calendar week views with customizable day and event layouts.",
+      "category": "Mobile Apps",
+      "reason": "Stars below minimum (0 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Incredible Bangladesh",
+      "html_url": "https://github.com/asnbd/incredible-bangladesh",
+      "description": "Tourism guide Android app showcasing Bangladeshi attractions with maps and location details.",
+      "category": "Mobile Apps",
+      "reason": "Stars below minimum (5 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Missing Person Mobile App",
+      "html_url": "https://github.com/CodeForBangladesh/missing-person-mobile-app",
+      "description": "NativeScript mobile client for reporting and locating missing persons in Bangladesh.",
+      "category": "Mobile Apps",
+      "reason": "Stars below minimum (6 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "bangla-wordlist",
+      "html_url": "https://github.com/tahmid02016/bangla-wordlist",
+      "description": "Massive, sorted Bangla word list (454k+ words) released as a public-domain resource for NLP and lexicon work.",
+      "category": "Other FOSS Projects",
+      "reason": "Stars below minimum (1 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis",
+      "html_url": "https://github.com/fahad35/BanglaSenti-A-Dataset-of-Bangla-Words-for-Sentiment-Analysis",
+      "description": "Lexicon of 61k+ Bangla words labeled with positive, negative and neutral sentiment for sentiment analysis and opinion mining.",
+      "category": "Other FOSS Projects",
+      "reason": "Stars below minimum (3 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "NER-Bangla-Dataset",
+      "html_url": "https://github.com/MISabic/NER-Bangla-Dataset",
+      "description": "Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.",
+      "category": "Other FOSS Projects",
+      "reason": "Stars below minimum (8 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Word-embedding-model-for-Bangla",
+      "html_url": "https://github.com/cogniinsight/Word-embedding-model-for-Bangla",
+      "description": "Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.",
+      "category": "Other FOSS Projects",
+      "reason": "Stars below minimum (8 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Bangladesh Renovation Platform",
+      "html_url": "https://github.com/shamspias/Bangladesh-Renovation-Platform",
+      "description": "Civic engagement platform for proposing ideas, reporting problems, and sharing solutions.",
+      "category": "Web Applications",
+      "reason": "Stars below minimum (1 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "BanglaGeoAPI",
+      "html_url": "https://github.com/thecodermehedi/BanglaGeoAPI",
+      "description": "RESTful API server for Bangladesh administrative geo data built with Node.js and TypeScript.",
+      "category": "Web Applications",
+      "reason": "Stars below minimum (1 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "FinanceFrz",
+      "html_url": "https://github.com/sharf-shawon/FinanceFrz",
+      "description": "Personal finance web app for tracking income and expenses, built as a real-world budgeting tool.",
+      "category": "Web Applications",
+      "reason": "Stars below minimum (0 < 10)",
+      "requested_by": "automation",
+      "repo_owner": "",
+      "owner_verified": false
+    },
+    {
+      "name": "Prochaar",
+      "html_url": "https://github.com/CodeForBangladesh/prochaar",
+      "description": "Rails API backend for broadcasting missing person alerts across Bangladesh.",
+      "category": "Web Applications",
+      "reason": "Stars below minimum (6 < 10)",
+      "requested_by": "automation",
       "repo_owner": "",
       "owner_verified": false
     }
