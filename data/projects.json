@@ -14,6 +14,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "Awesome-Bangladeshi-Devs",
+      "repository": "https://github.com/sharf-shawon/Awesome-Bangladeshi-Devs",
+      "description": "Awesome list of Top Performing Bangladeshi Developers on Github."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "Bangla All Programming Resources",
       "repository": "https://github.com/BanglaProgramming/Bangla-All-Programming-Resources",
       "description": "Bangla programming tutorials and references organized by core CS topics."

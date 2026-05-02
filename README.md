@@ -188,6 +188,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 
 - [Awesome Open Source Bangladesh](https://github.com/hackversedev/awesome-opensource-bangladesh) - Community-maintained list of open source projects and contributors from Bangladesh.
 - [Awesome Open Source by Country or Region](https://github.com/slowernews/awesome-open-source-by-country-or-region) - Global index of country-specific open source lists, including Bangladesh-focused resources.
+- [Awesome-Bangladeshi-Devs](https://github.com/sharf-shawon/Awesome-Bangladeshi-Devs) - List of Top Performing Bangladeshi Developers on Github.
 - [Bangla All Programming Resources](https://github.com/BanglaProgramming/Bangla-All-Programming-Resources) - Bangla programming tutorials and references organized by core CS topics.
 - [Bangla Programming Resources](https://github.com/me-shaon/bangla-programming-resources) - Curated Bangla learning materials across algorithms, data structures, and software fundamentals.
 - [Bangla-NLP-Dataset](https://github.com/Foysal87/Bangla-NLP-Dataset) - Curated catalog of Bangla NLP datasets covering sentiment analysis, NER, translation, language modeling and multimodal resources.
