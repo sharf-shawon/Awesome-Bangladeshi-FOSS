@@ -836,6 +836,12 @@
     },
     {
       "category": "Web Applications",
+      "name": "vcard-personal-portfolio",
+      "repository": "https://github.com/codewithsadee/vcard-personal-portfolio",
+      "description": "vCard is a fully responsive personal portfolio website, responsive for all devices."
+    },
+    {
+      "category": "Web Applications",
       "name": "Zooming Classroom",
       "repository": "https://github.com/yeazin/Zooming-cls",
       "description": "Online classroom platform built with Django for Bangladeshi students."

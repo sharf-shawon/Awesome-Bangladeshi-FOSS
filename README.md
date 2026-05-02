@@ -57,6 +57,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [prayer-time](https://github.com/NazmusSayad/prayer-time) - Accurate time for salah.
 - [Prochaar](https://github.com/CodeForBangladesh/prochaar) - Rails API backend for broadcasting missing person alerts across Bangladesh.
 - [Stack Unboxed](https://github.com/yeasin2002/Stack-Unboxed) - Bangla programming learning platform with tutorials and web development guides.
+- [vcard-personal-portfolio](https://github.com/codewithsadee/vcard-personal-portfolio) - VCard is a fully responsive personal portfolio website, responsive for all devices.
 - [Zooming Classroom](https://github.com/yeazin/Zooming-cls) - Online classroom platform built with Django for Bangladeshi students.
 
 ## Mobile Apps
