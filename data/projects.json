@@ -710,6 +710,12 @@
     },
     {
       "category": "Other FOSS Projects",
+      "name": "LocalPDF_Studio",
+      "repository": "https://github.com/Alinur1/LocalPDF_Studio",
+      "description": "Complete offline, privacy focused PDF tool."
+    },
+    {
+      "category": "Other FOSS Projects",
       "name": "NER-Bangla-Dataset",
       "repository": "https://github.com/MISabic/NER-Bangla-Dataset",
       "description": "Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research."

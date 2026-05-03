@@ -178,6 +178,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Findex](https://github.com/mdgaziur/findex) - Highly customizable GTK3 application launcher for Linux written in Rust.
 - [Host](https://github.com/htr-tech/host) - Tool to expose your localhost to the internet.
 - [js.zonayed.me](https://github.com/zonayedpca/js.zonayed.me) - JavaScript programming learning resource website and repository written in Bangla.
+- [LocalPDF_Studio](https://github.com/Alinur1/LocalPDF_Studio) - Complete offline, privacy focused PDF tool.
 - [NER-Bangla-Dataset](https://github.com/MISabic/NER-Bangla-Dataset) - Labeled Bangla named entity recognition dataset with nearly one million tokens for NER research.
 - [Node.js-Tutorial-Bangla](https://github.com/rupomsoft/Node.js-Tutorial-Bangla) - Comprehensive tutorial series exploring Node.js features and functionalities.
 - [RailwayMatrixBD](https://github.com/AhmedTrooper/RailwayMatrixBD) - Desktop application to find tickets for Bangladesh railways, including segmented ticket path finding.
