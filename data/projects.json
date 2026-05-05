@@ -86,6 +86,12 @@
     },
     {
       "category": "Awesome Lists & Resource Collections",
+      "name": "Programming-Problem-In-Bengali",
+      "repository": "https://github.com/hasancse91/Programming-Problem-In-Bengali",
+      "description": "ফেসবুক ভিত্তিক গ্রুপঃ প্রোগ্রামিং প্রবলেম (Programming Problem in Bengali) । এই গ্রুপের বিভিন্ন গুরুত্বপূর্ণ ডকুমেন্টসগুলো এই রিপোজিটরিতে সংযুক্ত হতে থাকবে।."
+    },
+    {
+      "category": "Awesome Lists & Resource Collections",
       "name": "the-docker-handbook",
       "repository": "https://github.com/fhsinchy/the-docker-handbook",
       "description": "An open-source full-length book on Docker."
