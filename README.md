@@ -202,6 +202,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [interview-questions-bangladesh](https://github.com/TamimEhsan/interview-questions-bangladesh) - A crowd sourced collection of interview questions asked in Bangladeshi Tech companies.
 - [Learning-CSE-at-EWU](https://github.com/Akhlak-Hossain-Jim/Learning-CSE-at-EWU) - What I have studied in CSE related to programming @ EWU will try to record here; and also other course materials.
 - [Made In Bangladesh](https://github.com/made-in-bangladesh/made-in-bangladesh) - List of frameworks, libraries, and software made in Bangladesh.
+- [the-docker-handbook](https://github.com/fhsinchy/the-docker-handbook) - An open-source full-length book on Docker.
 
 ## Contributing
 

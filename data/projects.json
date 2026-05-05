@@ -85,6 +85,12 @@
       "description": "Awesome list of frameworks, libraries, and software made in Bangladesh."
     },
     {
+      "category": "Awesome Lists & Resource Collections",
+      "name": "the-docker-handbook",
+      "repository": "https://github.com/fhsinchy/the-docker-handbook",
+      "description": "An open-source full-length book on Docker."
+    },
+    {
       "category": "Developer Tools & Libraries",
       "name": "Avro Keyboard",
       "repository": "https://github.com/mugli/Avro-Keyboard",
