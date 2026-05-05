@@ -746,6 +746,12 @@
     },
     {
       "category": "Other FOSS Projects",
+      "name": "spotube",
+      "repository": "https://github.com/KRTirtho/spotube",
+      "description": "🎧 Open source music streaming app! Available for both desktop & mobile!"
+    },
+    {
+      "category": "Other FOSS Projects",
       "name": "Word-embedding-model-for-Bangla",
       "repository": "https://github.com/cogniinsight/Word-embedding-model-for-Bangla",
       "description": "Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia."
