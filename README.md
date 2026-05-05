@@ -93,6 +93,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Devsonket](https://github.com/devsonket/devsonket.github.io) - Bangla developer cheatsheet collection available as JSON data and static site.
 - [django-elasticsearch-dsl](https://github.com/django-es/django-elasticsearch-dsl) - Library for indexing Django models into Elasticsearch with declarative DSL mapping.
 - [django-webpush](https://github.com/safwanrahman/django-webpush) - Django app for sending web push notifications to browsers.
+- [Election26OSD](https://github.com/AminulBD/Election26OSD) - National Parliamentary Election 2026 Open Source Database.
 - [EMQX Web Hook](https://github.com/emqx/emqx-web-hook) - Web hook plugin for the EMQX MQTT broker.
 - [Gittivity](https://github.com/s1s1ty/gittivity) - Desktop notifier for GitHub activity written in Python.
 - [go-avro-phonetic](https://github.com/sadlil/go-avro-phonetic) - Golang implementation of the Avro phonetic Bangla input method.

@@ -218,6 +218,12 @@
     },
     {
       "category": "Developer Tools & Libraries",
+      "name": "Election26OSD",
+      "repository": "https://github.com/AminulBD/Election26OSD",
+      "description": "National Parliamentary Election 2026 Open Source Database."
+    },
+    {
+      "category": "Developer Tools & Libraries",
       "name": "EMQX Web Hook",
       "repository": "https://github.com/emqx/emqx-web-hook",
       "description": "Web hook plugin for the EMQX MQTT broker."
