@@ -800,6 +800,12 @@
     },
     {
       "category": "Web Applications",
+      "name": "gitprofile",
+      "repository": "https://github.com/arifszn/gitprofile",
+      "description": "🚀 Create and publish a dynamic portfolio by just providing your GitHub username."
+    },
+    {
+      "category": "Web Applications",
       "name": "Goodwork",
       "repository": "https://github.com/Hasnayeen/goodwork",
       "description": "Self-hosted project management and team collaboration platform for software teams."

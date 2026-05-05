@@ -49,6 +49,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [CoronaInfoBD](https://github.com/TeamTigers/coronainfobd) - Real-time coronavirus tracker for Bangladesh with data visualization and awareness content.
 - [Fetchy Neon](https://github.com/prassamin/fetchy) - An open-source media downloader built to be fast, flexible, and beautifully modern. Whether you're here to build, contribute, or just peep under the hood, you're in for a treat.
 - [FinanceFrz](https://github.com/sharf-shawon/FinanceFrz) - Personal finance web app for tracking income and expenses, built as a real-world budgeting tool.
+- [gitprofile](https://github.com/arifszn/gitprofile) - 🚀 Create and publish a dynamic portfolio by just providing your GitHub username.
 - [Goodwork](https://github.com/Hasnayeen/goodwork) - Self-hosted project management and team collaboration platform for software teams.
 - [KonSchool](https://github.com/maacpiash/KonSchool) - 🏫 🇧🇩 Fuzzy-AHP-based recommendation system for secondary schools in Bangladesh.
 - [Movement Pass Clone](https://github.com/yeazin/Movement-Pass-Clone) - Django-based recreation of the Bangladesh police movement pass portal used during COVID lockdowns.
