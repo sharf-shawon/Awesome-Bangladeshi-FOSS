@@ -69,6 +69,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [COVID-19 Bangladesh Android](https://github.com/SaadAAkash/COVID-19-Bangladesh-Android) - Android app providing Bangla COVID-19 information and support resources tailored to Bangladesh.
 - [Incredible Bangladesh](https://github.com/asnbd/incredible-bangladesh) - Tourism guide Android app showcasing Bangladeshi attractions with maps and location details.
 - [Missing Person Mobile App](https://github.com/CodeForBangladesh/missing-person-mobile-app) - NativeScript mobile client for reporting and locating missing persons in Bangladesh.
+- [QuickBall](https://github.com/chayanforyou/QuickBall) - A Quick Action Ball that gives fast access to system controls (volume, brightness, lock) with smart positioning.
 - [SUic Player](https://github.com/soiadmahedi/SUic-Player) - Android audio and video player built on AndroidX Media3 ExoPlayer.
 
 ## Developer Tools & Libraries
