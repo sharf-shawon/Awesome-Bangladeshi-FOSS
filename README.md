@@ -202,6 +202,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [BD-public-api-datasets](https://github.com/SohanChy/BD-public-api-datasets) - Collective list of Bangladeshi public APIs and datasets aggregated from government and local services.
 - [DL-Sneak-Peek](https://github.com/menon92/DL-Sneak-Peek) - Deep learning Bangla resources using TensorFlow.
 - [F1.VISA.USA](https://github.com/MahediKamal/F1.VISA.USA) - A complete guide-from taking the GRE to boarding the flight to the USA-experience from Bangladeshi student.
+- [flutter_material_3_demo](https://github.com/chayanforyou/flutter_material_3_demo) - A flutter project showcasing supported Material 3 components, typography, color system and elevation. Supports different light/dark mode, color seed, and comparison to Material 2.
 - [foodpanda-order-tracking-animation](https://github.com/chayanforyou/foodpanda-order-tracking-animation) - A demonstration of foodpanda like order tracking animation in flutter.
 - [hp-t630-pfsense](https://github.com/sharf-shawon/hp-t630-pfsense) - PfSense Router on HP T630 thin client with an additional Realtek 2.5gb NIC.
 - [interview-questions-bangladesh](https://github.com/TamimEhsan/interview-questions-bangladesh) - A crowd sourced collection of interview questions asked in Bangladeshi Tech companies.
