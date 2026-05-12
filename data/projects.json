@@ -506,6 +506,12 @@
     },
     {
       "category": "Fintech & Payments",
+      "name": "bkash-pgwclient-demo-flutter",
+      "repository": "https://github.com/chayanforyou/bkash-pgwclient-demo-flutter",
+      "description": "bKash payment gateway integration in flutter."
+    },
+    {
+      "category": "Fintech & Payments",
       "name": "django-bkash",
       "repository": "https://github.com/sharf-shawon/django-bkash",
       "description": "Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants."

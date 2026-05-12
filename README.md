@@ -159,6 +159,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [all-bd-mobile-payments-gateway](https://github.com/wp-plugins/all-bd-mobile-payments-gateway) - WooCommerce plugin integrating multiple Bangladeshi mobile payment gateways.
 - [bkash-js](https://github.com/ShejanMahamud/bkash-js) - TypeScript SDK for bKash Checkout URL-based payments with webhook and lifecycle helpers.
 - [bkash-payment-gateway](https://github.com/shahriar-shojib/bkash-payment-gateway) - Node.js and TypeScript library for accepting bKash payments from backend services.
+- [bkash-pgwclient-demo-flutter](https://github.com/chayanforyou/bkash-pgwclient-demo-flutter) - BKash payment gateway integration in flutter.
 - [django-bkash](https://github.com/sharf-shawon/django-bkash) - Django integration app for the bKash payment gateway, wrapping checkout APIs for Bangladeshi merchants.
 - [django-bulksms-bd](https://github.com/sharf-shawon/django-bulksms-bd) - Django package for integrating the BulkSMSBD.net SMS API with retries, logging, and Bangladeshi number helpers.
 - [edd-bkash-gateway](https://github.com/kapilpaul/edd-bkash-gateway) - Easy Digital Downloads plugin adding bKash payment gateway support.
