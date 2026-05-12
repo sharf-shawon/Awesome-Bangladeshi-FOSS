@@ -782,6 +782,12 @@
     },
     {
       "category": "Other FOSS Projects",
+      "name": "Remote-Control-Switch",
+      "repository": "https://github.com/chayanforyou/Remote-Control-Switch",
+      "description": "This device can be used to remotely control the speed of an AC fan and lights to switch it ON/OFF. ."
+    },
+    {
+      "category": "Other FOSS Projects",
       "name": "spotube",
       "repository": "https://github.com/KRTirtho/spotube",
       "description": "🎧 Open source music streaming app! Available for both desktop & mobile!"

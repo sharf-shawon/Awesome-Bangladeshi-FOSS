@@ -187,6 +187,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Node.js-Tutorial-Bangla](https://github.com/rupomsoft/Node.js-Tutorial-Bangla) - Comprehensive tutorial series exploring Node.js features and functionalities.
 - [RailwayMatrixBD](https://github.com/AhmedTrooper/RailwayMatrixBD) - Desktop application to find tickets for Bangladesh railways, including segmented ticket path finding.
 - [react-bangla-tutorial](https://github.com/codedbyMojnu/react-bangla-tutorial) - React programming tutorial series written in Bangla for Bangladeshi developers.
+- [Remote-Control-Switch](https://github.com/chayanforyou/Remote-Control-Switch) - This device can be used to remotely control the speed of an AC fan and lights to switch it ON/OFF. .
 - [spotube](https://github.com/KRTirtho/spotube) - 🎧 Open source music streaming app! Available for both desktop & mobile!
 - [Word-embedding-model-for-Bangla](https://github.com/cogniinsight/Word-embedding-model-for-Bangla) - Pretrained Bangla word2vec embeddings trained on an 84M-word corpus from news, textbooks, speech and Wikipedia.
 
