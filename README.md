@@ -43,6 +43,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Bangladesh Income Tax Calculator](https://github.com/ssi-anik/bd-income-tax-calculator) - Web calculator for personal income tax slabs and payable amounts under Bangladesh tax law.
 - [Bangladesh Renovation Platform](https://github.com/shamspias/Bangladesh-Renovation-Platform) - Civic engagement platform for proposing ideas, reporting problems, and sharing solutions.
 - [Bangladesh Tech Companies](https://github.com/MBSTUPC/tech-companies-in-bangladesh) - Community-maintained directory of tech companies in Bangladesh for job seekers and networking.
+- [BinaryWebEngine](https://github.com/EquiSaaS-BD/BinaryWebEngine) - All-in-one Linux security monitoring platform (WAF, HIDS, NIDS, file integrity & ML anomaly detection) by EquiSaaS BD Open Tech Cooperative.
 - [BanglaGeoAPI](https://github.com/thecodermehedi/BanglaGeoAPI) - RESTful API server for Bangladesh administrative geo data built with Node.js and TypeScript.
 - [bdapis](https://github.com/AbmSourav/bdapis) - REST API service exposing Bangladesh administrative locations for client applications.
 - [Co-ronaBD.info](https://github.com/KhanShaheb34/Co-ronaBD.info) - Interactive dashboard visualizing Bangladesh COVID-19 case statistics and trends.
