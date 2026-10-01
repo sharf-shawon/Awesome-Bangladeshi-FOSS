@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-23T10:19:39.512042+00:00",
-  "input_candidate_count": 442,
-  "skipped_count": 344,
+  "generated_at": "2026-10-01T09:54:50.859788+00:00",
+  "input_candidate_count": 453,
+  "skipped_count": 355,
   "config": {
     "minimum_stars": 10,
     "user_search_query": "location:Bangladesh",
@@ -50,27 +50,73 @@
   "proposed_count": 98,
   "proposed": [
     {
-      "full_name": "FunctionError/PiratesTv",
-      "name": "PiratesTv",
-      "html_url": "https://github.com/FunctionError/PiratesTv",
-      "description": "📢 This project is not maintained anymore 📢",
-      "category": "Awesome Lists & Resource Collections",
+      "full_name": "Deshi-Startup/deshistartup",
+      "name": "deshistartup",
+      "html_url": "https://github.com/Deshi-Startup/deshistartup",
+      "description": "🇧🇩 বাংলাদেশে স্টার্টআপ গড়ার ওপেন-সোর্স ম্যানুয়াল। আপনিও লিখুন! · An open-source startup manual for Bangladesh.",
+      "category": "Other FOSS Projects",
       "license": {
-        "key": "agpl-3.0",
-        "spdx_id": "AGPL-3.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
-      "stars": 116,
-      "forks": 42,
-      "updated_at": "2026-04-23T10:14:15Z",
-      "source": "github_repo_search:bangladesh in:name,description,readme",
-      "owner_location": "192.186.88.1",
+      "stars": 44,
+      "forks": 16,
+      "updated_at": "2026-09-30T12:14:17Z",
+      "source": "github_repo_search:topic:bangladesh",
+      "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 4.5,
-        "usefulness": 3.27,
-        "maturity": 2.35
+        "usefulness": 2.79,
+        "maturity": 2.13
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.6395
+      "rank_score": 3.3345
+    },
+    {
+      "full_name": "shamspias/laya-bangla",
+      "name": "laya-bangla",
+      "html_url": "https://github.com/shamspias/laya-bangla",
+      "description": "A Bangla-focused adaptation of Laya for typed decisions, classification, and routing.",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "apache-2.0",
+        "spdx_id": "Apache-2.0"
+      },
+      "stars": 40,
+      "forks": 5,
+      "updated_at": "2026-09-30T09:12:39Z",
+      "source": "github_repo_search:topic:bangla",
+      "owner_location": "Dhaka,Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.77,
+        "maturity": 2.04
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.2915
+    },
+    {
+      "full_name": "SagarBiswas-MultiHAT/SagarBiswas-MultiHAT",
+      "name": "SagarBiswas-MultiHAT",
+      "html_url": "https://github.com/SagarBiswas-MultiHAT/SagarBiswas-MultiHAT",
+      "description": "Official GitHub profile of Sagar Biswas (SagarBiswas-MultiHAT) - a CSE student at AIUB, cybersecurity enthusiast, ethical hacker (web application security), and web developer. Showcases open-source tools, learning notebooks, security projects, blogs, and community work.",
+      "category": "Awesome Lists & Resource Collections",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 32,
+      "forks": 2,
+      "updated_at": "2026-09-29T02:14:59Z",
+      "source": "github_repo_search:topic:bangladesh",
+      "owner_location": "Dhaka, Bangladesh.",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.71,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.2565
     },
     {
       "full_name": "htr-tech/zphisher",
@@ -82,57 +128,11 @@
         "key": "gpl-3.0",
         "spdx_id": "GPL-3.0"
       },
-      "stars": 15802,
-      "forks": 5959,
-      "updated_at": "2026-04-23T09:34:00Z",
+      "stars": 16923,
+      "forks": 6362,
+      "updated_at": "2026-10-01T06:57:26Z",
       "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 4.5,
-        "maturity": 3.5
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 3.225
-    },
-    {
-      "full_name": "codewithsadee/vcard-personal-portfolio",
-      "name": "vcard-personal-portfolio",
-      "html_url": "https://github.com/codewithsadee/vcard-personal-portfolio",
-      "description": "vCard is a fully responsive personal portfolio website, responsive for all devices.",
-      "category": "Web Applications",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 7783,
-      "forks": 4244,
-      "updated_at": "2026-04-23T08:14:04Z",
-      "source": "github_user_location:codewithsadee",
-      "owner_location": "Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 4.5,
-        "maturity": 3.5
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 3.225
-    },
-    {
-      "full_name": "codewithsadee/grilli",
-      "name": "grilli",
-      "html_url": "https://github.com/codewithsadee/grilli",
-      "description": "Grilli is a fully responsive restaurant website, Responsive for all devices, build using HTML, CSS, and JavaScript.",
-      "category": "Web Applications",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 541,
-      "forks": 290,
-      "updated_at": "2026-04-22T17:12:33Z",
-      "source": "github_user_location:codewithsadee",
-      "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
@@ -151,9 +151,55 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 2815,
-      "forks": 590,
-      "updated_at": "2026-04-01T17:12:20Z",
+      "stars": 2799,
+      "forks": 584,
+      "updated_at": "2026-09-30T23:16:03Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 4.5,
+        "maturity": 3.5
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.225
+    },
+    {
+      "full_name": "codewithsadee/grilli",
+      "name": "grilli",
+      "html_url": "https://github.com/codewithsadee/grilli",
+      "description": "Grilli is a fully responsive restaurant website, Responsive for all devices, build using HTML, CSS, and JavaScript.",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 573,
+      "forks": 307,
+      "updated_at": "2026-09-27T16:57:31Z",
+      "source": "github_user_location:codewithsadee",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 4.5,
+        "maturity": 3.5
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.225
+    },
+    {
+      "full_name": "KasRoudra/CamHacker",
+      "name": "CamHacker",
+      "html_url": "https://github.com/KasRoudra/CamHacker",
+      "description": "Camera phishing tool. If anyone opens link generated by CamHacker and permits camera access his/her photo will be captured!",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 1113,
+      "forks": 184,
+      "updated_at": "2026-09-08T08:24:51Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -165,50 +211,27 @@
       "rank_score": 3.224
     },
     {
-      "full_name": "bauripalash/pankti",
-      "name": "pankti",
-      "html_url": "https://github.com/bauripalash/pankti",
-      "description": "Pankti Programming Language, A Practical Bengali Programming Language",
+      "full_name": "KasRoudra/MaxPhisher",
+      "name": "MaxPhisher",
+      "html_url": "https://github.com/KasRoudra/MaxPhisher",
+      "description": "A python phishing script for login phishing, image phishing video phishing and many more",
       "category": "Other FOSS Projects",
-      "license": {
-        "key": "mpl-2.0",
-        "spdx_id": "MPL-2.0"
-      },
-      "stars": 15,
-      "forks": 2,
-      "updated_at": "2026-04-22T12:51:59Z",
-      "source": "github_repo_search:topic:bangla",
-      "owner_location": "India",
-      "ai_scores": {
-        "relevance": 4.5,
-        "usefulness": 2.6,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 3.204
-    },
-    {
-      "full_name": "SagarBiswas-MultiHAT/infosec-vocabulary",
-      "name": "infosec-vocabulary",
-      "html_url": "https://github.com/SagarBiswas-MultiHAT/infosec-vocabulary",
-      "description": "infosec-vocabulary is a bilingual (English ↔ Bangla) cybersecurity glossary with concise definitions, synonyms, real-world examples, and short educational notes for each term. Alphabetized and workshop‑friendly, it’s ideal for learners, translators, SOC trainees, and security educators; docs-ready and GitHub Pages compatible.",
-      "category": "Awesome Lists & Resource Collections",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 16,
-      "forks": 0,
-      "updated_at": "2026-03-30T04:19:54Z",
-      "source": "github_repo_search:topic:bangla",
-      "owner_location": "Dhaka, Bangladesh.",
+      "stars": 989,
+      "forks": 209,
+      "updated_at": "2026-08-29T04:50:02Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
-        "relevance": 4.5,
-        "usefulness": 2.61,
-        "maturity": 2.0
+        "relevance": 2.0,
+        "usefulness": 4.5,
+        "maturity": 3.5
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.2005
+      "rank_score": 3.224
     },
     {
       "full_name": "hasinhayder/hydra",
@@ -220,18 +243,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 936,
-      "forks": 163,
-      "updated_at": "2026-04-16T08:09:57Z",
+      "stars": 932,
+      "forks": 162,
+      "updated_at": "2026-08-30T21:04:20Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
-        "maturity": 3.36
+        "maturity": 3.35
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.197
+      "rank_score": 3.194
     },
     {
       "full_name": "JubayerRiyad/Coursera-HTML-CSS-and-JavaScript-for-Web-Developers",
@@ -254,7 +277,7 @@
         "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.1885
+      "rank_score": 3.1845
     },
     {
       "full_name": "hasancse91/android-course-v2",
@@ -277,7 +300,30 @@
         "maturity": 2.05
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.188
+      "rank_score": 3.184
+    },
+    {
+      "full_name": "shahriar0999/Dhaka-RealEstate-Prediction-End-to-End",
+      "name": "Dhaka-RealEstate-Prediction-End-to-End",
+      "html_url": "https://github.com/shahriar0999/Dhaka-RealEstate-Prediction-End-to-End",
+      "description": "This project focuses on building an end-to-end machine learning pipeline to predict house prices and rent prices in Dhaka, the capital of Bangladesh.",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 10,
+      "forks": 0,
+      "updated_at": "2026-08-27T21:46:46Z",
+      "source": "github_user_location:shahriar0999",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.57,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.1815
     },
     {
       "full_name": "hasancse91/flutter_getx_template",
@@ -289,41 +335,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 448,
-      "forks": 156,
-      "updated_at": "2026-04-17T00:30:59Z",
+      "stars": 442,
+      "forks": 155,
+      "updated_at": "2026-07-31T08:23:21Z",
       "source": "github_user_location:hasancse91",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
-        "maturity": 3.3
+        "maturity": 3.29
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.185
-    },
-    {
-      "full_name": "MAHADI-143/MAHADI-PRO",
-      "name": "MAHADI-PRO",
-      "html_url": "https://github.com/MAHADI-143/MAHADI-PRO",
-      "description": "All In One Bangladeshi All Sim Facebook Cloner Tools [6-7-8-9-10-11]",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 10,
-      "forks": 2,
-      "updated_at": "2025-10-04T07:46:34Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
-      "ai_scores": {
-        "relevance": 4.5,
-        "usefulness": 2.57,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 3.1835
+      "rank_score": 3.181
     },
     {
       "full_name": "hasinhayder/tailwind-cards",
@@ -335,9 +358,9 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 599,
+      "stars": 591,
       "forks": 74,
-      "updated_at": "2026-04-18T04:39:41Z",
+      "updated_at": "2026-09-24T18:10:35Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -359,109 +382,86 @@
         "spdx_id": "MIT"
       },
       "stars": 272,
-      "forks": 78,
-      "updated_at": "2026-04-16T08:08:34Z",
+      "forks": 77,
+      "updated_at": "2026-09-09T08:57:31Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.31,
-        "maturity": 2.65
+        "maturity": 2.64
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.0045
+      "rank_score": 3.0015
     },
     {
-      "full_name": "codewithsadee/wren",
-      "name": "wren",
-      "html_url": "https://github.com/codewithsadee/wren",
-      "description": "Wren is a fully responsive personal blog website, Responsive for all devices, build using HTML, CSS, and JavaScript.",
-      "category": "Web Applications",
+      "full_name": "KasRoudra/VidPhisher",
+      "name": "VidPhisher",
+      "html_url": "https://github.com/KasRoudra/VidPhisher",
+      "description": "VidPhisher is a camera phishing tool that allows you to capture video/audio of a device just by links. The author is not responsible for any misuse of it",
+      "category": "Other FOSS Projects",
       "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
+        "key": "gpl-3.0",
+        "spdx_id": "GPL-3.0"
       },
-      "stars": 228,
-      "forks": 102,
-      "updated_at": "2026-04-17T16:43:56Z",
-      "source": "github_user_location:codewithsadee",
-      "owner_location": "Bangladesh",
+      "stars": 318,
+      "forks": 57,
+      "updated_at": "2026-09-25T12:02:30Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 4.02,
-        "maturity": 2.85
+        "usefulness": 4.5,
+        "maturity": 2.48
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.975
+      "rank_score": 2.992
     },
     {
       "full_name": "hasinhayder/tyro",
       "name": "tyro",
       "html_url": "https://github.com/hasinhayder/tyro",
-      "description": "Tyro is a powerful API Authentication, Authorization, Role & Privilege Management solution for Laravel 12 and 13. Think of it as a Swiss Army knife that handles everything from user authentication and role-based access control to user suspension workflows.",
+      "description": "Tyro is the complete authentication, roles & privileges package for Laravel 12 & 13: a modern RBAC/ACL solution built on Laravel Sanctum, with a fantastic CLI that manages everything for you.",
       "category": "Developer Tools & Libraries",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 674,
-      "forks": 49,
-      "updated_at": "2026-04-23T05:00:31Z",
+      "stars": 685,
+      "forks": 48,
+      "updated_at": "2026-09-30T10:00:43Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
-        "maturity": 2.41
+        "maturity": 2.4
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.968
-    },
-    {
-      "full_name": "codewithsadee/julia-portfolio",
-      "name": "julia-portfolio",
-      "html_url": "https://github.com/codewithsadee/julia-portfolio",
-      "description": "A fully responsive personal portfolio website, Responsive for all devices, build using HTML, CSS, and JavaScript.",
-      "category": "Web Applications",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 251,
-      "forks": 73,
-      "updated_at": "2026-04-22T13:49:18Z",
-      "source": "github_user_location:codewithsadee",
-      "owner_location": "Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 4.17,
-        "maturity": 2.61
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.9555
+      "rank_score": 2.965
     },
     {
       "full_name": "hasinhayder/tyro-dashboard",
       "name": "tyro-dashboard",
       "html_url": "https://github.com/hasinhayder/tyro-dashboard",
-      "description": "Powerful dashboard for Laravel 12 and 13, with profile, user, role and privilege management using tyro and tyro-login package.",
-      "category": "Developer Tools & Libraries",
+      "description": "Powerful and feature-rich dashboard for Laravel 13 and 12. Comes with complete authentication, user management, roles and privilege management, media management and dynamic CRUD",
+      "category": "Web Applications",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 525,
-      "forks": 21,
-      "updated_at": "2026-04-21T05:35:21Z",
+      "stars": 556,
+      "forks": 29,
+      "updated_at": "2026-09-30T10:00:42Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
-        "maturity": 2.17
+        "maturity": 2.24
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.885
+      "rank_score": 2.909
     },
     {
       "full_name": "KRTirtho/flemozi",
@@ -473,18 +473,41 @@
         "key": "gpl-3.0",
         "spdx_id": "GPL-3.0"
       },
-      "stars": 308,
-      "forks": 11,
-      "updated_at": "2026-04-20T14:42:39Z",
+      "stars": 324,
+      "forks": 16,
+      "updated_at": "2026-09-17T09:44:37Z",
       "source": "github_user_location:KRTirtho",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
-        "maturity": 2.09
+        "maturity": 2.13
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.857
+      "rank_score": 2.871
+    },
+    {
+      "full_name": "codewithsadee/music-player",
+      "name": "music-player",
+      "html_url": "https://github.com/codewithsadee/music-player",
+      "description": "A fully responsive web music player using vanilla javascript, Responsive for all devices, build using html, css, and javascript.",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 186,
+      "forks": 75,
+      "updated_at": "2026-09-17T14:42:08Z",
+      "source": "github_user_location:codewithsadee",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 3.74,
+        "maturity": 2.62
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.831
     },
     {
       "full_name": "hasinhayder/tyro-login",
@@ -496,18 +519,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 244,
-      "forks": 25,
-      "updated_at": "2026-04-21T17:24:40Z",
+      "stars": 251,
+      "forks": 27,
+      "updated_at": "2026-10-01T05:19:34Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 4.13,
-        "maturity": 2.21
+        "usefulness": 4.17,
+        "maturity": 2.23
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.8055
+      "rank_score": 2.8225
     },
     {
       "full_name": "KasRoudra/IP-Tracker",
@@ -519,41 +542,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 201,
-      "forks": 38,
-      "updated_at": "2026-04-19T01:26:58Z",
+      "stars": 221,
+      "forks": 40,
+      "updated_at": "2026-09-25T09:41:11Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.84,
-        "maturity": 2.32
+        "usefulness": 3.97,
+        "maturity": 2.33
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.771
-    },
-    {
-      "full_name": "htr-tech/PyObfuscate",
-      "name": "PyObfuscate",
-      "html_url": "https://github.com/htr-tech/PyObfuscate",
-      "description": "Simple Python Code Obfuscator. Supports python2 & python3",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 174,
-      "forks": 66,
-      "updated_at": "2026-04-16T09:31:25Z",
-      "source": "github_user_location:htr-tech",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 3.66,
-        "maturity": 2.55
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.768
+      "rank_score": 2.8085
     },
     {
       "full_name": "me-shaon/laravel-request-analytics",
@@ -565,41 +565,41 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 209,
-      "forks": 26,
-      "updated_at": "2026-04-21T10:19:36Z",
+      "stars": 241,
+      "forks": 25,
+      "updated_at": "2026-09-21T03:50:30Z",
       "source": "github_user_location:me-shaon",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.89,
-        "maturity": 2.22
+        "usefulness": 4.11,
+        "maturity": 2.21
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.7485
+      "rank_score": 2.8005
     },
     {
-      "full_name": "hasinhayder/wpsqlite",
-      "name": "wpsqlite",
-      "html_url": "https://github.com/hasinhayder/wpsqlite",
-      "description": "Quickly provision a fully functional WordPress site with SQLite, with *.wplocal.xyz domain support",
-      "category": "Web Applications",
+      "full_name": "htr-tech/PyObfuscate",
+      "name": "PyObfuscate",
+      "html_url": "https://github.com/htr-tech/PyObfuscate",
+      "description": "Simple Python Code Obfuscator. Supports python2 & python3",
+      "category": "Other FOSS Projects",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 207,
-      "forks": 19,
-      "updated_at": "2026-03-30T20:06:38Z",
-      "source": "github_user_location:hasinhayder",
+      "stars": 180,
+      "forks": 61,
+      "updated_at": "2026-09-16T09:13:52Z",
+      "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.88,
-        "maturity": 2.16
+        "usefulness": 3.7,
+        "maturity": 2.51
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.725
+      "rank_score": 2.773
     },
     {
       "full_name": "hasinhayder/vue3-icon-picker",
@@ -611,18 +611,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 201,
+      "stars": 200,
       "forks": 20,
-      "updated_at": "2026-04-01T15:33:52Z",
+      "updated_at": "2026-08-08T16:44:54Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.84,
+        "usefulness": 3.83,
         "maturity": 2.17
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.718
+      "rank_score": 2.7155
     },
     {
       "full_name": "hasinhayder/tailwind-boilerplate",
@@ -634,9 +634,9 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 173,
+      "stars": 172,
       "forks": 47,
-      "updated_at": "2026-04-10T19:15:33Z",
+      "updated_at": "2026-08-19T19:38:44Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -645,53 +645,30 @@
         "maturity": 2.39
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.7085
+      "rank_score": 2.7065
     },
     {
-      "full_name": "KRTirtho/wives",
-      "name": "wives",
-      "html_url": "https://github.com/KRTirtho/wives",
-      "description": "A beautiful, modern & feature-rich Terminal Emulator",
-      "category": "Mobile Apps",
-      "license": {
-        "key": "gpl-3.0",
-        "spdx_id": "GPL-3.0"
-      },
-      "stars": 167,
-      "forks": 14,
-      "updated_at": "2026-04-18T10:19:33Z",
-      "source": "github_user_location:KRTirtho",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 3.61,
-        "maturity": 2.12
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.5945
-    },
-    {
-      "full_name": "codewithsadee/drew-hays-personal-portfolio",
-      "name": "drew-hays-personal-portfolio",
-      "html_url": "https://github.com/codewithsadee/drew-hays-personal-portfolio",
-      "description": "Drew hays is a fully responsive personal portfolio website, Responsive for all devices, build using HTML, CSS, and JavaScript.",
+      "full_name": "codewithsadee/annie",
+      "name": "annie",
+      "html_url": "https://github.com/codewithsadee/annie",
+      "description": "Annie is a fully responsive personal portfolio, Responsive for all devices, build using HTML, CSS, and JavaScript.",
       "category": "Web Applications",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 148,
-      "forks": 30,
-      "updated_at": "2026-04-18T05:19:40Z",
+      "stars": 176,
+      "forks": 33,
+      "updated_at": "2026-09-25T05:28:13Z",
       "source": "github_user_location:codewithsadee",
       "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.49,
-        "maturity": 2.25
+        "usefulness": 3.67,
+        "maturity": 2.27
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.5815
+      "rank_score": 2.6765
     },
     {
       "full_name": "codewithsadee/doclab",
@@ -703,18 +680,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 126,
-      "forks": 43,
-      "updated_at": "2026-04-22T01:40:53Z",
+      "stars": 134,
+      "forks": 42,
+      "updated_at": "2026-09-23T16:31:35Z",
       "source": "github_user_location:codewithsadee",
       "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.34,
-        "maturity": 2.36
+        "usefulness": 3.39,
+        "maturity": 2.35
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.55
+      "rank_score": 2.5705
     },
     {
       "full_name": "codewithsadee/unigine",
@@ -726,87 +703,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 102,
-      "forks": 43,
-      "updated_at": "2026-04-19T20:45:44Z",
+      "stars": 106,
+      "forks": 44,
+      "updated_at": "2026-09-26T07:35:45Z",
       "source": "github_user_location:codewithsadee",
       "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.18,
-        "maturity": 2.36
+        "usefulness": 3.21,
+        "maturity": 2.37
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.474
-    },
-    {
-      "full_name": "codewithsadee/youdemi",
-      "name": "youdemi",
-      "html_url": "https://github.com/codewithsadee/youdemi",
-      "description": "Youdemi is a fully responsive education website, Responsive for all devices, build using HTML, CSS, and JavaScript.",
-      "category": "Web Applications",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 112,
-      "forks": 31,
-      "updated_at": "2026-04-17T16:40:30Z",
-      "source": "github_user_location:codewithsadee",
-      "owner_location": "Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 3.25,
-        "maturity": 2.26
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.4715
-    },
-    {
-      "full_name": "rupomsoft/mern-x",
-      "name": "mern-x",
-      "html_url": "https://github.com/rupomsoft/mern-x",
-      "description": "MERN-X is a comprehensive full-stack framework designed to streamline the development of web applications using the popular MERN stack: MongoDB, Express.js, React, and Node.js. Built with simplicity and scalability in mind, MERN-X empowers developers to create robust and efficient applications from end to end",
-      "category": "Web Applications",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 120,
-      "forks": 16,
-      "updated_at": "2026-04-15T18:08:21Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 3.3,
-        "maturity": 2.13
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.451
-    },
-    {
-      "full_name": "rupomsoft/MERN-STACK-Series",
-      "name": "MERN-STACK-Series",
-      "html_url": "https://github.com/rupomsoft/MERN-STACK-Series",
-      "description": "Master the MERN stack - MongoDB, Express.js, React, and Node.js - with our comprehensive tutorial series. From setting up your environment to deploying full-stack web applications, we cover everything you need to know. Ideal for developers looking to build modern, scalable web apps. Let's dive into MERN together! 🚀",
-      "category": "Web Applications",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 70,
-      "forks": 64,
-      "updated_at": "2025-09-16T01:57:38Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.97,
-        "maturity": 2.53
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.4275
+      "rank_score": 2.4905
     },
     {
       "full_name": "KasRoudra/k-fuscator",
@@ -818,18 +726,18 @@
         "key": "gpl-3.0",
         "spdx_id": "GPL-3.0"
       },
-      "stars": 83,
+      "stars": 84,
       "forks": 35,
-      "updated_at": "2026-04-22T16:44:58Z",
+      "updated_at": "2026-09-20T14:21:09Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 3.05,
+        "usefulness": 3.06,
         "maturity": 2.29
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.3885
+      "rank_score": 2.392
     },
     {
       "full_name": "hasancse91/Android-CardView-RecyclerView",
@@ -842,7 +750,7 @@
         "spdx_id": "MIT"
       },
       "stars": 80,
-      "forks": 33,
+      "forks": 32,
       "updated_at": "2025-12-17T21:21:47Z",
       "source": "github_user_location:hasancse91",
       "owner_location": "Dhaka, Bangladesh",
@@ -852,7 +760,30 @@
         "maturity": 2.27
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.3695
+      "rank_score": 2.3635
+    },
+    {
+      "full_name": "md-abu-kayser/javascript-1111-problems",
+      "name": "javascript-1111-problems",
+      "html_url": "https://github.com/md-abu-kayser/javascript-1111-problems",
+      "description": "1111+ JavaScript problems and runnable examples covering fundamentals, advanced language behavior, async programming, runtime concepts, performance, and problem-solving practice.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 104,
+      "forks": 1,
+      "updated_at": "2026-09-30T18:57:57Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 3.19,
+        "maturity": 2.01
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.3565
     },
     {
       "full_name": "me-shaon/js-jsonq",
@@ -875,7 +806,76 @@
         "maturity": 2.12
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.359
+      "rank_score": 2.355
+    },
+    {
+      "full_name": "md-abu-kayser/heartpress",
+      "name": "heartpress",
+      "html_url": "https://github.com/md-abu-kayser/heartpress",
+      "description": "HeartPress - Interactive love-message experience, 1000+ curated romantic messages, Vanilla JS, Offline-capable & Multi-platform",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 85,
+      "forks": 1,
+      "updated_at": "2026-09-17T06:27:22Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 3.07,
+        "maturity": 2.01
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.2975
+    },
+    {
+      "full_name": "md-abu-kayser/date-with-you",
+      "name": "date-with-you",
+      "html_url": "https://github.com/md-abu-kayser/date-with-you",
+      "description": "A beautifully designed interactive date invitation experience featuring glassmorphism, smooth animations, dynamic date planning, and a polished multi-step user journey built with HTML, CSS, Tailwind CSS, and JavaScript.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 84,
+      "forks": 2,
+      "updated_at": "2026-09-22T14:30:54Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 3.06,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.297
+    },
+    {
+      "full_name": "shajibsikder/tabvora",
+      "name": "tabvora",
+      "html_url": "https://github.com/shajibsikder/tabvora",
+      "description": "A smart browser extension for managing tabs, sessions, website usage time, and browsing data with powerful restore, import, and export features.",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 75,
+      "forks": 12,
+      "updated_at": "2026-09-18T16:58:11Z",
+      "source": "github_user_location:shajibsikder",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 3.0,
+        "maturity": 2.1
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.297
     },
     {
       "full_name": "KasRoudra/simplecalculator",
@@ -888,40 +888,86 @@
         "spdx_id": "GPL-3.0"
       },
       "stars": 23,
-      "forks": 62,
-      "updated_at": "2026-04-11T06:13:36Z",
+      "forks": 66,
+      "updated_at": "2026-07-08T12:37:12Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.65,
-        "maturity": 2.52
+        "maturity": 2.55
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.2785
+      "rank_score": 2.2875
     },
     {
-      "full_name": "KRTirtho/fl-query",
-      "name": "fl-query",
-      "html_url": "https://github.com/KRTirtho/fl-query",
-      "description": "Asynchronous data fetching & data invalidation libraries for Flutter",
-      "category": "Mobile Apps",
+      "full_name": "md-abu-kayser/professional-typescript-showcase",
+      "name": "professional-typescript-showcase",
+      "html_url": "https://github.com/md-abu-kayser/professional-typescript-showcase",
+      "description": "200 curated TypeScript challenges with fully-commented, idiomatic solutions - interview prep, portfolio-ready, includes demo, tests, and CI.",
+      "category": "Other FOSS Projects",
       "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
-      "stars": 68,
-      "forks": 12,
-      "updated_at": "2026-01-31T03:13:07Z",
-      "source": "github_user_location:KRTirtho",
+      "stars": 78,
+      "forks": 1,
+      "updated_at": "2026-09-25T13:22:13Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 3.02,
+        "maturity": 2.01
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.275
+    },
+    {
+      "full_name": "hasinhayder/tyro-checkpoint",
+      "name": "tyro-checkpoint",
+      "html_url": "https://github.com/hasinhayder/tyro-checkpoint",
+      "description": "Git-like checkpoints for Laravel SQLite Database and MySQL. Instant snapshots, restore, lock & add notes. No more migrate & re-seeding again and again.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 76,
+      "forks": 2,
+      "updated_at": "2026-09-15T18:32:58Z",
+      "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.95,
-        "maturity": 2.1
+        "usefulness": 3.01,
+        "maturity": 2.02
       },
       "ai_notes": "heuristic fallback",
       "rank_score": 2.2725
+    },
+    {
+      "full_name": "md-abu-kayser/js-solution-vault",
+      "name": "js-solution-vault",
+      "html_url": "https://github.com/md-abu-kayser/js-solution-vault",
+      "description": "World-class library of 136+ JavaScript & TypeScript problems with clean, tested solutions, interactive examples, and in-depth explanations.",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 72,
+      "forks": 1,
+      "updated_at": "2026-09-16T15:32:48Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.98,
+        "maturity": 2.01
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.256
     },
     {
       "full_name": "mrhm-dev/mdx-craft",
@@ -933,41 +979,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 59,
+      "stars": 57,
       "forks": 16,
-      "updated_at": "2026-03-14T04:54:02Z",
+      "updated_at": "2026-08-23T15:49:01Z",
       "source": "github_user_location:mrhm-dev",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.89,
+        "usefulness": 2.88,
         "maturity": 2.13
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.2555
-    },
-    {
-      "full_name": "hasinhayder/tyro-checkpoint",
-      "name": "tyro-checkpoint",
-      "html_url": "https://github.com/hasinhayder/tyro-checkpoint",
-      "description": "Git-like checkpoints for Laravel SQLite Database. Instant snapshots, restore, lock & add notes. No more migrate & re-seeding again and again.",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 70,
-      "forks": 3,
-      "updated_at": "2026-04-11T02:01:05Z",
-      "source": "github_user_location:hasinhayder",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.97,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.2545
+      "rank_score": 2.25
     },
     {
       "full_name": "hasinhayder/storyteller-astro",
@@ -980,17 +1003,63 @@
         "spdx_id": "MIT"
       },
       "stars": 59,
-      "forks": 12,
-      "updated_at": "2026-04-14T03:19:23Z",
+      "forks": 13,
+      "updated_at": "2026-09-04T06:17:02Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.89,
+        "maturity": 2.11
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.2485
+    },
+    {
+      "full_name": "zonayedpca/DevTop",
+      "name": "DevTop",
+      "html_url": "https://github.com/zonayedpca/DevTop",
+      "description": "An essential desktop 🖥️ tool for the developers  👨‍💻. Easy access to the necessary tools 🛠️ like copy-paste 📋 history, gist 👨 💻 manager , short-link 🔗 manager, todos 📝, bookmarks 🔖 and many more to come ⌛, just one click 🖱️ away! Supported in all the major platform. ⬇Download Now",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 56,
+      "forks": 6,
+      "updated_at": "2026-05-27T14:20:03Z",
+      "source": "github_user_location:zonayedpca",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.87,
+        "maturity": 2.05
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.2155
+    },
+    {
+      "full_name": "codewithsadee/cozynest",
+      "name": "cozynest",
+      "html_url": "https://github.com/codewithsadee/cozynest",
+      "description": "A modern and fully responsive eCommerce landing page",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "apache-2.0",
+        "spdx_id": "Apache-2.0"
+      },
+      "stars": 48,
+      "forks": 12,
+      "updated_at": "2026-09-18T11:04:13Z",
+      "source": "github_user_location:codewithsadee",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.82,
         "maturity": 2.1
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.2455
+      "rank_score": 2.212
     },
     {
       "full_name": "KasRoudra/oh-my-shell",
@@ -1013,53 +1082,7 @@
         "maturity": 2.08
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.2165
-    },
-    {
-      "full_name": "zonayedpca/DevTop",
-      "name": "DevTop",
-      "html_url": "https://github.com/zonayedpca/DevTop",
-      "description": "An essential desktop 🖥️ tool for the developers  👨‍💻. Easy access to the necessary tools 🛠️ like copy-paste 📋 history, gist 👨 💻 manager , short-link 🔗 manager, todos 📝, bookmarks 🔖 and many more to come ⌛, just one click 🖱️ away! Supported in all the major platform. ⬇Download Now",
-      "category": "Developer Tools & Libraries",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 57,
-      "forks": 5,
-      "updated_at": "2025-11-23T09:39:45Z",
-      "source": "github_user_location:zonayedpca",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.88,
-        "maturity": 2.04
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.216
-    },
-    {
-      "full_name": "KasRoudra/supremeFolio",
-      "name": "supremeFolio",
-      "html_url": "https://github.com/KasRoudra/supremeFolio",
-      "description": "Happy New Year. Celebrate this day with a awesome new portfolio",
-      "category": "Awesome Lists & Resource Collections",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 52,
-      "forks": 5,
-      "updated_at": "2026-02-27T18:35:38Z",
-      "source": "github_user_location:KasRoudra",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.85,
-        "maturity": 2.04
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.2035
+      "rank_score": 2.2115
     },
     {
       "full_name": "KRTirtho/platform_ui",
@@ -1071,15 +1094,38 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 52,
-      "forks": 4,
-      "updated_at": "2026-04-04T16:45:14Z",
+      "stars": 53,
+      "forks": 5,
+      "updated_at": "2026-09-14T07:38:05Z",
       "source": "github_user_location:KRTirtho",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.85,
-        "maturity": 2.03
+        "maturity": 2.04
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.2055
+    },
+    {
+      "full_name": "KasRoudra/supremeFolio",
+      "name": "supremeFolio",
+      "html_url": "https://github.com/KasRoudra/supremeFolio",
+      "description": "Happy New Year. Celebrate this day with a awesome new portfolio",
+      "category": "Awesome Lists & Resource Collections",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 53,
+      "forks": 5,
+      "updated_at": "2026-04-24T12:18:45Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.85,
+        "maturity": 2.04
       },
       "ai_notes": "heuristic fallback",
       "rank_score": 2.2015
@@ -1094,18 +1140,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 46,
+      "stars": 45,
       "forks": 10,
-      "updated_at": "2026-04-20T08:44:58Z",
+      "updated_at": "2026-07-06T10:34:09Z",
       "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.81,
+        "usefulness": 2.8,
         "maturity": 2.08
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1995
+      "rank_score": 2.194
     },
     {
       "full_name": "htr-tech/Vigenere-Decoder",
@@ -1117,64 +1163,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 39,
-      "forks": 11,
-      "updated_at": "2026-03-27T11:20:02Z",
+      "stars": 42,
+      "forks": 9,
+      "updated_at": "2026-09-15T17:50:01Z",
       "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.76,
-        "maturity": 2.09
+        "usefulness": 2.78,
+        "maturity": 2.08
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.18
-    },
-    {
-      "full_name": "MAHADI-143/MAHADI-GREEN",
-      "name": "MAHADI-GREEN",
-      "html_url": "https://github.com/MAHADI-143/MAHADI-GREEN",
-      "description": "This is Free file and random & Dumping cloning tool>",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "gpl-3.0",
-        "spdx_id": "GPL-3.0"
-      },
-      "stars": 38,
-      "forks": 14,
-      "updated_at": "2025-08-22T05:37:36Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.75,
-        "maturity": 2.12
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.1795
-    },
-    {
-      "full_name": "rupomsoft/Ecommerce-Rest-API-Free",
-      "name": "Ecommerce-Rest-API-Free",
-      "html_url": "https://github.com/rupomsoft/Ecommerce-Rest-API-Free",
-      "description": "Ecommerce-Rest-API-Free",
-      "category": "Developer Tools & Libraries",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 30,
-      "forks": 17,
-      "updated_at": "2026-03-02T01:58:25Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.7,
-        "maturity": 2.14
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.168
+      "rank_score": 2.185
     },
     {
       "full_name": "sabbir-noyon/cpp-solutions",
@@ -1186,18 +1186,18 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 38,
+      "stars": 43,
       "forks": 7,
-      "updated_at": "2026-04-21T18:25:04Z",
+      "updated_at": "2026-09-05T10:13:44Z",
       "source": "github_user_location:sabbir-noyon",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.75,
+        "usefulness": 2.79,
         "maturity": 2.06
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1655
+      "rank_score": 2.1825
     },
     {
       "full_name": "JubayerRiyad/JubayerRiyad",
@@ -1209,41 +1209,110 @@
         "key": "gpl-3.0",
         "spdx_id": "GPL-3.0"
       },
-      "stars": 33,
+      "stars": 34,
       "forks": 12,
-      "updated_at": "2026-03-09T21:07:15Z",
+      "updated_at": "2026-05-14T17:56:26Z",
       "source": "github_user_location:JubayerRiyad",
       "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.72,
+        "usefulness": 2.73,
         "maturity": 2.1
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.163
+      "rank_score": 2.1645
     },
     {
-      "full_name": "rupomsoft/React-Business-Table",
-      "name": "React-Business-Table",
-      "html_url": "https://github.com/rupomsoft/React-Business-Table",
-      "description": "React-Business-Table",
-      "category": "Other FOSS Projects",
+      "full_name": "md-abu-kayser/bare-metal-nodejs-server",
+      "name": "bare-metal-nodejs-server",
+      "html_url": "https://github.com/md-abu-kayser/bare-metal-nodejs-server",
+      "description": "A dependency-free REST API built with Node.js native HTTP and TypeScript, featuring layered architecture, CRUD operations, JSON file persistence, and explicit request handling without Express.",
+      "category": "Developer Tools & Libraries",
       "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
-      "stars": 31,
-      "forks": 10,
-      "updated_at": "2026-04-22T07:51:12Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
+      "stars": 44,
+      "forks": 0,
+      "updated_at": "2026-09-16T15:32:43Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.71,
-        "maturity": 2.08
+        "usefulness": 2.79,
+        "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1525
+      "rank_score": 2.1635
+    },
+    {
+      "full_name": "NazmusSayad/Git-Stats",
+      "name": "Git-Stats",
+      "html_url": "https://github.com/NazmusSayad/Git-Stats",
+      "description": "Automates generation of GitHub activity stats and visual summaries.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "gpl-3.0",
+        "spdx_id": "GPL-3.0"
+      },
+      "stars": 38,
+      "forks": 2,
+      "updated_at": "2026-10-01T00:51:22Z",
+      "source": "github_user_location:NazmusSayad",
+      "owner_location": "Khulna, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.75,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.1505
+    },
+    {
+      "full_name": "ettisafxrup/CleanWrap",
+      "name": "CleanWrap",
+      "html_url": "https://github.com/ettisafxrup/CleanWrap",
+      "description": "CleanWrap is a fast, lightweight and modular designed app that instantly organizes messy folders into clean and shaped categories, made for Windows.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 36,
+      "forks": 1,
+      "updated_at": "2026-09-30T22:03:20Z",
+      "source": "github_user_location:ettisafxrup",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.74,
+        "maturity": 2.01
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.142
+    },
+    {
+      "full_name": "KasRoudra/wififtp",
+      "name": "wififtp",
+      "html_url": "https://github.com/KasRoudra/wififtp",
+      "description": "Create a FTP Server and access files from device under same Wi-Fi/LAN/Router",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 30,
+      "forks": 7,
+      "updated_at": "2026-06-26T16:57:19Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.7,
+        "maturity": 2.06
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.138
     },
     {
       "full_name": "md-sazzadul-islam/laravel-dynamic-report-generator",
@@ -1266,67 +1335,21 @@
         "maturity": 2.06
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1425
+      "rank_score": 2.1375
     },
     {
-      "full_name": "hasinhayder/cronos",
-      "name": "cronos",
-      "html_url": "https://github.com/hasinhayder/cronos",
-      "description": "A fullscreen multi location clock app with lots of customization -  Alpine.js and Tailwind",
-      "category": "Other FOSS Projects",
+      "full_name": "KasRoudra/repository-readme-generator",
+      "name": "repository-readme-generator",
+      "html_url": "https://github.com/KasRoudra/repository-readme-generator",
+      "description": "Repository readme generator is a website/web-application to generate beautiful README.md for your repository. You can copy or download that. Enjoy!",
+      "category": "Web Applications",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
       "stars": 28,
-      "forks": 9,
-      "updated_at": "2026-03-08T15:24:27Z",
-      "source": "github_user_location:hasinhayder",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.69,
-        "maturity": 2.08
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.1405
-    },
-    {
-      "full_name": "MAHADI-143/DUMP",
-      "name": "DUMP",
-      "html_url": "https://github.com/MAHADI-143/DUMP",
-      "description": "Facebook Ids Friends And Followers Extract Tool.This Tool Can Be Used To Dump Facebook Ids Friendlist And Followers And Separate Aslo Duplicate Removed,Faster Ids Collected Per Minutes 3 Lakh Ids Dump🚀🌪️",
-      "category": "Awesome Lists & Resource Collections",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 27,
-      "forks": 10,
-      "updated_at": "2026-01-12T18:48:49Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.68,
-        "maturity": 2.08
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.136
-    },
-    {
-      "full_name": "KasRoudra/wififtp",
-      "name": "wififtp",
-      "html_url": "https://github.com/KasRoudra/wififtp",
-      "description": "Create a FTP Server and access files from device under same Wi-Fi/LAN/Router",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 29,
       "forks": 7,
-      "updated_at": "2026-01-12T23:22:35Z",
+      "updated_at": "2026-07-23T13:37:16Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -1335,27 +1358,27 @@
         "maturity": 2.06
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1345
+      "rank_score": 2.1335
     },
     {
-      "full_name": "NazmusSayad/Git-Stats",
-      "name": "Git-Stats",
-      "html_url": "https://github.com/NazmusSayad/Git-Stats",
-      "description": "Automates generation of GitHub activity stats and visual summaries.",
-      "category": "Other FOSS Projects",
+      "full_name": "KasRoudra/YT-Downloader",
+      "name": "YT-Downloader",
+      "html_url": "https://github.com/KasRoudra/YT-Downloader",
+      "description": "Download youtube videos or audios by ruby script",
+      "category": "Mobile Apps",
       "license": {
         "key": "gpl-3.0",
         "spdx_id": "GPL-3.0"
       },
       "stars": 32,
-      "forks": 2,
-      "updated_at": "2026-04-23T08:24:29Z",
-      "source": "github_user_location:NazmusSayad",
-      "owner_location": "Khulna, Bangladesh",
+      "forks": 4,
+      "updated_at": "2026-05-23T16:46:16Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.71,
-        "maturity": 2.02
+        "maturity": 2.03
       },
       "ai_notes": "heuristic fallback",
       "rank_score": 2.1325
@@ -1381,76 +1404,76 @@
         "maturity": 2.02
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1325
+      "rank_score": 2.1285
     },
     {
-      "full_name": "KasRoudra/YT-Downloader",
-      "name": "YT-Downloader",
-      "html_url": "https://github.com/KasRoudra/YT-Downloader",
-      "description": "Download youtube videos or audios by ruby script",
-      "category": "Mobile Apps",
-      "license": {
-        "key": "gpl-3.0",
-        "spdx_id": "GPL-3.0"
-      },
-      "stars": 31,
-      "forks": 4,
-      "updated_at": "2026-01-12T23:22:44Z",
-      "source": "github_user_location:KasRoudra",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.71,
-        "maturity": 2.03
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.1325
-    },
-    {
-      "full_name": "KasRoudra/repository-readme-generator",
-      "name": "repository-readme-generator",
-      "html_url": "https://github.com/KasRoudra/repository-readme-generator",
-      "description": "Repository readme generator is a website/web-application to generate beautiful README.md for your repository. You can copy or download that. Enjoy!",
-      "category": "Web Applications",
+      "full_name": "KasRoudra/github-stats-card",
+      "name": "github-stats-card",
+      "html_url": "https://github.com/KasRoudra/github-stats-card",
+      "description": "Get github statistics in svg card/image which you can add in your github readme",
+      "category": "Developer Tools & Libraries",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 28,
+      "stars": 26,
       "forks": 7,
-      "updated_at": "2026-01-12T23:22:37Z",
+      "updated_at": "2026-05-14T14:22:06Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.69,
+        "usefulness": 2.67,
         "maturity": 2.06
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1325
+      "rank_score": 2.1235
     },
     {
-      "full_name": "MAHADI-143/MULTI-FB",
-      "name": "MULTI-FB",
-      "html_url": "https://github.com/MAHADI-143/MULTI-FB",
-      "description": "This Is Free Friend & Followers Id Cloning Tool ⚠️☄️",
-      "category": "Other FOSS Projects",
+      "full_name": "nafiul-afk/github-treasures",
+      "name": "github-treasures",
+      "html_url": "https://github.com/nafiul-afk/github-treasures",
+      "description": "",
+      "category": "Awesome Lists & Resource Collections",
       "license": {
-        "key": "gpl-3.0",
-        "spdx_id": "GPL-3.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
       "stars": 29,
-      "forks": 6,
-      "updated_at": "2025-10-22T15:42:40Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
+      "forks": 3,
+      "updated_at": "2026-08-02T12:52:47Z",
+      "source": "github_user_location:nafiul-afk",
+      "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.69,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.1225
+    },
+    {
+      "full_name": "hasinhayder/bookmark.py",
+      "name": "bookmark.py",
+      "html_url": "https://github.com/hasinhayder/bookmark.py",
+      "description": "A command-line tool to bookmark directories and quickly navigate between them.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 25,
+      "forks": 6,
+      "updated_at": "2026-08-10T12:53:05Z",
+      "source": "github_user_location:hasinhayder",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.67,
         "maturity": 2.05
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1285
+      "rank_score": 2.1215
     },
     {
       "full_name": "me-shaon/agent-skills",
@@ -1473,30 +1496,7 @@
         "maturity": 2.04
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.125
-    },
-    {
-      "full_name": "KasRoudra/github-stats-card",
-      "name": "github-stats-card",
-      "html_url": "https://github.com/KasRoudra/github-stats-card",
-      "description": "Get github statistics in svg card/image which you can add in your github readme",
-      "category": "Developer Tools & Libraries",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 25,
-      "forks": 7,
-      "updated_at": "2026-03-18T10:05:40Z",
-      "source": "github_user_location:KasRoudra",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.67,
-        "maturity": 2.06
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.1245
+      "rank_score": 2.12
     },
     {
       "full_name": "KasRoudra/banner-generator",
@@ -1519,53 +1519,7 @@
         "maturity": 2.05
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1215
-    },
-    {
-      "full_name": "nafiul-afk/github-treasures",
-      "name": "github-treasures",
-      "html_url": "https://github.com/nafiul-afk/github-treasures",
-      "description": "",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 27,
-      "forks": 3,
-      "updated_at": "2026-03-10T00:26:10Z",
-      "source": "github_user_location:nafiul-afk",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.68,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.117
-    },
-    {
-      "full_name": "MAHADI-143/AUTO-COOKIE",
-      "name": "AUTO-COOKIE",
-      "html_url": "https://github.com/MAHADI-143/AUTO-COOKIE",
-      "description": "UNLIMITED COOKIE/TOKEN MAKE🤞",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 22,
-      "forks": 7,
-      "updated_at": "2026-01-10T14:35:18Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.65,
-        "maturity": 2.06
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.1135
+      "rank_score": 2.1165
     },
     {
       "full_name": "htr-tech/crypt-ssl",
@@ -1577,41 +1531,87 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 21,
+      "stars": 22,
       "forks": 8,
-      "updated_at": "2025-12-30T05:45:56Z",
+      "updated_at": "2026-06-04T15:51:03Z",
       "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.64,
+        "usefulness": 2.65,
         "maturity": 2.07
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.112
+      "rank_score": 2.1165
     },
     {
-      "full_name": "rupomsoft/JavaScript-OOP-Tutorial-With-Example",
-      "name": "JavaScript-OOP-Tutorial-With-Example",
-      "html_url": "https://github.com/rupomsoft/JavaScript-OOP-Tutorial-With-Example",
-      "description": "",
-      "category": "Other FOSS Projects",
+      "full_name": "mhhridoy7907/esp32-radar-system",
+      "name": "esp32-radar-system",
+      "html_url": "https://github.com/mhhridoy7907/esp32-radar-system",
+      "description": "ESP32 based WiFi Radar System using Ultrasonic Sensor and Servo Motor.  This project creates a real-time radar-style web interface showing object distance and angle using ESP32 SoftAP.",
+      "category": "Web Applications",
       "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
-      "stars": 16,
-      "forks": 16,
-      "updated_at": "2024-12-25T11:55:03Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
+      "stars": 29,
+      "forks": 0,
+      "updated_at": "2026-09-26T19:36:33Z",
+      "source": "github_user_location:mhhridoy7907",
+      "owner_location": "Bangladesh, Sylhet City",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.61,
-        "maturity": 2.13
+        "usefulness": 2.69,
+        "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.1095
+      "rank_score": 2.1155
+    },
+    {
+      "full_name": "zonayedpca/statikapi",
+      "name": "statikapi",
+      "html_url": "https://github.com/zonayedpca/statikapi",
+      "description": "StatikAPI turns filesystem route modules into static JSON endpoints. Scaffold new projects with create-statikapi, run local dev with a preview UI, and deploy with Cloudflare, Netlify, or GitHub Pages. https://statikapi.com · https://statikapi.com/docs",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 27,
+      "forks": 2,
+      "updated_at": "2026-06-24T15:44:33Z",
+      "source": "github_user_location:zonayedpca",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.68,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.114
+    },
+    {
+      "full_name": "me-shaon/trackway",
+      "name": "trackway",
+      "html_url": "https://github.com/me-shaon/trackway",
+      "description": "Answers why a line of code exists, using the agent session behind it.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 23,
+      "forks": 3,
+      "updated_at": "2026-09-25T12:11:22Z",
+      "source": "github_user_location:me-shaon",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.65,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.1045
     },
     {
       "full_name": "htr-tech/GithubStat",
@@ -1634,7 +1634,30 @@
         "maturity": 2.08
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.108
+      "rank_score": 2.103
+    },
+    {
+      "full_name": "md-abu-kayser/drive-mad",
+      "name": "drive-mad",
+      "html_url": "https://github.com/md-abu-kayser/drive-mad",
+      "description": "High-octane, dependency-free HTML5 arcade racing game (Canvas/WebGL) - keyboard, gamepad, and touch controls.",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 24,
+      "forks": 0,
+      "updated_at": "2026-09-23T16:54:35Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.66,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.101
     },
     {
       "full_name": "md-sazzadul-islam/flutter-secret-diary-notes-with-lock",
@@ -1646,9 +1669,9 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 19,
+      "stars": 20,
       "forks": 5,
-      "updated_at": "2026-01-17T06:00:42Z",
+      "updated_at": "2026-08-26T15:32:13Z",
       "source": "github_user_location:md-sazzadul-islam",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -1657,53 +1680,7 @@
         "maturity": 2.04
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0975
-    },
-    {
-      "full_name": "KasRoudra/httpserver",
-      "name": "httpserver",
-      "html_url": "https://github.com/KasRoudra/httpserver",
-      "description": "Create a http server in your pc to access files from any other devices under same Wi-Fi!",
-      "category": "Mobile Apps",
-      "license": {
-        "key": "gpl-3.0",
-        "spdx_id": "GPL-3.0"
-      },
-      "stars": 19,
-      "forks": 4,
-      "updated_at": "2026-01-12T23:22:19Z",
-      "source": "github_user_location:KasRoudra",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.63,
-        "maturity": 2.03
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0945
-    },
-    {
-      "full_name": "rupomsoft/SSLCOMMERZ-Payment-Gateway-With-NEXT.JS-App-Router",
-      "name": "SSLCOMMERZ-Payment-Gateway-With-NEXT.JS-App-Router",
-      "html_url": "https://github.com/rupomsoft/SSLCOMMERZ-Payment-Gateway-With-NEXT.JS-App-Router",
-      "description": "SSLCOMMERZ Payment Gateway With NEXT.JS App Router",
-      "category": "Fintech & Payments",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 13,
-      "forks": 11,
-      "updated_at": "2025-10-27T16:31:04Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.59,
-        "maturity": 2.09
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0935
+      "rank_score": 2.1005
     },
     {
       "full_name": "htr-tech/0xTwin",
@@ -1715,18 +1692,110 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 21,
+      "stars": 23,
       "forks": 1,
-      "updated_at": "2025-12-24T01:21:37Z",
+      "updated_at": "2026-07-04T19:55:09Z",
       "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.64,
+        "usefulness": 2.65,
         "maturity": 2.01
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.091
+      "rank_score": 2.0975
+    },
+    {
+      "full_name": "me-shaon/naming-scout",
+      "name": "naming-scout",
+      "html_url": "https://github.com/me-shaon/naming-scout",
+      "description": "Names your startup, product or side project, then proves you can actually use it. Checks the domain registry, trademark, GitHub, npm, app stores and search. An agent skill for Claude Code, Cursor, Codex and 75 other agents.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 23,
+      "forks": 0,
+      "updated_at": "2026-09-21T11:05:20Z",
+      "source": "github_user_location:me-shaon",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.65,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0965
+    },
+    {
+      "full_name": "md-abu-kayser/go-engineering",
+      "name": "go-engineering",
+      "html_url": "https://github.com/md-abu-kayser/go-engineering",
+      "description": "",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 23,
+      "forks": 0,
+      "updated_at": "2026-09-16T15:32:47Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.65,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0965
+    },
+    {
+      "full_name": "ettisafxrup/rgit",
+      "name": "rgit",
+      "html_url": "https://github.com/ettisafxrup/rgit",
+      "description": "rgit is a lightweight command-line macro tool designed to speed up and simplify your daily life workflows, including gits and project managings",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 20,
+      "forks": 2,
+      "updated_at": "2026-09-30T22:03:01Z",
+      "source": "github_user_location:ettisafxrup",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.63,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0945
+    },
+    {
+      "full_name": "me-shaon/pulsedeck",
+      "name": "pulsedeck",
+      "html_url": "https://github.com/me-shaon/pulsedeck",
+      "description": "PulseDeck — the reporting inbox for your AI agents.",
+      "category": "Web Applications",
+      "license": {
+        "key": "agpl-3.0",
+        "spdx_id": "AGPL-3.0"
+      },
+      "stars": 20,
+      "forks": 0,
+      "updated_at": "2026-07-12T17:09:36Z",
+      "source": "github_user_location:me-shaon",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.63,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0855
     },
     {
       "full_name": "JubayerRiyad/html_pack",
@@ -1749,7 +1818,7 @@
         "maturity": 2.02
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0885
+      "rank_score": 2.0845
     },
     {
       "full_name": "md-sazzadul-islam/passport-management-system",
@@ -1772,7 +1841,76 @@
         "maturity": 2.01
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0865
+      "rank_score": 2.0825
+    },
+    {
+      "full_name": "md-sazzadul-islam/front-desk-visitor-management",
+      "name": "front-desk-visitor-management",
+      "html_url": "https://github.com/md-sazzadul-islam/front-desk-visitor-management",
+      "description": "A front desk / visitor management system is an important aspect of a business. The front desk / visitor is the first     point of contact for customers and it can make or break their experience.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 18,
+      "forks": 0,
+      "updated_at": "2026-09-24T08:15:15Z",
+      "source": "github_user_location:md-sazzadul-islam",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.62,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.082
+    },
+    {
+      "full_name": "mhhridoy7907/3D-Planet-Website",
+      "name": "3D-Planet-Website",
+      "html_url": "https://github.com/mhhridoy7907/3D-Planet-Website",
+      "description": "3D Planet Web  Interactive solar system with 3D spinning planets, glowing header, starry background, and smooth scroll animations built with Three.js, HTML, and CSS.",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 17,
+      "forks": 0,
+      "updated_at": "2026-09-26T19:36:21Z",
+      "source": "github_user_location:mhhridoy7907",
+      "owner_location": "Bangladesh, Sylhet City",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.61,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0775
+    },
+    {
+      "full_name": "md-abu-kayser/docker-ultimate-notebook",
+      "name": "docker-ultimate-notebook",
+      "html_url": "https://github.com/md-abu-kayser/docker-ultimate-notebook",
+      "description": "A practical Docker notebook covering fundamentals, images, Compose, networking, storage, security, CI/CD, Swarm, monitoring, and production best practices.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 16,
+      "forks": 0,
+      "updated_at": "2026-09-16T15:32:47Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.61,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0765
     },
     {
       "full_name": "KasRoudra/kasroudra.github.io",
@@ -1795,76 +1933,53 @@
         "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.08
+      "rank_score": 2.076
     },
     {
-      "full_name": "rupomsoft/express-fileforge",
-      "name": "express-fileforge",
-      "html_url": "https://github.com/rupomsoft/express-fileforge",
-      "description": "express-fileforge is a file upload utility for Express.js that simplifies file handling. It provides a convenient way to save files to the server and manage file storage paths. This package is designed to be easy to use and integrate seamlessly with your Express.js applications.",
-      "category": "Government & Utility Services",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 18,
-      "forks": 3,
-      "updated_at": "2025-02-22T10:40:04Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.62,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.078
-    },
-    {
-      "full_name": "md-sazzadul-islam/front-desk-visitor-management",
-      "name": "front-desk-visitor-management",
-      "html_url": "https://github.com/md-sazzadul-islam/front-desk-visitor-management",
-      "description": "A front desk / visitor management system is an important aspect of a business. The front desk / visitor is the first     point of contact for customers and it can make or break their experience.",
+      "full_name": "md-abu-kayser/md-abu-kayser",
+      "name": "md-abu-kayser",
+      "html_url": "https://github.com/md-abu-kayser/md-abu-kayser",
+      "description": "Profile README for Kayser - Full-Stack Engineer - React, Node, Next, Go, TypeScript - Open to remote (US/CA/EU).",
       "category": "Other FOSS Projects",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 18,
-      "forks": 0,
-      "updated_at": "2025-12-15T18:27:30Z",
-      "source": "github_user_location:md-sazzadul-islam",
-      "owner_location": "Dhaka, Bangladesh",
+      "stars": 15,
+      "forks": 1,
+      "updated_at": "2026-09-30T17:12:08Z",
+      "source": "github_user_location:md-abu-kayser",
+      "owner_location": "Bangladesh | Open to Remote Opportunities",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.62,
+        "usefulness": 2.6,
+        "maturity": 2.01
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.076
+    },
+    {
+      "full_name": "mhhridoy7907/mh2-ai-chatbot",
+      "name": "mh2-ai-chatbot",
+      "html_url": "https://github.com/mhhridoy7907/mh2-ai-chatbot",
+      "description": "Lightweight front-end AI chatbot interface with dynamic message rendering, simulated bot intelligence, and interactive UI effects. Built using vanilla JavaScript with no external dependencies.",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 15,
+      "forks": 0,
+      "updated_at": "2026-09-26T19:36:07Z",
+      "source": "github_user_location:mhhridoy7907",
+      "owner_location": "Bangladesh, Sylhet City",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.6,
         "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.078
-    },
-    {
-      "full_name": "rupomsoft/Product-Cart-Rest-API-Free",
-      "name": "Product-Cart-Rest-API-Free",
-      "html_url": "https://github.com/rupomsoft/Product-Cart-Rest-API-Free",
-      "description": "Product-Cart-Rest-API-Free",
-      "category": "Developer Tools & Libraries",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 16,
-      "forks": 2,
-      "updated_at": "2025-10-06T09:31:06Z",
-      "source": "github_user_location:rupomsoft",
-      "owner_location": "Dhaka,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.61,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0775
+      "rank_score": 2.072
     },
     {
       "full_name": "KRTirtho/jiosaavn",
@@ -1887,53 +2002,76 @@
         "maturity": 2.01
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.074
+      "rank_score": 2.07
     },
     {
-      "full_name": "zonayedpca/statikapi",
-      "name": "statikapi",
-      "html_url": "https://github.com/zonayedpca/statikapi",
-      "description": "StatikAPI — build APIs as static JSON. Dynamic routes via paths(), manifest, pretty/minified output, and deploy presets (Cloudflare, Netlify, GitHub Pages). https://statikapi.com  · https://statikapi.com/docs",
-      "category": "Developer Tools & Libraries",
+      "full_name": "nafiul-afk/skills-integrate-mcp-with-copilot",
+      "name": "skills-integrate-mcp-with-copilot",
+      "html_url": "https://github.com/nafiul-afk/skills-integrate-mcp-with-copilot",
+      "description": "Exercise: Integrate Model Context Protocol with GitHub Copilot",
+      "category": "Other FOSS Projects",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 12,
+      "forks": 3,
+      "updated_at": "2026-08-02T12:52:45Z",
+      "source": "github_user_location:nafiul-afk",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.58,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.069
+    },
+    {
+      "full_name": "nafiul-afk/skills-github-pages",
+      "name": "skills-github-pages",
+      "html_url": "https://github.com/nafiul-afk/skills-github-pages",
+      "description": "Exercise: Create a site or blog from your GitHub repositories with GitHub Pages",
+      "category": "Web Applications",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
       "stars": 14,
-      "forks": 1,
-      "updated_at": "2025-12-10T07:27:07Z",
-      "source": "github_user_location:zonayedpca",
+      "forks": 0,
+      "updated_at": "2026-08-02T12:52:42Z",
+      "source": "github_user_location:nafiul-afk",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.59,
-        "maturity": 2.01
+        "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0685
+      "rank_score": 2.0665
     },
     {
-      "full_name": "MAHADI-143/FB-BOT",
-      "name": "FB-BOT",
-      "html_url": "https://github.com/MAHADI-143/FB-BOT",
-      "description": "FACEBOOK AUTO COMMENT & SHARE BOT",
+      "full_name": "nafiul-afk/nafiul-afk.github.io",
+      "name": "nafiul-afk.github.io",
+      "html_url": "https://github.com/nafiul-afk/nafiul-afk.github.io",
+      "description": "Personal Blog",
       "category": "Other FOSS Projects",
       "license": {
-        "key": "gpl-3.0",
-        "spdx_id": "GPL-3.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
-      "stars": 14,
-      "forks": 2,
-      "updated_at": "2025-07-27T17:49:22Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
+      "stars": 13,
+      "forks": 0,
+      "updated_at": "2026-08-02T12:52:47Z",
+      "source": "github_user_location:nafiul-afk",
+      "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.59,
-        "maturity": 2.02
+        "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0675
+      "rank_score": 2.0655
     },
     {
       "full_name": "KasRoudra/setfont",
@@ -1956,30 +2094,30 @@
         "maturity": 2.01
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0675
+      "rank_score": 2.0635
     },
     {
-      "full_name": "KRTirtho/piped_client",
-      "name": "piped_client",
-      "html_url": "https://github.com/KRTirtho/piped_client",
-      "description": "[WIP] API Client for https://piped.video",
-      "category": "Mobile Apps",
+      "full_name": "mhhridoy7907/3d-moon-eid-scene",
+      "name": "3d-moon-eid-scene",
+      "html_url": "https://github.com/mhhridoy7907/3d-moon-eid-scene",
+      "description": "A beautiful interactive 3D Moon Eid greeting scene using Three.js with rotating moon, stars, and stylish “Eid Mubarak” text. Perfect for festive web greetings.",
+      "category": "Web Applications",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 10,
-      "forks": 5,
-      "updated_at": "2025-11-29T14:45:32Z",
-      "source": "github_user_location:KRTirtho",
-      "owner_location": "Dhaka, Bangladesh",
+      "stars": 12,
+      "forks": 0,
+      "updated_at": "2026-09-26T19:36:22Z",
+      "source": "github_user_location:mhhridoy7907",
+      "owner_location": "Bangladesh, Sylhet City",
       "ai_scores": {
         "relevance": 2.0,
-        "usefulness": 2.57,
-        "maturity": 2.04
+        "usefulness": 2.58,
+        "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0675
+      "rank_score": 2.063
     },
     {
       "full_name": "KasRoudra/muxlock",
@@ -2002,122 +2140,7 @@
         "maturity": 2.02
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.067
-    },
-    {
-      "full_name": "nafiul-afk/nafiul-afk.github.io",
-      "name": "nafiul-afk.github.io",
-      "html_url": "https://github.com/nafiul-afk/nafiul-afk.github.io",
-      "description": "Personal Blog",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 13,
-      "forks": 0,
-      "updated_at": "2026-04-08T12:52:17Z",
-      "source": "github_user_location:nafiul-afk",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.59,
-        "maturity": 2.0
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0665
-    },
-    {
-      "full_name": "nafiul-afk/skills-github-pages",
-      "name": "skills-github-pages",
-      "html_url": "https://github.com/nafiul-afk/skills-github-pages",
-      "description": "Exercise: Create a site or blog from your GitHub repositories with GitHub Pages",
-      "category": "Web Applications",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 14,
-      "forks": 0,
-      "updated_at": "2026-01-21T10:05:38Z",
-      "source": "github_user_location:nafiul-afk",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.59,
-        "maturity": 2.0
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0655
-    },
-    {
-      "full_name": "nafiul-afk/skills-integrate-mcp-with-copilot",
-      "name": "skills-integrate-mcp-with-copilot",
-      "html_url": "https://github.com/nafiul-afk/skills-integrate-mcp-with-copilot",
-      "description": "Exercise: Integrate Model Context Protocol with GitHub Copilot",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 12,
-      "forks": 3,
-      "updated_at": "2025-10-03T22:35:50Z",
-      "source": "github_user_location:nafiul-afk",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.58,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.065
-    },
-    {
-      "full_name": "hasinhayder/cryptography-examples",
-      "name": "cryptography-examples",
-      "html_url": "https://github.com/hasinhayder/cryptography-examples",
-      "description": "A versatile encryption and hashing playground built with Alpine.js and CryptoJS, supporting multiple ciphers, encoding methods, and hash functions. Explore, learn, and experiment with secure cryptographic techniques!",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 11,
-      "forks": 2,
-      "updated_at": "2026-03-08T15:24:37Z",
-      "source": "github_user_location:hasinhayder",
-      "owner_location": "Dhaka, Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.57,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0645
-    },
-    {
-      "full_name": "MAHADI-143/ENC_PY3",
-      "name": "ENC_PY3",
-      "html_url": "https://github.com/MAHADI-143/ENC_PY3",
-      "description": "Encript Marshal Python3 Only",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 10,
-      "forks": 6,
-      "updated_at": "2024-11-04T19:56:32Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.57,
-        "maturity": 2.05
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0605
+      "rank_score": 2.062
     },
     {
       "full_name": "nafiul-afk/skills-introduction-to-github",
@@ -2131,7 +2154,7 @@
       },
       "stars": 12,
       "forks": 0,
-      "updated_at": "2025-10-03T22:35:02Z",
+      "updated_at": "2026-08-02T12:52:45Z",
       "source": "github_user_location:nafiul-afk",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -2140,30 +2163,76 @@
         "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.057
+      "rank_score": 2.061
     },
     {
-      "full_name": "MAHADI-143/T-Banner",
-      "name": "T-Banner",
-      "html_url": "https://github.com/MAHADI-143/T-Banner",
-      "description": "THIS IS TERMUX BANNER TOOLS",
-      "category": "Other FOSS Projects",
+      "full_name": "shajibsikder/buysellgo-cms",
+      "name": "buysellgo-cms",
+      "html_url": "https://github.com/shajibsikder/buysellgo-cms",
+      "description": "A Laravel-based classified-commerce marketplace system inspired by Bikroy.com where users can buy and sell products. It supports user authentication, product listings, category browsing, and direct buyer-seller communication via WhatsApp or messaging, built with PHP and MySQL.",
+      "category": "Awesome Lists & Resource Collections",
       "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
       "stars": 10,
-      "forks": 2,
-      "updated_at": "2025-08-01T09:09:52Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
+      "forks": 1,
+      "updated_at": "2026-08-10T18:06:12Z",
+      "source": "github_user_location:shajibsikder",
+      "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 2.57,
-        "maturity": 2.02
+        "maturity": 2.01
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0565
+      "rank_score": 2.0595
+    },
+    {
+      "full_name": "mhhridoy7907/Modern-3d-website",
+      "name": "Modern-3d-website",
+      "html_url": "https://github.com/mhhridoy7907/Modern-3d-website",
+      "description": "Modern-3D Website: A cutting-edge 3D website project designed to deliver an immersive user experience.  This project is private. No one may access, download, copy, or use the code without explicit permission  from the author.",
+      "category": "Web Applications",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 11,
+      "forks": 0,
+      "updated_at": "2026-09-26T19:36:27Z",
+      "source": "github_user_location:mhhridoy7907",
+      "owner_location": "Bangladesh, Sylhet City",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.57,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0585
+    },
+    {
+      "full_name": "KRTirtho/wikipedia_api",
+      "name": "wikipedia_api",
+      "html_url": "https://github.com/KRTirtho/wikipedia_api",
+      "description": "Wikipedia API generated using OpenApi Specification for Dart and Flutter",
+      "category": "Mobile Apps",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 11,
+      "forks": 0,
+      "updated_at": "2026-05-07T18:18:03Z",
+      "source": "github_user_location:KRTirtho",
+      "owner_location": "Dhaka, Bangladesh",
+      "ai_scores": {
+        "relevance": 2.0,
+        "usefulness": 2.57,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 2.0545
     },
     {
       "full_name": "KasRoudra/stats-card",
@@ -2186,30 +2255,7 @@
         "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0565
-    },
-    {
-      "full_name": "MAHADI-143/MAHADI-PROTECT",
-      "name": "MAHADI-PROTECT",
-      "html_url": "https://github.com/MAHADI-143/MAHADI-PROTECT",
-      "description": "PROTECT DATA FROM TERMUX VIRUS  🦠",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "apache-2.0",
-        "spdx_id": "Apache-2.0"
-      },
-      "stars": 11,
-      "forks": 0,
-      "updated_at": "2025-11-18T14:21:56Z",
-      "source": "github_user_location:MAHADI-143",
-      "owner_location": "Chittagong,Bangladesh",
-      "ai_scores": {
-        "relevance": 2.0,
-        "usefulness": 2.57,
-        "maturity": 2.0
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 2.0545
+      "rank_score": 2.0525
     },
     {
       "full_name": "hasancse91/weather-app-android-mvvm-dagger",
@@ -2232,7 +2278,7 @@
         "maturity": 2.02
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0465
+      "rank_score": 2.0425
     },
     {
       "full_name": "JubayerRiyad/jub_badge",
@@ -2255,32 +2301,78 @@
         "maturity": 2.0
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 2.0465
+      "rank_score": 2.0415
     }
   ],
   "selected": [
     {
-      "full_name": "FunctionError/PiratesTv",
-      "name": "PiratesTv",
-      "html_url": "https://github.com/FunctionError/PiratesTv",
-      "description": "📢 This project is not maintained anymore 📢",
-      "category": "Awesome Lists & Resource Collections",
+      "full_name": "Deshi-Startup/deshistartup",
+      "name": "deshistartup",
+      "html_url": "https://github.com/Deshi-Startup/deshistartup",
+      "description": "🇧🇩 বাংলাদেশে স্টার্টআপ গড়ার ওপেন-সোর্স ম্যানুয়াল। আপনিও লিখুন! · An open-source startup manual for Bangladesh.",
+      "category": "Other FOSS Projects",
       "license": {
-        "key": "agpl-3.0",
-        "spdx_id": "AGPL-3.0"
+        "key": "mit",
+        "spdx_id": "MIT"
       },
-      "stars": 116,
-      "forks": 42,
-      "updated_at": "2026-04-23T10:14:15Z",
-      "source": "github_repo_search:bangladesh in:name,description,readme",
-      "owner_location": "192.186.88.1",
+      "stars": 44,
+      "forks": 16,
+      "updated_at": "2026-09-30T12:14:17Z",
+      "source": "github_repo_search:topic:bangladesh",
+      "owner_location": "Bangladesh",
       "ai_scores": {
         "relevance": 4.5,
-        "usefulness": 3.27,
-        "maturity": 2.35
+        "usefulness": 2.79,
+        "maturity": 2.13
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.6395
+      "rank_score": 3.3345
+    },
+    {
+      "full_name": "shamspias/laya-bangla",
+      "name": "laya-bangla",
+      "html_url": "https://github.com/shamspias/laya-bangla",
+      "description": "A Bangla-focused adaptation of Laya for typed decisions, classification, and routing.",
+      "category": "Developer Tools & Libraries",
+      "license": {
+        "key": "apache-2.0",
+        "spdx_id": "Apache-2.0"
+      },
+      "stars": 40,
+      "forks": 5,
+      "updated_at": "2026-09-30T09:12:39Z",
+      "source": "github_repo_search:topic:bangla",
+      "owner_location": "Dhaka,Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.77,
+        "maturity": 2.04
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.2915
+    },
+    {
+      "full_name": "SagarBiswas-MultiHAT/SagarBiswas-MultiHAT",
+      "name": "SagarBiswas-MultiHAT",
+      "html_url": "https://github.com/SagarBiswas-MultiHAT/SagarBiswas-MultiHAT",
+      "description": "Official GitHub profile of Sagar Biswas (SagarBiswas-MultiHAT) - a CSE student at AIUB, cybersecurity enthusiast, ethical hacker (web application security), and web developer. Showcases open-source tools, learning notebooks, security projects, blogs, and community work.",
+      "category": "Awesome Lists & Resource Collections",
+      "license": {
+        "key": "mit",
+        "spdx_id": "MIT"
+      },
+      "stars": 32,
+      "forks": 2,
+      "updated_at": "2026-09-29T02:14:59Z",
+      "source": "github_repo_search:topic:bangladesh",
+      "owner_location": "Dhaka, Bangladesh.",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.71,
+        "maturity": 2.02
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.2565
     },
     {
       "full_name": "htr-tech/zphisher",
@@ -2292,9 +2384,9 @@
         "key": "gpl-3.0",
         "spdx_id": "GPL-3.0"
       },
-      "stars": 15802,
-      "forks": 5959,
-      "updated_at": "2026-04-23T09:34:00Z",
+      "stars": 16923,
+      "forks": 6362,
+      "updated_at": "2026-10-01T06:57:26Z",
       "source": "github_user_location:htr-tech",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -2306,20 +2398,20 @@
       "rank_score": 3.225
     },
     {
-      "full_name": "codewithsadee/vcard-personal-portfolio",
-      "name": "vcard-personal-portfolio",
-      "html_url": "https://github.com/codewithsadee/vcard-personal-portfolio",
-      "description": "vCard is a fully responsive personal portfolio website, responsive for all devices.",
+      "full_name": "KasRoudra/PyPhisher",
+      "name": "PyPhisher",
+      "html_url": "https://github.com/KasRoudra/PyPhisher",
+      "description": "Easy to use phishing tool with 77 website templates. Author is not responsible for any misuse.",
       "category": "Web Applications",
       "license": {
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 7783,
-      "forks": 4244,
-      "updated_at": "2026-04-23T08:14:04Z",
-      "source": "github_user_location:codewithsadee",
-      "owner_location": "Bangladesh",
+      "stars": 2799,
+      "forks": 584,
+      "updated_at": "2026-09-30T23:16:03Z",
+      "source": "github_user_location:KasRoudra",
+      "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
@@ -2338,9 +2430,9 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 541,
-      "forks": 290,
-      "updated_at": "2026-04-22T17:12:33Z",
+      "stars": 573,
+      "forks": 307,
+      "updated_at": "2026-09-27T16:57:31Z",
       "source": "github_user_location:codewithsadee",
       "owner_location": "Bangladesh",
       "ai_scores": {
@@ -2361,9 +2453,9 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 1119,
-      "forks": 185,
-      "updated_at": "2026-02-24T07:28:12Z",
+      "stars": 1113,
+      "forks": 184,
+      "updated_at": "2026-09-08T08:24:51Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -2372,7 +2464,7 @@
         "maturity": 3.5
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.223
+      "rank_score": 3.224
     },
     {
       "full_name": "KasRoudra/MaxPhisher",
@@ -2384,9 +2476,9 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 998,
+      "stars": 989,
       "forks": 209,
-      "updated_at": "2026-02-24T07:28:14Z",
+      "updated_at": "2026-08-29T04:50:02Z",
       "source": "github_user_location:KasRoudra",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
@@ -2395,53 +2487,7 @@
         "maturity": 3.5
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.223
-    },
-    {
-      "full_name": "bauripalash/pankti",
-      "name": "pankti",
-      "html_url": "https://github.com/bauripalash/pankti",
-      "description": "Pankti Programming Language, A Practical Bengali Programming Language",
-      "category": "Other FOSS Projects",
-      "license": {
-        "key": "mpl-2.0",
-        "spdx_id": "MPL-2.0"
-      },
-      "stars": 15,
-      "forks": 2,
-      "updated_at": "2026-04-22T12:51:59Z",
-      "source": "github_repo_search:topic:bangla",
-      "owner_location": "India",
-      "ai_scores": {
-        "relevance": 4.5,
-        "usefulness": 2.6,
-        "maturity": 2.02
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 3.204
-    },
-    {
-      "full_name": "SagarBiswas-MultiHAT/infosec-vocabulary",
-      "name": "infosec-vocabulary",
-      "html_url": "https://github.com/SagarBiswas-MultiHAT/infosec-vocabulary",
-      "description": "infosec-vocabulary is a bilingual (English ↔ Bangla) cybersecurity glossary with concise definitions, synonyms, real-world examples, and short educational notes for each term. Alphabetized and workshop‑friendly, it’s ideal for learners, translators, SOC trainees, and security educators; docs-ready and GitHub Pages compatible.",
-      "category": "Awesome Lists & Resource Collections",
-      "license": {
-        "key": "mit",
-        "spdx_id": "MIT"
-      },
-      "stars": 16,
-      "forks": 0,
-      "updated_at": "2026-03-30T04:19:54Z",
-      "source": "github_repo_search:topic:bangla",
-      "owner_location": "Dhaka, Bangladesh.",
-      "ai_scores": {
-        "relevance": 4.5,
-        "usefulness": 2.61,
-        "maturity": 2.0
-      },
-      "ai_notes": "heuristic fallback",
-      "rank_score": 3.2005
+      "rank_score": 3.224
     },
     {
       "full_name": "hasinhayder/hydra",
@@ -2453,18 +2499,41 @@
         "key": "mit",
         "spdx_id": "MIT"
       },
-      "stars": 936,
-      "forks": 163,
-      "updated_at": "2026-04-16T08:09:57Z",
+      "stars": 932,
+      "forks": 162,
+      "updated_at": "2026-08-30T21:04:20Z",
       "source": "github_user_location:hasinhayder",
       "owner_location": "Dhaka, Bangladesh",
       "ai_scores": {
         "relevance": 2.0,
         "usefulness": 4.5,
-        "maturity": 3.36
+        "maturity": 3.35
       },
       "ai_notes": "heuristic fallback",
-      "rank_score": 3.197
+      "rank_score": 3.194
+    },
+    {
+      "full_name": "JubayerRiyad/Coursera-HTML-CSS-and-JavaScript-for-Web-Developers",
+      "name": "Coursera-HTML-CSS-and-JavaScript-for-Web-Developers",
+      "html_url": "https://github.com/JubayerRiyad/Coursera-HTML-CSS-and-JavaScript-for-Web-Developers",
+      "description": "I'm Jubayer Riyad Web Design and Developer. I am very passionate and dedicated to my work. I have acquired the skill and knowledge necessary to make your project successful. If you choose me I will give my best to make you happy with my work.",
+      "category": "Web Applications",
+      "license": {
+        "key": "gpl-3.0",
+        "spdx_id": "GPL-3.0"
+      },
+      "stars": 16,
+      "forks": 0,
+      "updated_at": "2025-01-11T01:51:33Z",
+      "source": "github_user_location:JubayerRiyad",
+      "owner_location": "Bangladesh",
+      "ai_scores": {
+        "relevance": 4.5,
+        "usefulness": 2.61,
+        "maturity": 2.0
+      },
+      "ai_notes": "heuristic fallback",
+      "rank_score": 3.1845
     }
   ]
 }
