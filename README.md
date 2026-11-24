@@ -146,6 +146,7 @@ Submitted projects must be **Genuine FOSS** with an open source license, have at
 - [Bangladesh GeoCode PHP](https://github.com/exceptio/bangladesh-geocode) - PHP library providing Bangladesh division, district, and upazila data for applications.
 - [Bangladesh GeoJSON](https://github.com/ifahimreza/bangladesh-geojson) - GeoJSON boundary data for Bangladesh divisions, districts, and upazilas.
 - [Bangladesh Unified SIM Codes](https://github.com/dibbockb/Bangladesh-Unified-SIM-Codes) - Comprehensive USSD, SMS, and short codes for all Bangladeshi mobile operators.
+- [bangladesh-address](https://github.com/rajuAhmed1705/bangladesh-address) - Divisions, districts, upazilas and thanas of Bangladesh as a typed npm package and as MySQL, PostgreSQL, SQLite and MongoDB dumps.
 - [Bangladeshi Geo Data](https://github.com/engrasel/bangladeshi-geo-data) - Npm package exposing administrative and city data for Bangladesh.
 - [battery-monitor](https://github.com/maateen/battery-monitor) - Linux desktop utility that notifies users about battery state changes.
 - [Brightness Controller](https://github.com/LordAmit/Brightness) - GUI tool to control display brightness on multi-monitor Linux setups.

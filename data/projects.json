@@ -596,6 +596,12 @@
     },
     {
       "category": "Government & Utility Services",
+      "name": "bangladesh-address",
+      "repository": "https://github.com/rajuAhmed1705/bangladesh-address",
+      "description": "Divisions, districts, upazilas and thanas of Bangladesh as a typed npm package and as MySQL, PostgreSQL, SQLite and MongoDB dumps."
+    },
+    {
+      "category": "Government & Utility Services",
       "name": "Bangladeshi Geo Data",
       "repository": "https://github.com/engrasel/bangladeshi-geo-data",
       "description": "npm package exposing administrative and city data for Bangladesh."
